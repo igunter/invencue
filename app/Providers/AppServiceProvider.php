@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Category;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\ServiceProvider;
 
@@ -31,5 +32,9 @@ class AppServiceProvider extends ServiceProvider
         ];
 
         view()->share('age_ranges', $age_ranges);
+
+        $categories = Category::where('is_active', true)->get();
+
+        view()->share('categories', $categories);
     }
 }

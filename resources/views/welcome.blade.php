@@ -30,6 +30,19 @@
             </a>
         @endforeach
     </div>
+
+    {{-- Category selector --}}
+    <div class="p-5 mb-4 bg-body-tertiary rounded-3 text-center">
+        <div class="row row-cols-3 justify-content-center g-2">
+            @foreach ($categories as $category)
+                <div class="col d-flex justify-content-center">
+                    <a href="{{ route('category.show', $category->slug) }}" class="btn btn-outline-secondary btn-lg">
+                        {{ $category->name }}
+                    </a>
+                </div>
+            @endforeach
+        </div>
+    </div>
 @endsection
 
 @push('scripts')
