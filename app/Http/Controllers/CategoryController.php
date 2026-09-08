@@ -15,6 +15,8 @@ class CategoryController extends Controller
 
     public function show(Category $category)
     {
-        return view('categories.show', compact('category'));
+        $games  = $category->games()->where('is_active', true)->get();
+
+        return view('categories.show', compact('category', 'games'));
     }
 }

@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends Model
+class AgeRange extends Model
 {
     protected $fillable = [
         'is_active',
@@ -19,6 +19,6 @@ class Category extends Model
 
     public function games()
     {
-        return $this->hasMany(Game::class, 'category_slug', 'slug');
+        return $this->hasMany(Game::class, 'age_range_slug', 'slug');
     }
 }

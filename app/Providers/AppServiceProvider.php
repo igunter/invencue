@@ -2,9 +2,14 @@
 
 namespace App\Providers;
 
+use App\Models\AgeRange;
 use App\Models\Category;
+use App\Models\User;
 use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\View\View;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,18 +28,25 @@ class AppServiceProvider extends ServiceProvider
     {
         Paginator::useBootstrapFive();
 
-        $age_ranges = [
-            '4-6',
-            '7-9',
-            '10-12',
-            '13-15',
-            '16-18',
-        ];
+        if (Schema::hasTable('age_ranges')) {
+            view()->share('age_ranges', AgeRange::where('is_active', true)->get());
+        }
 
-        view()->share('age_ranges', $age_ranges);
+        if (Schema::hasTable('categories')) {
+            view()->share('categories', Category::where('is_active', true)->get());
+        }
 
-        $categories = Category::where('is_active', true)->get();
+        if (Schema::hasTable('age_ranges')) {
+            view()->composer('*', function (View $view) {
+                $user = Auth::user();
+                $selectedAgeRange = $user instanceof User
+                    ? $user->age_range
+                    : request()->cookie('age_range');
 
-        view()->share('categories', $categories);
+                $view->with('selected_age_range', AgeRange::where('slug', $selectedAgeRange)->where('is_active', true)->exists()
+                    ? $selectedAgeRange
+                    : null);
+            });
+        }
     }
 }
