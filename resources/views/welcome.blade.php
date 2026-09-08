@@ -21,4 +21,39 @@
             </a>
         @endguest
     </div>
+
+    {{-- Age range selection buttons --}}
+    <div class="p-5 mb-4 bg-body-tertiary rounded-3 text-center">
+        @foreach ($age_ranges as $age_range)
+            <a href="{{ route('age-range.select', ['age_range' => $age_range]) }}" class="btn btn-outline-secondary btn-lg m-1 age-range-button{{ $selected_age_range === $age_range ? ' selected' : '' }}">
+                {{ $age_range }}
+            </a>
+        @endforeach
+    </div>
 @endsection
+
+@push('scripts')
+    <script>
+        document.querySelectorAll('.age-range-button').forEach((button) => {
+            button.addEventListener('click', async (event) => {
+                event.preventDefault();
+
+                const response = await fetch(button.href, {
+                    headers: {
+                        Accept: 'application/json',
+                        'X-Requested-With': 'XMLHttpRequest',
+                    },
+                });
+
+                if (!response.ok) {
+                    window.location.href = button.href;
+                    return;
+                }
+
+                document.querySelectorAll('.age-range-button').forEach((ageRangeButton) => {
+                    ageRangeButton.classList.toggle('selected', ageRangeButton === button);
+                });
+            });
+        });
+    </script>
+@endpush

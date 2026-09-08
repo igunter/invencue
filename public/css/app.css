@@ -14,3 +14,30 @@ main {
 footer {
     flex-shrink: 0;
 }
+
+.age-range-button {
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.35);
+    display: inline-flex;
+    height: 100px;
+    justify-content: center;
+    transition: box-shadow 0.2s ease;
+    width: 100px;
+}
+
+.age-range-button:hover,
+.age-range-button:focus-visible {
+    background-color: transparent;
+    color: #d33d3d;
+    box-shadow: 0 0 18px rgba(211, 61, 61, 0.55);
+}
+
+.age-range-button.selected,
+.age-range-button.selected:hover,
+.age-range-button.selected:focus-visible {
+    background-color: transparent;
+    border-color: #198754;
+    color: #198754;
+    box-shadow: 0 0 18px rgba(25, 135, 84, 0.65);
+}
