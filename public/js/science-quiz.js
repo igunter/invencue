@@ -82,6 +82,7 @@ window.ScienceQuiz = (function () {
         const pauseOverlay = el('pauseOverlay');
         const hintBtn = el('hintBtn');
         const hintText = el('hintText');
+        const hintRow = el('hintRow');
 
         const resultsStars = el('resultsStars');
         const resultsScore = el('resultsScore');
@@ -238,6 +239,7 @@ window.ScienceQuiz = (function () {
             pauseOverlay.classList.add('d-none');
             hintText.classList.add('d-none');
             hintText.textContent = '';
+            hintRow.classList.remove('d-none');
             if (settings.timeLimit) {
                 pauseBtn.classList.remove('d-none');
                 pauseBtn.disabled = false;
@@ -305,6 +307,7 @@ window.ScienceQuiz = (function () {
             stopTimer();
             session.answered = true;
             pauseBtn.classList.add('d-none');
+            hintRow.classList.add('d-none');
             lockAnswers();
             const q = session.questions[session.index];
             const isCorrect = choice === q.correctText;
@@ -335,6 +338,7 @@ window.ScienceQuiz = (function () {
         function handleTimeout() {
             session.answered = true;
             pauseBtn.classList.add('d-none');
+            hintRow.classList.add('d-none');
             lockAnswers();
             const q = session.questions[session.index];
             revealCorrect(q.correctText, null);

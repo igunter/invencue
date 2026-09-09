@@ -15,6 +15,15 @@ footer {
     flex-shrink: 0;
 }
 
+/* Shared min-height for the hint-button row and the feedback banner in
+   quiz-style games — only one of the two is ever visible at a time (the
+   feedback banner replaces the hint row once a question is answered), so
+   giving them the same reserved height stops the answer buttons below
+   from jumping up and down between questions. */
+.status-slot {
+    min-height: 3.5rem;
+}
+
 .age-range-button {
     align-items: center;
     border-radius: 50rem;

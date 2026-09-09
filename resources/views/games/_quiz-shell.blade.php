@@ -95,14 +95,14 @@
                 </div>
             </div>
 
-            <div class="d-flex justify-content-center mb-3">
+            <div class="d-flex justify-content-center align-items-center status-slot mb-3" id="hintRow">
                 <button type="button" class="btn btn-sm btn-outline-primary hint-btn" id="hintBtn">
                     <i class="bi bi-lightbulb"></i> Hint
                 </button>
             </div>
             <div id="hintText" class="hint-text mb-3 d-none"></div>
 
-            <div id="feedbackBanner" class="feedback-banner mb-3 d-none d-flex align-items-center gap-3">
+            <div id="feedbackBanner" class="feedback-banner status-slot mb-3 d-none d-flex align-items-center gap-3">
                 <span class="flex-grow-1 text-center" id="feedbackText"></span>
                 <button type="button" class="continue-chevron-btn d-none" id="continueBtn" title="Continue">
                     <i class="bi bi-chevron-right"></i>

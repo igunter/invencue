@@ -389,14 +389,14 @@
                     </div>
                 </div>
 
-                <div class="d-flex justify-content-center mb-3">
+                <div class="d-flex justify-content-center align-items-center status-slot mb-3" id="hintRow">
                     <button type="button" class="btn btn-sm btn-outline-primary hint-btn" id="hintBtn">
                         <i class="bi bi-lightbulb"></i> Hint
                     </button>
                 </div>
                 <div id="hintText" class="hint-text mb-3 d-none"></div>
 
-                <div id="feedbackBanner" class="feedback-banner mb-3 d-none d-flex align-items-center gap-3">
+                <div id="feedbackBanner" class="feedback-banner status-slot mb-3 d-none d-flex align-items-center gap-3">
                     <span class="flex-grow-1 text-center" id="feedbackText"></span>
                     <button type="button" class="continue-chevron-btn d-none" id="continueBtn" title="Continue">
                         <i class="bi bi-chevron-right"></i>
@@ -471,6 +471,7 @@
             const pauseBtn = document.getElementById('pauseBtn');
             const pauseOverlay = document.getElementById('pauseOverlay');
             const hintBtn = document.getElementById('hintBtn');
+            const hintRow = document.getElementById('hintRow');
             const hintText = document.getElementById('hintText');
 
             const resultsStars = document.getElementById('resultsStars');
@@ -825,6 +826,7 @@
                 pauseOverlay.classList.add('d-none');
                 hintText.classList.add('d-none');
                 hintText.textContent = '';
+                hintRow.classList.remove('d-none');
                 if (settings.timeLimit) {
                     pauseBtn.classList.remove('d-none');
                     pauseBtn.disabled = false;
@@ -880,6 +882,7 @@
                 stopTimer();
                 session.answered = true;
                 pauseBtn.classList.add('d-none');
+                hintRow.classList.add('d-none');
                 lockAnswers();
                 const q = session.questions[session.index];
                 const isCorrect = choice === q.x;
@@ -910,6 +913,7 @@
             function handleTimeout() {
                 session.answered = true;
                 pauseBtn.classList.add('d-none');
+                hintRow.classList.add('d-none');
                 lockAnswers();
                 const q = session.questions[session.index];
                 revealCorrect(q.x, null);
