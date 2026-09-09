@@ -33,27 +33,36 @@
 
     {{-- Category selector --}}
     @php
-        $categoryIcons = [
-            'maths'       => 'bi-calculator',
-            'english'     => 'bi-book',
-            'biology'     => 'bi-diagram-2',
-            'chemistry'   => 'bi-droplet-half',
-            'physics'     => 'bi-lightning-charge',
-            'earth-space' => 'bi-globe2',
-            'science-lab' => 'bi-clipboard',
-            'history'     => 'bi-hourglass-split',
-            'geography'   => 'bi-map',
+        $categoryStyles = [
+            'maths'       => ['icon' => 'bi-calculator',        'accent' => '#1c7ed6', 'tint' => '#e7f5ff'],
+            'english'     => ['icon' => 'bi-book',              'accent' => '#9c36b5', 'tint' => '#f8f0fc'],
+            'biology'     => ['icon' => 'bi-diagram-2',         'accent' => '#2f9e44', 'tint' => '#ebfbee'],
+            'chemistry'   => ['icon' => 'bi-droplet-half',      'accent' => '#0c8599', 'tint' => '#e3fafc'],
+            'physics'     => ['icon' => 'bi-lightning-charge',  'accent' => '#e8590c', 'tint' => '#fff4e6'],
+            'earth-space' => ['icon' => 'bi-globe2',            'accent' => '#3b5bdb', 'tint' => '#edf2ff'],
+            'science-lab' => ['icon' => 'bi-clipboard',         'accent' => '#d6336c', 'tint' => '#fff0f6'],
+            'history'     => ['icon' => 'bi-hourglass-split',   'accent' => '#e67700', 'tint' => '#fff9db'],
+            'geography'   => ['icon' => 'bi-map',               'accent' => '#0ca678', 'tint' => '#e6fcf5'],
         ];
+        $defaultStyle = ['icon' => 'bi-grid', 'accent' => '#495057', 'tint' => '#f8f9fa'];
+
+        $visibleCategories = $categories->filter(function ($category) use ($selected_age_range) {
+            return $category->games()
+                ->where('is_active', true)
+                ->when($selected_age_range, fn ($query) => $query->where('age_range_slug', $selected_age_range))
+                ->exists();
+        });
     @endphp
     <div class="p-3 mb-4 bg-body-tertiary rounded-3 text-center">
         <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-3 justify-content-center">
-            @foreach ($categories as $category)
+            @foreach ($visibleCategories as $category)
+                @php $style = $categoryStyles[$category->slug] ?? $defaultStyle; @endphp
                 <div class="col">
                     <a href="{{ route('category.show', $category->slug) }}" class="category-card-link category-button">
-                        <div class="card category-card h-100">
+                        <div class="card category-card h-100" style="--cat-accent: {{ $style['accent'] }}; --cat-tint: {{ $style['tint'] }};">
                             <div class="card-body text-center">
-                                <div class="category-icon"><i class="bi {{ $categoryIcons[$category->slug] ?? 'bi-grid' }}"></i></div>
-                                <div class="fw-semibold">{{ $category->name }}</div>
+                                <div class="category-icon"><i class="bi {{ $style['icon'] }}"></i></div>
+                                <div class="fw-bold">{{ $category->name }}</div>
                             </div>
                         </div>
                     </a>

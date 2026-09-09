@@ -56,28 +56,31 @@ footer {
 
 .category-card {
     height: 100%;
-    border: 1px solid transparent;
-    border-radius: 0.9rem;
+    background: var(--cat-tint, #f8f9fa);
+    border: 2px solid transparent;
+    border-radius: 1.25rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
     transition: box-shadow 0.15s ease, border-color 0.15s ease;
 }
 
 .category-card-link:hover .category-card,
 .category-card-link:focus .category-card {
-    box-shadow: 0 0 1.25rem rgba(25, 135, 84, 0.35);
-    border-color: #cfe2ff;
+    border-color: var(--cat-accent, #0d6efd);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
 .category-icon {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 0.75rem;
-    background: #eaf2ff;
-    color: #198754;
+    width: 3.25rem;
+    height: 3.25rem;
+    border-radius: 50%;
+    background: #fff;
+    color: var(--cat-accent, #0d6efd);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     margin: 0 auto 0.75rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .age-range-section.active-range {
