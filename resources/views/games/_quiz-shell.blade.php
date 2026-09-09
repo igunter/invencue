@@ -9,7 +9,7 @@
      configures and starts window.ScienceQuiz against these same element
      ids. $category and $game come from the controller that rendered the
      including page. --}}
-<div class="container-xl pb-2 quiz-tier-{{ $tier }}">
+<div class="container-xl pb-2 quiz-tier-{{ $tier }}" id="quizShellRoot" data-category-slug="{{ $category->slug }}" data-game-slug="{{ $game->slug }}">
     @include('partials.games-header', [
         'category' => $category,
         'game' => $game,

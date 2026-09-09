@@ -366,6 +366,11 @@ window.ScienceQuiz = (function () {
             const score = session.score;
             const pct = total > 0 ? (score / total) : 0;
 
+            const quizShellRoot = document.getElementById('quizShellRoot');
+            if (quizShellRoot && window.InvencueResults) {
+                window.InvencueResults.submit(quizShellRoot.dataset.categorySlug, quizShellRoot.dataset.gameSlug, score, total);
+            }
+
             resultsScore.textContent = score + ' / ' + total;
 
             let stars = 1;

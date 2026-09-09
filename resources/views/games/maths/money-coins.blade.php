@@ -400,6 +400,7 @@
 @push('scripts')
     <script>
         (function() {
+            const GAME_SLUG = '{{ $game->slug }}';
             const setupScreen = document.getElementById('setupScreen');
             const gameScreen = document.getElementById('gameScreen');
             const resultsScreen = document.getElementById('resultsScreen');
@@ -824,6 +825,10 @@
                 const total = session.questions.length;
                 const score = session.score;
                 const pct = total > 0 ? (score / total) : 0;
+
+                if (window.InvencueResults) {
+                    window.InvencueResults.submit('maths', GAME_SLUG, score, total);
+                }
 
                 resultsScore.textContent = score + ' / ' + total;
 

@@ -23,6 +23,8 @@ class User extends Authenticatable implements MustVerifyEmail
         'name',
         'email',
         'age_range',
+        'date_of_birth',
+        'is_admin',
         'password',
     ];
 
@@ -45,7 +47,14 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return [
             'email_verified_at' => 'datetime',
+            'date_of_birth' => 'date',
+            'is_admin' => 'boolean',
             'password' => 'hashed',
         ];
+    }
+
+    public function gameResults()
+    {
+        return $this->hasMany(GameResult::class);
     }
 }

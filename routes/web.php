@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GameController;
+use App\Http\Controllers\GameResultController;
 use App\Models\AgeRange;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
@@ -33,9 +35,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::post('/game-results', [GameResultController::class, 'store'])->middleware('auth')->name('game-results.store');
 
 Route::resource('/category', CategoryController::class)->only(['index', 'show'])->names('category');
 
