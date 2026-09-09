@@ -40,3 +40,301 @@ footer {
     color: #198754;
     box-shadow: 0 0 18px rgba(25, 135, 84, 0.65);
 }
+
+.category-header {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
+
+.age-range-section.active-range {
+    background-color: rgba(25, 135, 84, 0.08);
+    border: 2px solid #198754;
+}
+
+.age-range-section.active-range .game-button:hover,
+.age-range-section.active-range .game-button:focus-visible {
+    background-color: rgba(25, 135, 84, 0.16);
+}
+
+/* Science quiz games (Science Games section), driven by the shared
+   public/js/science-quiz.js engine. A page can still push its own
+   overrides of these same class names if a game needs something
+   different — pushed styles render after this block.
+
+   Each game's root element carries a .quiz-tier-{basic|intermediate|gcse}
+   class (set by games/_quiz-shell.blade.php) which defines these custom
+   properties; every accent colour below reads from them so the same
+   engine/markup produces the correct age-tier colour automatically. */
+
+.quiz-tier-basic {
+    --quiz-accent: #20c997;
+    --quiz-accent-hover: #0ca678;
+    --quiz-accent-shadow: rgba(32, 201, 151, 0.35);
+    --quiz-card-bg: linear-gradient(160deg, #eef6ff, #f0fbf6);
+}
+
+.quiz-tier-intermediate {
+    --quiz-accent: #0d6efd;
+    --quiz-accent-hover: #0b5ed7;
+    --quiz-accent-shadow: rgba(13, 110, 253, 0.35);
+    --quiz-card-bg: linear-gradient(160deg, #eaf2ff, #f5f8ff);
+}
+
+.quiz-tier-gcse {
+    --quiz-accent: #7048e8;
+    --quiz-accent-hover: #5f3dc4;
+    --quiz-accent-shadow: rgba(112, 72, 232, 0.35);
+    --quiz-card-bg: linear-gradient(160deg, #f3f0ff, #fdf4ff);
+}
+
+.mult-wrap {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+#typeToggles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.choice-toggle {
+    border-radius: 0.9rem;
+    border: 2px solid #dee2e6;
+    background: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #495057;
+    padding: 0.6rem 1.25rem;
+    transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.choice-toggle:hover {
+    border-color: #adb5bd;
+}
+
+.choice-toggle.active {
+    background: var(--quiz-accent, #7048e8);
+    border-color: transparent;
+    color: #fff;
+    box-shadow: 0 4px 10px var(--quiz-accent-shadow, rgba(112, 72, 232, 0.35));
+}
+
+.mult-setup-card {
+    border: none;
+    border-radius: 1.25rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.start-btn {
+    border-radius: 2rem;
+    font-weight: 700;
+    font-size: 1.15rem;
+    padding: 0.75rem 1rem;
+    background: var(--quiz-accent, #7048e8);
+    border: none;
+}
+
+.start-btn:hover:not(:disabled),
+.start-btn:focus:not(:disabled) {
+    background: var(--quiz-accent-hover, #5f3dc4);
+    color: #fff;
+}
+
+.start-btn:disabled {
+    opacity: 0.5;
+}
+
+.game-topbar {
+    font-weight: 600;
+}
+
+.timer-track {
+    height: 0.6rem;
+    border-radius: 1rem;
+    background: #e9ecef;
+    overflow: hidden;
+}
+
+.timer-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #20c997, #0dcaf0);
+    border-radius: 1rem;
+    transition: width 0.1s linear, background 0.3s ease;
+}
+
+.timer-fill.timer-low {
+    background: linear-gradient(90deg, #fd7e14, #dc3545);
+}
+
+.question-card {
+    border: none;
+    border-radius: 1.5rem;
+    background: var(--quiz-card-bg, linear-gradient(160deg, #f3f0ff, #fdf4ff));
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+.quiz-badge {
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    padding: 0.35rem 1rem;
+    border-radius: 2rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    background: var(--quiz-accent, #7048e8);
+}
+
+.quiz-badge-a {
+    background: #20c997;
+}
+
+.quiz-badge-b {
+    background: linear-gradient(135deg, #fd7e14, #dc3545);
+}
+
+.question-text-display {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #343a40;
+    margin-bottom: 0;
+}
+
+.answer-btn {
+    border-radius: 1.1rem;
+    border: 2px solid #dee2e6;
+    background: #fff;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #343a40;
+    text-align: left;
+    padding: 0.85rem 1.1rem;
+    min-height: 3.5rem;
+    transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.answer-btn:hover:not(:disabled) {
+    border-color: #adb5bd;
+}
+
+.answer-btn:disabled {
+    opacity: 1;
+}
+
+.answer-btn.correct {
+    background: linear-gradient(135deg, #40c057, #82c91e);
+    border-color: transparent;
+    color: #fff;
+}
+
+.answer-btn.wrong {
+    background: linear-gradient(135deg, #fa5252, #e64980);
+    border-color: transparent;
+    color: #fff;
+}
+
+.feedback-banner {
+    font-size: 1.15rem;
+    font-weight: 700;
+    border-radius: 1rem;
+    padding: 0.75rem 1rem;
+}
+
+.feedback-banner.correct-banner {
+    background: #d3f9d8;
+    color: #2b8a3e;
+}
+
+.feedback-banner.wrong-banner {
+    background: #ffe3e3;
+    color: #c92a2a;
+}
+
+.continue-chevron-btn {
+    flex-shrink: 0;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    border: 2px solid currentColor;
+    background: transparent;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    transition: background 0.15s ease;
+}
+
+.continue-chevron-btn:hover {
+    background: rgba(0, 0, 0, 0.08);
+}
+
+.question-card-wrap {
+    position: relative;
+}
+
+.pause-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.94);
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+
+.pause-overlay .bi {
+    font-size: 2.5rem;
+    color: var(--quiz-accent, #7048e8);
+}
+
+.hint-btn {
+    border-radius: 2rem;
+}
+
+.hint-text {
+    background: #fff8e1;
+    border: 1px dashed #ffca28;
+    border-radius: 0.75rem;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    color: #7a5b00;
+    text-align: center;
+}
+
+.results-card {
+    border: none;
+    border-radius: 1.5rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+.results-stars {
+    font-size: 2.75rem;
+    letter-spacing: 0.25rem;
+}
+
+.results-score {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+@keyframes pop-in {
+    0% { transform: scale(0.85); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.pop-in {
+    animation: pop-in 0.25s ease-out;
+}
+
+@media (max-width: 400px) {
+    .answer-btn {
+        font-size: 0.95rem;
+    }
+}

@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('games', function (Blueprint $table) {
             $table->boolean('is_active')->default(true);
+            $table->integer('sort_order')->nullable();
             $table->string('age_range_slug');
             $table->string('category_slug');
             $table->string('slug')->unique();

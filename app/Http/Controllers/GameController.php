@@ -9,7 +9,7 @@ class GameController extends Controller
 {
     public function index(Category $category)
     {
-        $games = Game::where('category_slug', $category->slug)->get();
+        $games = Game::where('category_slug', $category->slug)->ordered()->get();
 
         return response()->json($games);
     }

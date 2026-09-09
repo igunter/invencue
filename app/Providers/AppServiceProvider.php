@@ -29,11 +29,11 @@ class AppServiceProvider extends ServiceProvider
         Paginator::useBootstrapFive();
 
         if (Schema::hasTable('age_ranges')) {
-            view()->share('age_ranges', AgeRange::where('is_active', true)->get());
+            view()->share('age_ranges', AgeRange::where('is_active', true)->ordered()->get());
         }
 
         if (Schema::hasTable('categories')) {
-            view()->share('categories', Category::where('is_active', true)->get());
+            view()->share('categories', Category::where('is_active', true)->ordered()->get());
         }
 
         if (Schema::hasTable('age_ranges')) {
