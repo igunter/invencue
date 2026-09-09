@@ -32,12 +32,30 @@
     </div>
 
     {{-- Category selector --}}
+    @php
+        $categoryIcons = [
+            'maths'       => 'bi-calculator',
+            'english'     => 'bi-book',
+            'biology'     => 'bi-diagram-2',
+            'chemistry'   => 'bi-droplet-half',
+            'physics'     => 'bi-lightning-charge',
+            'earth-space' => 'bi-globe2',
+            'science-lab' => 'bi-clipboard',
+            'history'     => 'bi-hourglass-split',
+            'geography'   => 'bi-map',
+        ];
+    @endphp
     <div class="p-3 mb-4 bg-body-tertiary rounded-3 text-center">
-        <div class="row row-cols-3 justify-content-center g-2">
+        <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-3 justify-content-center">
             @foreach ($categories as $category)
-                <div class="col d-flex justify-content-center my-2">
-                    <a href="{{ route('category.show', $category->slug) }}" class="btn btn-outline-secondary btn-lg category-button">
-                        {{ $category->name }}
+                <div class="col">
+                    <a href="{{ route('category.show', $category->slug) }}" class="category-card-link category-button">
+                        <div class="card category-card h-100">
+                            <div class="card-body text-center">
+                                <div class="category-icon"><i class="bi {{ $categoryIcons[$category->slug] ?? 'bi-grid' }}"></i></div>
+                                <div class="fw-semibold">{{ $category->name }}</div>
+                            </div>
+                        </div>
                     </a>
                 </div>
             @endforeach
