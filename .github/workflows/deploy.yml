@@ -26,17 +26,25 @@ jobs:
             set -e
             cd ${{ secrets.APP_PATH }}
 
-            composer install --no-interaction --prefer-dist --optimize-autoloader --no-dev
-            
+            # .env and the sqlite file must exist BEFORE composer install or any
+            # artisan command runs — the app boots fully (and hits the DB via
+            # AppServiceProvider) even for composer's post-autoload-dump hooks.
+            NEW_ENV=false
             if [ ! -f .env ]; then
               cp .env.example .env
               sed -i 's/^APP_ENV=.*/APP_ENV=production/' .env
               sed -i 's/^APP_DEBUG=.*/APP_DEBUG=false/' .env
-              php artisan key:generate --force
+              NEW_ENV=true
             fi
 
             if [ ! -f database/database.sqlite ]; then
               touch database/database.sqlite
+            fi
+
+            composer install --no-interaction --prefer-dist --optimize-autoloader --no-dev
+
+            if [ "$NEW_ENV" = true ]; then
+              php artisan key:generate --force
             fi
 
             sudo chown -R "$(whoami):www-data" storage bootstrap/cache database
