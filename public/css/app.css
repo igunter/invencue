@@ -444,12 +444,13 @@ footer {
     overflow: hidden;
     position: relative;
     display: block;
+    text-align: center;
 }
 .subject-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
 .subject-icon {
     width: 64px; height: 64px; border-radius: 18px;
     display: grid; place-items: center;
-    margin-bottom: 1.05rem;
+    margin: 0 auto 1.05rem;
     background: var(--cat-tint, #e9efff);
     color: var(--cat-accent, #4e7cff);
     font-size: 1.7rem;
