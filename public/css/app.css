@@ -85,6 +85,10 @@ footer {
     color: var(--blue);
 }
 
+#navbarOffcanvas {
+    width: 250px;
+}
+
 .site-footer {
     background: transparent;
     color: #77839a;
