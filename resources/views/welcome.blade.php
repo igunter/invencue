@@ -156,11 +156,11 @@
         <div class="row g-4">
             @foreach ($visibleCategories as $category)
                 @php $style = $categoryStyles[$category->slug] ?? $defaultStyle; @endphp
-                <div class="col-sm-6 col-lg-4">
+                <div class="col-6 col-lg-4">
                     <a href="{{ route('category.show', $category->slug) }}" class="subject-card category-button d-block text-reset" style="--cat-accent: {{ $style['accent'] }}; --cat-tint: {{ $style['tint'] }};">
                         <div class="subject-icon"><i class="bi {{ $style['icon'] }}"></i></div>
                         <h3>{{ $category->name }}</h3>
-                        <p>Jump in and start playing games built for your age group.</p>
+                        <p class="d-none d-lg-block">Jump in and start playing games built for your age group.</p>
                         <span class="go">&rsaquo;</span>
                     </a>
                 </div>
