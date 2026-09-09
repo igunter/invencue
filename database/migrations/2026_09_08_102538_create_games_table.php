@@ -13,13 +13,16 @@ return new class extends Migration
     {
         Schema::create('games', function (Blueprint $table) {
             $table->boolean('is_active')->default(true);
-            $table->foreignId('age_range_slug')->constrained('age_ranges', 'slug');
-            $table->foreignId('category_slug')->constrained('categories', 'slug');
+            $table->string('age_range_slug');
+            $table->string('category_slug');
             $table->string('slug')->unique();
             $table->string('name');
             $table->string('icon')->nullable();
             $table->text('blurb');
             $table->timestamps();
+
+            $table->foreign('age_range_slug')->references('slug')->on('age_ranges');
+            $table->foreign('category_slug')->references('slug')->on('categories');
         });
     }
 
