@@ -4,6 +4,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\GameResultController;
+use App\Http\Controllers\ProfileController;
 use App\Models\AgeRange;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
@@ -38,6 +39,12 @@ Route::get('/', function () {
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::post('/game-results', [GameResultController::class, 'store'])->middleware('auth')->name('game-results.store');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::put('/profile/password', [ProfileController::class, 'updatePassword'])->name('profile.password');
+});
 
 Route::resource('/category', CategoryController::class)->only(['index', 'show'])->names('category');
 
