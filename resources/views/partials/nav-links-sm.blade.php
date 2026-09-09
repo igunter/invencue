@@ -5,6 +5,19 @@
     </div>
     <div class="offcanvas-body d-flex flex-column">
         <ul class="navbar-nav">
+            <li class="nav-item">
+                <small class="text-white-50 text-uppercase px-1">Subjects</small>
+            </li>
+            @foreach ($categories as $category)
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('category.show', $category->slug) }}">
+                        {{ $category->name }}
+                    </a>
+                </li>
+            @endforeach
+
+            <li><hr class="border-secondary"></li>
+
             @auth
                 <li class="nav-item">
                     <a class="nav-link {{ request()->routeIs('dashboard') ? 'active' : '' }}" href="{{ route('dashboard') }}">

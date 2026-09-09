@@ -1,4 +1,18 @@
 <ul class="navbar-nav ms-auto d-none d-md-flex align-items-md-center">
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle {{ request()->routeIs('category.*', 'game.*') ? 'active' : '' }}" href="#" id="subjectsMenuMd" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-grid me-1"></i>Subjects
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="subjectsMenuMd">
+            @foreach ($categories as $category)
+                <li>
+                    <a class="dropdown-item" href="{{ route('category.show', $category->slug) }}">
+                        {{ $category->name }}
+                    </a>
+                </li>
+            @endforeach
+        </ul>
+    </li>
     @auth
         <li class="nav-item">
             <a class="nav-link {{ request()->routeIs('dashboard') ? 'active' : '' }}" href="{{ route('dashboard') }}">
