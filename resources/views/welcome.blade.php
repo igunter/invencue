@@ -21,12 +21,16 @@
         ];
         $defaultStyle = ['icon' => 'bi-grid', 'accent' => '#4e7cff', 'tint' => '#e9efff'];
 
-        $visibleCategories = $categories->filter(function ($category) use ($selected_age_range) {
-            return $category->games()
-                ->where('is_active', true)
+        $categorySlugsWithGames = \Illuminate\Support\Facades\Cache::remember(
+            'visible-category-slugs-' . ($selected_age_range ?? 'all'),
+            300,
+            fn () => \App\Models\Game::where('is_active', true)
                 ->when($selected_age_range, fn ($query) => $query->where('age_range_slug', $selected_age_range))
-                ->exists();
-        });
+                ->distinct()
+                ->pluck('category_slug')
+        );
+
+        $visibleCategories = $categories->filter(fn ($category) => $categorySlugsWithGames->contains($category->slug));
     @endphp
 
     <header class="hero">
