@@ -3,6 +3,7 @@
 @section('title', $category->name)
 
 @section('content')
+    <div id="categoryHeaderSentinel"></div>
     <div class="category-header hero-kicker-wrap p-5 mb-4 rounded-4 text-center">
         <div class="hero-kicker mb-3">{{ $category->name }}</div>
         <h1 class="section-title mb-0">{{ $category->name }} games</h1>
@@ -66,6 +67,14 @@
             const navbarHeight = fixedNavbar.offsetHeight;
             categoryHeader.style.top = navbarHeight + 'px';
             document.documentElement.style.scrollPaddingTop = (navbarHeight + categoryHeader.offsetHeight) + 'px';
+        }
+
+        const categoryHeaderSentinel = document.getElementById('categoryHeaderSentinel');
+        if (categoryHeaderSentinel && categoryHeader) {
+            new IntersectionObserver(
+                ([entry]) => categoryHeader.classList.toggle('is-stuck', !entry.isIntersecting),
+                { rootMargin: `-${fixedNavbar ? fixedNavbar.offsetHeight + 1 : 1}px 0px 0px 0px`, threshold: 0 }
+            ).observe(categoryHeaderSentinel);
         }
 
         const activeRangeSection = document.querySelector('[data-active-range]');

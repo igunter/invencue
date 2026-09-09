@@ -188,6 +188,12 @@ footer {
     position: sticky;
     top: 0;
     z-index: 1020;
+    transition: border-radius 0.15s ease;
+}
+
+.category-header.is-stuck {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
 }
 
 .hero-kicker-wrap {
