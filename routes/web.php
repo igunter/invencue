@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\QuestionController as AdminQuestionController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GameController;
@@ -44,6 +45,14 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::put('/profile/password', [ProfileController::class, 'updatePassword'])->name('profile.password');
+});
+
+Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {
+    Route::get('/questions', [AdminQuestionController::class, 'index'])->name('questions.index');
+    Route::get('/questions/{game:slug}', [AdminQuestionController::class, 'show'])->name('questions.show');
+    Route::post('/questions/{game:slug}', [AdminQuestionController::class, 'store'])->name('questions.store');
+    Route::put('/questions/{question}', [AdminQuestionController::class, 'update'])->name('questions.update');
+    Route::delete('/questions/{question}', [AdminQuestionController::class, 'destroy'])->name('questions.destroy');
 });
 
 Route::resource('/category', CategoryController::class)->only(['index', 'show'])->names('category');

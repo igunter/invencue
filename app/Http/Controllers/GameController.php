@@ -16,6 +16,8 @@ class GameController extends Controller
 
     public function show(Category $category, Game $game)
     {
-        return view('games.' . $category->slug . '.' . $game->slug, compact('category', 'game'));
+        $dbQuestions = $game->questions()->where('is_active', true)->get()->groupBy('type');
+
+        return view('games.' . $category->slug . '.' . $game->slug, compact('category', 'game', 'dbQuestions'));
     }
 }

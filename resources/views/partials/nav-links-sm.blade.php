@@ -34,6 +34,13 @@
                                 <i class="bi bi-gear me-1"></i>My account
                             </a>
                         </li>
+                        @if (auth()->user()->is_admin)
+                            <li>
+                                <a class="dropdown-item {{ request()->routeIs('admin.*') ? 'active' : '' }}" href="{{ route('admin.questions.index') }}">
+                                    <i class="bi bi-shield-lock me-1"></i>Manage questions
+                                </a>
+                            </li>
+                        @endif
                         <li><hr class="dropdown-divider"></li>
                         <li>
                             <form method="POST" action="{{ route('logout') }}">

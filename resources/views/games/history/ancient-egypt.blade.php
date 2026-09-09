@@ -20,24 +20,21 @@
     ])
 @endsection
 
+@php
+    $factsForJs = $dbQuestions->get('main', collect())->map(function ($question) {
+        return array_filter([
+            'q' => $question->question,
+            'a' => $question->answer,
+            'options' => $question->choices,
+        ]);
+    })->values();
+@endphp
+
 @push('scripts')
     <script src="{{ asset('js/science-quiz.js') }}"></script>
     <script>
         (function() {
-            const FACTS = [
-                { q: "What were the massive stone tombs built for Egyptian pharaohs called?", a: "Pyramids" },
-                { q: "What is the name of the process ancient Egyptians used to preserve bodies after death?", a: "Mummification" },
-                { q: "What is the name of the river that ancient Egyptian civilisation grew up along?", a: "The River Nile" },
-                { q: "What do we call the writing system of picture symbols used by the ancient Egyptians?", a: "Hieroglyphics" },
-                { q: "What was the title given to the rulers of ancient Egypt?", a: "Pharaoh" },
-                { q: "Which famous ancient Egyptian queen was known for her relationships with Julius Caesar and Mark Antony?", a: "Cleopatra" },
-                { q: "What is the name of the huge statue with the body of a lion and the head of a human that stands near the Giza pyramids?", a: "The Great Sphinx" },
-                { q: "Which young pharaoh's nearly untouched tomb, full of treasure, was discovered in 1922?", a: "Tutankhamun" },
-                { q: "What stone, found in 1799, allowed experts to finally translate Egyptian hieroglyphics?", a: "The Rosetta Stone" },
-                { q: "What was the ancient Egyptian sun god called?", a: "Ra" },
-                { q: "What material, made from papyrus reeds that grew along the Nile, did the Egyptians write on?", a: "Papyrus" },
-                { q: "What was the name for the coffin-shaped case used to hold a mummified body?", a: "Sarcophagus" },
-            ];
+            const FACTS = @json($factsForJs);
 
             function randInt(min, max) {
                 return Math.floor(Math.random() * (max - min + 1)) + min;

@@ -33,6 +33,11 @@ class Game extends Model
         return $this->belongsTo(AgeRange::class, 'age_range_slug', 'slug');
     }
 
+    public function questions()
+    {
+        return $this->hasMany(Question::class, 'game_slug', 'slug');
+    }
+
     public function scopeOrdered(Builder $query): Builder
     {
         return $query
