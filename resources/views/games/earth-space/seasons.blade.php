@@ -44,6 +44,12 @@
                 'Equinox': 'A day in spring or autumn when day and night are almost exactly equal in length.',
                 'Northern Hemisphere': 'The half of the Earth north of the equator, where the UK is — it has summer when tilted towards the Sun.',
                 'Southern Hemisphere': 'The half of the Earth south of the equator — it has the opposite seasons to the UK.',
+                "Earth's axis": 'An imaginary line running through the North and South Poles that Earth spins around — it is tilted at about 23.5 degrees, which is why we have seasons.',
+                'December in Australia': 'It is summer in Australia in December, even though it is winter in the UK at the same time, because the two countries are in opposite hemispheres.',
+                'June in Australia': 'It is winter in Australia in June, even though it is summer in the UK at the same time, because the two countries are in opposite hemispheres.',
+                'What does NOT cause the seasons': "Earth's distance from the Sun barely changes and is not why we have seasons — the tilt of the Earth is the real reason.",
+                'The tropics': 'The warm region near the equator that gets fairly direct sunlight all year, so it has little change between seasons.',
+                'The Arctic and Antarctic Circles': 'Regions near the poles that can have 24 hours of daylight in summer and 24 hours of darkness in winter, because of Earth\'s tilt.',
             };
             const FACT_NAMES = Object.keys(FACTS);
 
