@@ -36,10 +36,10 @@
         }
 
         .choice-toggle.active {
-            background: #20c997;
+            background: #3ecb8c;
             border-color: transparent;
             color: #fff;
-            box-shadow: 0 4px 10px rgba(32, 201, 151, 0.35);
+            box-shadow: 0 4px 10px rgba(78, 124, 255, 0.35);
         }
 
         .mult-setup-card {
@@ -53,13 +53,13 @@
             font-weight: 700;
             font-size: 1.15rem;
             padding: 0.75rem 1rem;
-            background: #20c997;
+            background: #3ecb8c;
             border: none;
         }
 
         .start-btn:hover:not(:disabled),
         .start-btn:focus:not(:disabled) {
-            background: #0ca678;
+            background: #2fb377;
             color: #fff;
         }
 
@@ -81,7 +81,7 @@
 
         .timer-fill {
             height: 100%;
-            background: linear-gradient(90deg, #20c997, #0dcaf0);
+            background: linear-gradient(90deg, #3ecb8c, #2dc8e7);
             border-radius: 1rem;
             transition: width 0.1s linear, background 0.3s ease;
         }
@@ -105,7 +105,7 @@
             letter-spacing: 0.03em;
             padding: 0.35rem 1rem;
             border-radius: 2rem;
-            background: #20c997;
+            background: #3ecb8c;
             color: #fff;
             margin-bottom: 1rem;
         }
@@ -205,7 +205,7 @@
 
         .pause-overlay .bi {
             font-size: 2.5rem;
-            color: #20c997;
+            color: #3ecb8c;
         }
 
         .hint-btn {
@@ -644,10 +644,10 @@
             function render2DShape(shape) {
                 let svg;
                 if (shape.name === 'Rectangle') {
-                    svg = '<svg viewBox="0 0 200 200" width="200"><rect x="40" y="70" width="120" height="60" fill="#eaf2ff" stroke="#20c997" stroke-width="4" /></svg>';
+                    svg = '<svg viewBox="0 0 200 200" width="200"><rect x="40" y="70" width="120" height="60" fill="#eaf2ff" stroke="#3ecb8c" stroke-width="4" /></svg>';
                 } else {
                     const points = polygonPoints(100, 100, 70, shape.sides, -90);
-                    svg = '<svg viewBox="0 0 200 200" width="200"><polygon points="' + points + '" fill="#eaf2ff" stroke="#20c997" stroke-width="4" stroke-linejoin="round" /></svg>';
+                    svg = '<svg viewBox="0 0 200 200" width="200"><polygon points="' + points + '" fill="#eaf2ff" stroke="#3ecb8c" stroke-width="4" stroke-linejoin="round" /></svg>';
                 }
                 shapeVisual2.innerHTML = svg;
             }
@@ -671,9 +671,9 @@
 
                 return (
                     '<svg viewBox="0 0 200 200" width="200">' +
-                        '<polygon points="' + s1x + ',' + s1y + ' ' + s2x + ',' + s2y + ' ' + s3x + ',' + s3y + ' ' + s4x + ',' + s4y + '" fill="#dbe9ff" stroke="#20c997" stroke-width="3" stroke-linejoin="round" />' +
-                        '<polygon points="' + t1x + ',' + t1y + ' ' + t2x + ',' + t2y + ' ' + t3x + ',' + t3y + ' ' + t4x + ',' + t4y + '" fill="#f2f8ff" stroke="#20c997" stroke-width="3" stroke-linejoin="round" />' +
-                        '<rect x="' + padLeft + '" y="' + frontTopY + '" width="' + w + '" height="' + h + '" fill="#eaf2ff" stroke="#20c997" stroke-width="3" />' +
+                        '<polygon points="' + s1x + ',' + s1y + ' ' + s2x + ',' + s2y + ' ' + s3x + ',' + s3y + ' ' + s4x + ',' + s4y + '" fill="#dbe9ff" stroke="#3ecb8c" stroke-width="3" stroke-linejoin="round" />' +
+                        '<polygon points="' + t1x + ',' + t1y + ' ' + t2x + ',' + t2y + ' ' + t3x + ',' + t3y + ' ' + t4x + ',' + t4y + '" fill="#f2f8ff" stroke="#3ecb8c" stroke-width="3" stroke-linejoin="round" />' +
+                        '<rect x="' + padLeft + '" y="' + frontTopY + '" width="' + w + '" height="' + h + '" fill="#eaf2ff" stroke="#3ecb8c" stroke-width="3" />' +
                     '</svg>'
                 );
             }
@@ -689,11 +689,11 @@
 
                 return (
                     '<svg viewBox="0 0 200 200" width="200">' +
-                        '<line x1="' + (cx - rx) + '" y1="' + topY + '" x2="' + (cx - rx) + '" y2="' + bottomY + '" stroke="#20c997" stroke-width="3" />' +
-                        '<line x1="' + (cx + rx) + '" y1="' + topY + '" x2="' + (cx + rx) + '" y2="' + bottomY + '" stroke="#20c997" stroke-width="3" />' +
-                        '<path d="M ' + (cx - rx) + ' ' + bottomY + ' A ' + rx + ' ' + ry + ' 0 0 0 ' + (cx + rx) + ' ' + bottomY + '" fill="#eaf2ff" stroke="#20c997" stroke-width="3" />' +
+                        '<line x1="' + (cx - rx) + '" y1="' + topY + '" x2="' + (cx - rx) + '" y2="' + bottomY + '" stroke="#3ecb8c" stroke-width="3" />' +
+                        '<line x1="' + (cx + rx) + '" y1="' + topY + '" x2="' + (cx + rx) + '" y2="' + bottomY + '" stroke="#3ecb8c" stroke-width="3" />' +
+                        '<path d="M ' + (cx - rx) + ' ' + bottomY + ' A ' + rx + ' ' + ry + ' 0 0 0 ' + (cx + rx) + ' ' + bottomY + '" fill="#eaf2ff" stroke="#3ecb8c" stroke-width="3" />' +
                         '<rect x="' + (cx - rx) + '" y="' + topY + '" width="' + (rx * 2) + '" height="' + heightPx + '" fill="#eaf2ff" stroke="none" opacity="0.6" />' +
-                        '<ellipse cx="' + cx + '" cy="' + topY + '" rx="' + rx + '" ry="' + ry + '" fill="#eaf2ff" stroke="#20c997" stroke-width="3" />' +
+                        '<ellipse cx="' + cx + '" cy="' + topY + '" rx="' + rx + '" ry="' + ry + '" fill="#eaf2ff" stroke="#3ecb8c" stroke-width="3" />' +
                     '</svg>'
                 );
             }
@@ -701,10 +701,10 @@
             function renderPyramid3D() {
                 return (
                     '<svg viewBox="0 0 200 200" width="200">' +
-                        '<polygon points="100,40 40,160 160,160" fill="#eaf2ff" stroke="#20c997" stroke-width="4" stroke-linejoin="round" />' +
-                        '<line x1="55" y1="150" x2="175" y2="150" stroke="#20c997" stroke-width="3" />' +
-                        '<line x1="40" y1="160" x2="55" y2="150" stroke="#20c997" stroke-width="2" />' +
-                        '<line x1="160" y1="160" x2="175" y2="150" stroke="#20c997" stroke-width="2" />' +
+                        '<polygon points="100,40 40,160 160,160" fill="#eaf2ff" stroke="#3ecb8c" stroke-width="4" stroke-linejoin="round" />' +
+                        '<line x1="55" y1="150" x2="175" y2="150" stroke="#3ecb8c" stroke-width="3" />' +
+                        '<line x1="40" y1="160" x2="55" y2="150" stroke="#3ecb8c" stroke-width="2" />' +
+                        '<line x1="160" y1="160" x2="175" y2="150" stroke="#3ecb8c" stroke-width="2" />' +
                     '</svg>'
                 );
             }
@@ -718,9 +718,9 @@
                 } else if (name === 'Cylinder') {
                     svg = renderCylinder3D();
                 } else if (name === 'Sphere') {
-                    svg = '<svg viewBox="0 0 200 200" width="200"><circle cx="100" cy="100" r="70" fill="#eaf2ff" stroke="#20c997" stroke-width="4" /><ellipse cx="80" cy="70" rx="25" ry="15" fill="#fff" opacity="0.6" /></svg>';
+                    svg = '<svg viewBox="0 0 200 200" width="200"><circle cx="100" cy="100" r="70" fill="#eaf2ff" stroke="#3ecb8c" stroke-width="4" /><ellipse cx="80" cy="70" rx="25" ry="15" fill="#fff" opacity="0.6" /></svg>';
                 } else if (name === 'Cone') {
-                    svg = '<svg viewBox="0 0 200 200" width="200"><ellipse cx="100" cy="150" rx="60" ry="15" fill="#eaf2ff" stroke="#20c997" stroke-width="4" /><line x1="40" y1="150" x2="100" y2="40" stroke="#20c997" stroke-width="4" /><line x1="160" y1="150" x2="100" y2="40" stroke="#20c997" stroke-width="4" /></svg>';
+                    svg = '<svg viewBox="0 0 200 200" width="200"><ellipse cx="100" cy="150" rx="60" ry="15" fill="#eaf2ff" stroke="#3ecb8c" stroke-width="4" /><line x1="40" y1="150" x2="100" y2="40" stroke="#3ecb8c" stroke-width="4" /><line x1="160" y1="150" x2="100" y2="40" stroke="#3ecb8c" stroke-width="4" /></svg>';
                 } else {
                     svg = renderPyramid3D();
                 }

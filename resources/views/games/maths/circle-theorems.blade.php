@@ -36,10 +36,10 @@
         }
 
         .choice-toggle.active {
-            background: #7048e8;
+            background: #8a5cff;
             border-color: transparent;
             color: #fff;
-            box-shadow: 0 4px 10px rgba(112, 72, 232, 0.35);
+            box-shadow: 0 4px 10px rgba(138, 92, 255, 0.35);
         }
 
         .mult-setup-card {
@@ -53,13 +53,13 @@
             font-weight: 700;
             font-size: 1.15rem;
             padding: 0.75rem 1rem;
-            background: #7048e8;
+            background: #8a5cff;
             border: none;
         }
 
         .start-btn:hover:not(:disabled),
         .start-btn:focus:not(:disabled) {
-            background: #5f3dc4;
+            background: #7444eb;
             color: #fff;
         }
 
@@ -81,7 +81,7 @@
 
         .timer-fill {
             height: 100%;
-            background: linear-gradient(90deg, #20c997, #0dcaf0);
+            background: linear-gradient(90deg, #3ecb8c, #2dc8e7);
             border-radius: 1rem;
             transition: width 0.1s linear, background 0.3s ease;
         }
@@ -105,7 +105,7 @@
             letter-spacing: 0.03em;
             padding: 0.35rem 1rem;
             border-radius: 2rem;
-            background: #7048e8;
+            background: #8a5cff;
             color: #fff;
             margin-bottom: 1rem;
         }
@@ -212,7 +212,7 @@
 
         .pause-overlay .bi {
             font-size: 2.5rem;
-            color: #7048e8;
+            color: #8a5cff;
         }
 
         .hint-btn {
@@ -684,7 +684,7 @@
                 const corner1 = addv(v, scalev(u1, size));
                 const corner2 = addv(addv(v, scalev(u1, size)), scalev(u2, size));
                 const corner3 = addv(v, scalev(u2, size));
-                return '<polyline points="' + corner1.x.toFixed(1) + ',' + corner1.y.toFixed(1) + ' ' + corner2.x.toFixed(1) + ',' + corner2.y.toFixed(1) + ' ' + corner3.x.toFixed(1) + ',' + corner3.y.toFixed(1) + '" fill="none" stroke="#7048e8" stroke-width="2" />';
+                return '<polyline points="' + corner1.x.toFixed(1) + ',' + corner1.y.toFixed(1) + ' ' + corner2.x.toFixed(1) + ',' + corner2.y.toFixed(1) + ' ' + corner3.x.toFixed(1) + ',' + corner3.y.toFixed(1) + '" fill="none" stroke="#8a5cff" stroke-width="2" />';
             }
 
             function renderDiagram(q) {
@@ -703,12 +703,12 @@
                     const qPos = anglePos(C, A, B, 0.35);
 
                     svg =
-                        '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '" fill="#eaf2ff" stroke="#7048e8" stroke-width="3" />' +
+                        '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '" fill="#eaf2ff" stroke="#8a5cff" stroke-width="3" />' +
                         svgLine(O, A) + svgLine(O, B) + svgLine(C, A) + svgLine(C, B) +
                         svgDot(O, 3) + svgDot(A) + svgDot(B) + svgDot(C) +
                         pointLabel({ x: cx, y: cy - 14 }, 'O') +
                         pointLabel(labelA, 'A') + pointLabel(labelB, 'B') + pointLabel(labelC, 'C') +
-                        angleLabel(givenPos, q.given + '°', '#7048e8') +
+                        angleLabel(givenPos, q.given + '°', '#8a5cff') +
                         angleLabel(qPos, '?', '#e64980');
                 } else if (q.theorem === 'semicircle') {
                     const A = pt(cx, cy, r, 180);
@@ -721,12 +721,12 @@
                     const qPos = anglePos(B, C, A, 0.35);
 
                     svg =
-                        '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '" fill="#eaf2ff" stroke="#7048e8" stroke-width="3" />' +
+                        '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '" fill="#eaf2ff" stroke="#8a5cff" stroke-width="3" />' +
                         svgLine(A, B) + svgLine(A, C) + svgLine(B, C) +
                         rightAngleMarker(C, A, B, 12) +
                         svgDot(A) + svgDot(B) + svgDot(C) +
                         pointLabel(labelA, 'A') + pointLabel(labelB, 'B') + pointLabel(labelC, 'C') +
-                        angleLabel(givenPos, q.given + '°', '#7048e8') +
+                        angleLabel(givenPos, q.given + '°', '#8a5cff') +
                         angleLabel(qPos, '?', '#e64980');
                 } else if (q.theorem === 'segment') {
                     const A = pt(cx, cy, r, 125);
@@ -741,12 +741,12 @@
                     const qPos = anglePos(D, A, B, 0.35);
 
                     svg =
-                        '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '" fill="#eaf2ff" stroke="#7048e8" stroke-width="3" />' +
+                        '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '" fill="#eaf2ff" stroke="#8a5cff" stroke-width="3" />' +
                         svgLine(A, B, '#adb5bd', 2, '4 3') +
                         svgLine(C, A) + svgLine(C, B) + svgLine(D, A) + svgLine(D, B) +
                         svgDot(A) + svgDot(B) + svgDot(C) + svgDot(D) +
                         pointLabel(labelA, 'A') + pointLabel(labelB, 'B') + pointLabel(labelC, 'C') + pointLabel(labelD, 'D') +
-                        angleLabel(givenPos, q.given + '°', '#7048e8') +
+                        angleLabel(givenPos, q.given + '°', '#8a5cff') +
                         angleLabel(qPos, '?', '#e64980');
                 } else {
                     // cyclic quadrilateral, points in order A, B, C, D around the circle
@@ -762,11 +762,11 @@
                     const qPos = anglePos(C, B, D, 0.4);
 
                     svg =
-                        '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '" fill="#eaf2ff" stroke="#7048e8" stroke-width="3" />' +
+                        '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '" fill="#eaf2ff" stroke="#8a5cff" stroke-width="3" />' +
                         svgLine(A, B) + svgLine(B, C) + svgLine(C, D) + svgLine(D, A) +
                         svgDot(A) + svgDot(B) + svgDot(C) + svgDot(D) +
                         pointLabel(labelA, 'A') + pointLabel(labelB, 'B') + pointLabel(labelC, 'C') + pointLabel(labelD, 'D') +
-                        angleLabel(givenPos, q.given + '°', '#7048e8') +
+                        angleLabel(givenPos, q.given + '°', '#8a5cff') +
                         angleLabel(qPos, '?', '#e64980');
                 }
 

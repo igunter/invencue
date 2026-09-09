@@ -38,10 +38,10 @@
         }
 
         .choice-toggle.active {
-            background: #7048e8;
+            background: #8a5cff;
             border-color: transparent;
             color: #fff;
-            box-shadow: 0 4px 10px rgba(112, 72, 232, 0.35);
+            box-shadow: 0 4px 10px rgba(138, 92, 255, 0.35);
         }
 
         .quick-pick-btn {
@@ -59,13 +59,13 @@
             font-weight: 700;
             font-size: 1.15rem;
             padding: 0.75rem 1rem;
-            background: #7048e8;
+            background: #8a5cff;
             border: none;
         }
 
         .start-btn:hover:not(:disabled),
         .start-btn:focus:not(:disabled) {
-            background: #5f3dc4;
+            background: #7444eb;
             color: #fff;
         }
 
@@ -87,7 +87,7 @@
 
         .timer-fill {
             height: 100%;
-            background: linear-gradient(90deg, #20c997, #0dcaf0);
+            background: linear-gradient(90deg, #3ecb8c, #2dc8e7);
             border-radius: 1rem;
             transition: width 0.1s linear, background 0.3s ease;
         }
@@ -111,7 +111,7 @@
             letter-spacing: 0.03em;
             padding: 0.35rem 1rem;
             border-radius: 2rem;
-            background: #7048e8;
+            background: #8a5cff;
             color: #fff;
             margin-bottom: 1rem;
         }
@@ -211,7 +211,7 @@
 
         .pause-overlay .bi {
             font-size: 2.5rem;
-            color: #7048e8;
+            color: #8a5cff;
         }
 
         .hint-btn {
@@ -755,8 +755,8 @@
 
                 const svg =
                     '<svg viewBox="0 0 ' + viewW + ' ' + viewH + '" width="' + Math.min(viewW * 2, 320) + '">' +
-                        '<polygon points="' + tl.x + ',' + tl.y + ' ' + bl.x + ',' + bl.y + ' ' + br.x + ',' + br.y + '" fill="#eaf2ff" stroke="#7048e8" stroke-width="3" />' +
-                        '<rect x="' + bl.x + '" y="' + (bl.y - 14) + '" width="14" height="14" fill="none" stroke="#7048e8" stroke-width="2" />' +
+                        '<polygon points="' + tl.x + ',' + tl.y + ' ' + bl.x + ',' + bl.y + ' ' + br.x + ',' + br.y + '" fill="#eaf2ff" stroke="#8a5cff" stroke-width="3" />' +
+                        '<rect x="' + bl.x + '" y="' + (bl.y - 14) + '" width="14" height="14" fill="none" stroke="#8a5cff" stroke-width="2" />' +
                         '<text x="' + ((bl.x + br.x) / 2) + '" y="' + (bl.y + 20) + '" text-anchor="middle" font-size="15" font-weight="700" fill="#495057">' + legALabel + '</text>' +
                         '<text x="' + (bl.x - 12) + '" y="' + ((bl.y + tl.y) / 2 + 5) + '" text-anchor="end" font-size="15" font-weight="700" fill="#495057">' + legBLabel + '</text>' +
                         '<text x="' + ((tl.x + br.x) / 2 + 10) + '" y="' + ((tl.y + br.y) / 2 - 6) + '" text-anchor="middle" font-size="15" font-weight="700" fill="#495057">' + hypLabel + '</text>' +
@@ -789,10 +789,10 @@
                 const arcEndY = A.y - arcR * Math.sin(arcRad);
                 const svg =
                     '<svg viewBox="0 0 ' + viewW + ' ' + viewH + '" width="' + Math.min(viewW * 2, 320) + '">' +
-                        '<polygon points="' + A.x + ',' + A.y + ' ' + B.x + ',' + B.y + ' ' + C.x + ',' + C.y + '" fill="#eaf2ff" stroke="#7048e8" stroke-width="3" />' +
-                        '<rect x="' + (B.x - 14) + '" y="' + (B.y - 14) + '" width="14" height="14" fill="none" stroke="#7048e8" stroke-width="2" />' +
-                        '<path d="M ' + (A.x + arcR) + ' ' + A.y + ' A ' + arcR + ' ' + arcR + ' 0 0 0 ' + arcEndX + ' ' + arcEndY + '" fill="none" stroke="#7048e8" stroke-width="2" />' +
-                        '<text x="' + (A.x + 26) + '" y="' + (A.y - 10) + '" font-size="13" font-weight="700" fill="#7048e8">' + q.angle + '&#176;</text>' +
+                        '<polygon points="' + A.x + ',' + A.y + ' ' + B.x + ',' + B.y + ' ' + C.x + ',' + C.y + '" fill="#eaf2ff" stroke="#8a5cff" stroke-width="3" />' +
+                        '<rect x="' + (B.x - 14) + '" y="' + (B.y - 14) + '" width="14" height="14" fill="none" stroke="#8a5cff" stroke-width="2" />' +
+                        '<path d="M ' + (A.x + arcR) + ' ' + A.y + ' A ' + arcR + ' ' + arcR + ' 0 0 0 ' + arcEndX + ' ' + arcEndY + '" fill="none" stroke="#8a5cff" stroke-width="2" />' +
+                        '<text x="' + (A.x + 26) + '" y="' + (A.y - 10) + '" font-size="13" font-weight="700" fill="#8a5cff">' + q.angle + '&#176;</text>' +
                         '<text x="' + ((A.x + B.x) / 2) + '" y="' + (A.y + 20) + '" text-anchor="middle" font-size="15" font-weight="700" fill="#495057">' + adjLabel + '</text>' +
                         '<text x="' + (B.x + 12) + '" y="' + ((B.y + C.y) / 2 + 5) + '" text-anchor="start" font-size="15" font-weight="700" fill="#495057">' + oppLabel + '</text>' +
                         '<text x="' + ((A.x + C.x) / 2 - 10) + '" y="' + ((A.y + C.y) / 2) + '" text-anchor="middle" font-size="15" font-weight="700" fill="#495057">' + hypLabel + '</text>' +

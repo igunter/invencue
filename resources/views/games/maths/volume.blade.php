@@ -45,10 +45,10 @@
         }
 
         .table-toggle.active {
-            background: #0d6efd;
+            background: #4e7cff;
             border-color: transparent;
             color: #fff;
-            box-shadow: 0 4px 10px rgba(13, 110, 253, 0.35);
+            box-shadow: 0 4px 10px rgba(78, 124, 255, 0.35);
         }
 
         #shapeToggles,
@@ -75,10 +75,10 @@
         }
 
         .choice-toggle.active {
-            background: #0d6efd;
+            background: #4e7cff;
             border-color: transparent;
             color: #fff;
-            box-shadow: 0 4px 10px rgba(13, 110, 253, 0.35);
+            box-shadow: 0 4px 10px rgba(78, 124, 255, 0.35);
         }
 
         .quick-pick-btn {
@@ -96,13 +96,13 @@
             font-weight: 700;
             font-size: 1.15rem;
             padding: 0.75rem 1rem;
-            background: #0d6efd;
+            background: #4e7cff;
             border: none;
         }
 
         .start-btn:hover:not(:disabled),
         .start-btn:focus:not(:disabled) {
-            background: #0b5ed7;
+            background: #3a68eb;
             color: #fff;
         }
 
@@ -124,7 +124,7 @@
 
         .timer-fill {
             height: 100%;
-            background: linear-gradient(90deg, #20c997, #0dcaf0);
+            background: linear-gradient(90deg, #3ecb8c, #2dc8e7);
             border-radius: 1rem;
             transition: width 0.1s linear, background 0.3s ease;
         }
@@ -148,7 +148,7 @@
             letter-spacing: 0.03em;
             padding: 0.35rem 1rem;
             border-radius: 2rem;
-            background: #0d6efd;
+            background: #4e7cff;
             color: #fff;
             margin-bottom: 1rem;
         }
@@ -248,7 +248,7 @@
 
         .pause-overlay .bi {
             font-size: 2.5rem;
-            color: #0d6efd;
+            color: #4e7cff;
         }
 
         .hint-btn {
@@ -738,9 +738,9 @@
 
                 return (
                     '<svg viewBox="0 0 ' + viewW + ' ' + viewH + '" width="' + Math.min(viewW * 2, 340) + '">' +
-                        '<polygon points="' + s1x + ',' + s1y + ' ' + s2x + ',' + s2y + ' ' + s3x + ',' + s3y + ' ' + s4x + ',' + s4y + '" fill="#dbe9ff" stroke="#0d6efd" stroke-width="3" stroke-linejoin="round" />' +
-                        '<polygon points="' + t1x + ',' + t1y + ' ' + t2x + ',' + t2y + ' ' + t3x + ',' + t3y + ' ' + t4x + ',' + t4y + '" fill="#f2f8ff" stroke="#0d6efd" stroke-width="3" stroke-linejoin="round" />' +
-                        '<rect x="' + padLeft + '" y="' + frontTopY + '" width="' + rectW + '" height="' + rectH + '" fill="#eaf2ff" stroke="#0d6efd" stroke-width="3" />' +
+                        '<polygon points="' + s1x + ',' + s1y + ' ' + s2x + ',' + s2y + ' ' + s3x + ',' + s3y + ' ' + s4x + ',' + s4y + '" fill="#dbe9ff" stroke="#4e7cff" stroke-width="3" stroke-linejoin="round" />' +
+                        '<polygon points="' + t1x + ',' + t1y + ' ' + t2x + ',' + t2y + ' ' + t3x + ',' + t3y + ' ' + t4x + ',' + t4y + '" fill="#f2f8ff" stroke="#4e7cff" stroke-width="3" stroke-linejoin="round" />' +
+                        '<rect x="' + padLeft + '" y="' + frontTopY + '" width="' + rectW + '" height="' + rectH + '" fill="#eaf2ff" stroke="#4e7cff" stroke-width="3" />' +
                         '<text x="' + (padLeft + rectW / 2) + '" y="' + (frontBottomY + 20) + '" text-anchor="middle" font-size="16" font-weight="700" fill="#495057">' + w + '</text>' +
                         '<text x="' + (padLeft - 10) + '" y="' + (frontTopY + rectH / 2 + 5) + '" text-anchor="end" font-size="16" font-weight="700" fill="#495057">' + h + '</text>' +
                         '<text x="' + depthLabelX + '" y="' + depthLabelY + '" text-anchor="start" font-size="16" font-weight="700" fill="#495057">' + depth + '</text>' +
@@ -765,11 +765,11 @@
 
                 return (
                     '<svg viewBox="0 0 ' + viewW + ' ' + viewH + '" width="' + Math.min(viewW * 2, 340) + '">' +
-                        '<line x1="' + (cx - rx) + '" y1="' + topY + '" x2="' + (cx - rx) + '" y2="' + bottomY + '" stroke="#0d6efd" stroke-width="3" />' +
-                        '<line x1="' + (cx + rx) + '" y1="' + topY + '" x2="' + (cx + rx) + '" y2="' + bottomY + '" stroke="#0d6efd" stroke-width="3" />' +
-                        '<path d="M ' + (cx - rx) + ' ' + bottomY + ' A ' + rx + ' ' + ry + ' 0 0 0 ' + (cx + rx) + ' ' + bottomY + '" fill="#eaf2ff" stroke="#0d6efd" stroke-width="3" />' +
+                        '<line x1="' + (cx - rx) + '" y1="' + topY + '" x2="' + (cx - rx) + '" y2="' + bottomY + '" stroke="#4e7cff" stroke-width="3" />' +
+                        '<line x1="' + (cx + rx) + '" y1="' + topY + '" x2="' + (cx + rx) + '" y2="' + bottomY + '" stroke="#4e7cff" stroke-width="3" />' +
+                        '<path d="M ' + (cx - rx) + ' ' + bottomY + ' A ' + rx + ' ' + ry + ' 0 0 0 ' + (cx + rx) + ' ' + bottomY + '" fill="#eaf2ff" stroke="#4e7cff" stroke-width="3" />' +
                         '<rect x="' + (cx - rx) + '" y="' + topY + '" width="' + (rx * 2) + '" height="' + heightPx + '" fill="#eaf2ff" stroke="none" opacity="0.6" />' +
-                        '<ellipse cx="' + cx + '" cy="' + topY + '" rx="' + rx + '" ry="' + ry + '" fill="#eaf2ff" stroke="#0d6efd" stroke-width="3" />' +
+                        '<ellipse cx="' + cx + '" cy="' + topY + '" rx="' + rx + '" ry="' + ry + '" fill="#eaf2ff" stroke="#4e7cff" stroke-width="3" />' +
                         '<line x1="' + cx + '" y1="' + topY + '" x2="' + (cx + rx) + '" y2="' + topY + '" stroke="#495057" stroke-width="2" stroke-dasharray="4,3" />' +
                         '<text x="' + (cx + rx / 2) + '" y="' + (topY - 8) + '" text-anchor="middle" font-size="14" font-weight="700" fill="#495057">r = ' + r + '</text>' +
                         '<line x1="' + heightLabelX + '" y1="' + topY + '" x2="' + heightLabelX + '" y2="' + bottomY + '" stroke="#495057" stroke-width="2" stroke-dasharray="4,3" />' +
@@ -801,10 +801,10 @@
 
                 return (
                     '<svg viewBox="0 0 ' + viewW + ' ' + viewH + '" width="' + Math.min(viewW * 2, 340) + '">' +
-                        '<polygon points="' + cx + ',' + cy + ' ' + cx2 + ',' + cy2 + ' ' + bx2 + ',' + by2 + ' ' + bx + ',' + by + '" fill="#f2f8ff" stroke="#0d6efd" stroke-width="2" stroke-linejoin="round" />' +
-                        '<line x1="' + ax + '" y1="' + ay + '" x2="' + ax2 + '" y2="' + ay2 + '" stroke="#0d6efd" stroke-width="2" stroke-dasharray="4,3" />' +
-                        '<polygon points="' + ax2 + ',' + ay2 + ' ' + bx2 + ',' + by2 + ' ' + cx2 + ',' + cy2 + '" fill="none" stroke="#0d6efd" stroke-width="2" />' +
-                        '<polygon points="' + ax + ',' + ay + ' ' + bx + ',' + by + ' ' + cx + ',' + cy + '" fill="#eaf2ff" stroke="#0d6efd" stroke-width="3" stroke-linejoin="round" />' +
+                        '<polygon points="' + cx + ',' + cy + ' ' + cx2 + ',' + cy2 + ' ' + bx2 + ',' + by2 + ' ' + bx + ',' + by + '" fill="#f2f8ff" stroke="#4e7cff" stroke-width="2" stroke-linejoin="round" />' +
+                        '<line x1="' + ax + '" y1="' + ay + '" x2="' + ax2 + '" y2="' + ay2 + '" stroke="#4e7cff" stroke-width="2" stroke-dasharray="4,3" />' +
+                        '<polygon points="' + ax2 + ',' + ay2 + ' ' + bx2 + ',' + by2 + ' ' + cx2 + ',' + cy2 + '" fill="none" stroke="#4e7cff" stroke-width="2" />' +
+                        '<polygon points="' + ax + ',' + ay + ' ' + bx + ',' + by + ' ' + cx + ',' + cy + '" fill="#eaf2ff" stroke="#4e7cff" stroke-width="3" stroke-linejoin="round" />' +
                         '<text x="' + ((ax + bx) / 2) + '" y="' + (ay + 20) + '" text-anchor="middle" font-size="15" font-weight="700" fill="#495057">' + base + '</text>' +
                         '<text x="' + (ax - 10) + '" y="' + ((ay + cy) / 2 + 5) + '" text-anchor="end" font-size="15" font-weight="700" fill="#495057">' + triHeight + '</text>' +
                         '<text x="' + lenLabelX + '" y="' + lenLabelY + '" text-anchor="start" font-size="14" font-weight="700" fill="#495057">' + length + '</text>' +

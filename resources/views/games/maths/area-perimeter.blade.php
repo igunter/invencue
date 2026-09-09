@@ -45,10 +45,10 @@
         }
 
         .table-toggle.active {
-            background: #0d6efd;
+            background: #4e7cff;
             border-color: transparent;
             color: #fff;
-            box-shadow: 0 4px 10px rgba(13, 110, 253, 0.35);
+            box-shadow: 0 4px 10px rgba(78, 124, 255, 0.35);
         }
 
         #shapeToggles,
@@ -75,10 +75,10 @@
         }
 
         .choice-toggle.active {
-            background: #0d6efd;
+            background: #4e7cff;
             border-color: transparent;
             color: #fff;
-            box-shadow: 0 4px 10px rgba(13, 110, 253, 0.35);
+            box-shadow: 0 4px 10px rgba(78, 124, 255, 0.35);
         }
 
         .quick-pick-btn {
@@ -96,13 +96,13 @@
             font-weight: 700;
             font-size: 1.15rem;
             padding: 0.75rem 1rem;
-            background: #0d6efd;
+            background: #4e7cff;
             border: none;
         }
 
         .start-btn:hover:not(:disabled),
         .start-btn:focus:not(:disabled) {
-            background: #0b5ed7;
+            background: #3a68eb;
             color: #fff;
         }
 
@@ -124,7 +124,7 @@
 
         .timer-fill {
             height: 100%;
-            background: linear-gradient(90deg, #20c997, #0dcaf0);
+            background: linear-gradient(90deg, #3ecb8c, #2dc8e7);
             border-radius: 1rem;
             transition: width 0.1s linear, background 0.3s ease;
         }
@@ -148,7 +148,7 @@
             letter-spacing: 0.03em;
             padding: 0.35rem 1rem;
             border-radius: 2rem;
-            background: #0d6efd;
+            background: #4e7cff;
             color: #fff;
             margin-bottom: 1rem;
         }
@@ -248,7 +248,7 @@
 
         .pause-overlay .bi {
             font-size: 2.5rem;
-            color: #0d6efd;
+            color: #4e7cff;
         }
 
         .hint-btn {
@@ -746,7 +746,7 @@
 
                 const svg =
                     '<svg viewBox="0 0 ' + viewW + ' ' + viewH + '" width="' + Math.min(viewW * 2, 340) + '">' +
-                        '<rect x="' + padLeft + '" y="' + padTop + '" width="' + rectW + '" height="' + rectH + '" fill="#eaf2ff" stroke="#0d6efd" stroke-width="3" />' +
+                        '<rect x="' + padLeft + '" y="' + padTop + '" width="' + rectW + '" height="' + rectH + '" fill="#eaf2ff" stroke="#4e7cff" stroke-width="3" />' +
                         grid +
                         '<text x="' + (padLeft + rectW / 2) + '" y="' + (padTop - 10) + '" text-anchor="middle" font-size="16" font-weight="700" fill="#495057">' + q.w + '</text>' +
                         '<text x="' + (padLeft - 12) + '" y="' + (padTop + rectH / 2 + 5) + '" text-anchor="end" font-size="16" font-weight="700" fill="#495057">' + q.h + '</text>' +

@@ -45,10 +45,10 @@
         }
 
         .table-toggle.active {
-            background: #20c997;
+            background: #3ecb8c;
             border-color: transparent;
             color: #fff;
-            box-shadow: 0 4px 10px rgba(32, 201, 151, 0.35);
+            box-shadow: 0 4px 10px rgba(78, 124, 255, 0.35);
         }
 
         .quick-pick-btn {
@@ -66,13 +66,13 @@
             font-weight: 700;
             font-size: 1.15rem;
             padding: 0.75rem 1rem;
-            background: #20c997;
+            background: #3ecb8c;
             border: none;
         }
 
         .start-btn:hover:not(:disabled),
         .start-btn:focus:not(:disabled) {
-            background: #0ca678;
+            background: #2fb377;
             color: #fff;
         }
 
@@ -94,7 +94,7 @@
 
         .timer-fill {
             height: 100%;
-            background: linear-gradient(90deg, #20c997, #0dcaf0);
+            background: linear-gradient(90deg, #3ecb8c, #2dc8e7);
             border-radius: 1rem;
             transition: width 0.1s linear, background 0.3s ease;
         }
@@ -125,7 +125,7 @@
         }
 
         .num-chip.chip-a { background: linear-gradient(135deg, #ff6b6b, #ff922b); }
-        .num-chip.chip-b { background: linear-gradient(135deg, #20c997, #0dcaf0); }
+        .num-chip.chip-b { background: linear-gradient(135deg, #3ecb8c, #2dc8e7); }
 
         .op-symbol {
             font-size: 2.25rem;
@@ -266,7 +266,7 @@
 
         .pause-overlay .bi {
             font-size: 2.5rem;
-            color: #20c997;
+            color: #3ecb8c;
         }
 
         .hint-btn {

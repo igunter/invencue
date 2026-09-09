@@ -36,10 +36,10 @@
         }
 
         .choice-toggle.active {
-            background: #0d6efd;
+            background: #4e7cff;
             border-color: transparent;
             color: #fff;
-            box-shadow: 0 4px 10px rgba(13, 110, 253, 0.35);
+            box-shadow: 0 4px 10px rgba(78, 124, 255, 0.35);
         }
 
         .mult-setup-card {
@@ -53,13 +53,13 @@
             font-weight: 700;
             font-size: 1.15rem;
             padding: 0.75rem 1rem;
-            background: #0d6efd;
+            background: #4e7cff;
             border: none;
         }
 
         .start-btn:hover:not(:disabled),
         .start-btn:focus:not(:disabled) {
-            background: #0b5ed7;
+            background: #3a68eb;
             color: #fff;
         }
 
@@ -81,7 +81,7 @@
 
         .timer-fill {
             height: 100%;
-            background: linear-gradient(90deg, #20c997, #0dcaf0);
+            background: linear-gradient(90deg, #3ecb8c, #2dc8e7);
             border-radius: 1rem;
             transition: width 0.1s linear, background 0.3s ease;
         }
@@ -105,7 +105,7 @@
             letter-spacing: 0.03em;
             padding: 0.35rem 1rem;
             border-radius: 2rem;
-            background: #0d6efd;
+            background: #4e7cff;
             color: #fff;
             margin-bottom: 1rem;
         }
@@ -205,7 +205,7 @@
 
         .pause-overlay .bi {
             font-size: 2.5rem;
-            color: #0d6efd;
+            color: #4e7cff;
         }
 
         .hint-btn {
@@ -659,25 +659,25 @@
             function shapeMarkup(shape) {
                 const cx = 110, cy = 110, r = 80;
                 if (shape.name === 'Square') {
-                    return '<polygon points="' + polygonPoints(cx, cy, r, 4, -45) + '" fill="#eaf2ff" stroke="#0d6efd" stroke-width="4" stroke-linejoin="round" />';
+                    return '<polygon points="' + polygonPoints(cx, cy, r, 4, -45) + '" fill="#eaf2ff" stroke="#4e7cff" stroke-width="4" stroke-linejoin="round" />';
                 }
                 if (shape.name === 'Equilateral Triangle') {
-                    return '<polygon points="' + polygonPoints(cx, cy, r, 3, -90) + '" fill="#eaf2ff" stroke="#0d6efd" stroke-width="4" stroke-linejoin="round" />';
+                    return '<polygon points="' + polygonPoints(cx, cy, r, 3, -90) + '" fill="#eaf2ff" stroke="#4e7cff" stroke-width="4" stroke-linejoin="round" />';
                 }
                 if (shape.name === 'Regular Pentagon') {
-                    return '<polygon points="' + polygonPoints(cx, cy, r, 5, -90) + '" fill="#eaf2ff" stroke="#0d6efd" stroke-width="4" stroke-linejoin="round" />';
+                    return '<polygon points="' + polygonPoints(cx, cy, r, 5, -90) + '" fill="#eaf2ff" stroke="#4e7cff" stroke-width="4" stroke-linejoin="round" />';
                 }
                 if (shape.name === 'Regular Hexagon') {
-                    return '<polygon points="' + polygonPoints(cx, cy, r, 6, -90) + '" fill="#eaf2ff" stroke="#0d6efd" stroke-width="4" stroke-linejoin="round" />';
+                    return '<polygon points="' + polygonPoints(cx, cy, r, 6, -90) + '" fill="#eaf2ff" stroke="#4e7cff" stroke-width="4" stroke-linejoin="round" />';
                 }
                 if (shape.name === 'Rectangle') {
-                    return '<rect x="40" y="65" width="140" height="90" fill="#eaf2ff" stroke="#0d6efd" stroke-width="4" />';
+                    return '<rect x="40" y="65" width="140" height="90" fill="#eaf2ff" stroke="#4e7cff" stroke-width="4" />';
                 }
                 if (shape.name === 'Isosceles Triangle') {
-                    return '<polygon points="110,40 30,150 190,150" fill="#eaf2ff" stroke="#0d6efd" stroke-width="4" stroke-linejoin="round" />';
+                    return '<polygon points="110,40 30,150 190,150" fill="#eaf2ff" stroke="#4e7cff" stroke-width="4" stroke-linejoin="round" />';
                 }
                 // Rhombus — unequal diagonals so it is a true rhombus, not a square
-                return '<polygon points="110,40 170,110 110,180 50,110" fill="#eaf2ff" stroke="#0d6efd" stroke-width="4" stroke-linejoin="round" />';
+                return '<polygon points="110,40 170,110 110,180 50,110" fill="#eaf2ff" stroke="#4e7cff" stroke-width="4" stroke-linejoin="round" />';
             }
 
             function renderShape(q) {

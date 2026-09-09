@@ -36,10 +36,10 @@
         }
 
         .choice-toggle.active {
-            background: #7048e8;
+            background: #8a5cff;
             border-color: transparent;
             color: #fff;
-            box-shadow: 0 4px 10px rgba(112, 72, 232, 0.35);
+            box-shadow: 0 4px 10px rgba(138, 92, 255, 0.35);
         }
 
         .mult-setup-card {
@@ -53,13 +53,13 @@
             font-weight: 700;
             font-size: 1.15rem;
             padding: 0.75rem 1rem;
-            background: #7048e8;
+            background: #8a5cff;
             border: none;
         }
 
         .start-btn:hover:not(:disabled),
         .start-btn:focus:not(:disabled) {
-            background: #5f3dc4;
+            background: #7444eb;
             color: #fff;
         }
 
@@ -81,7 +81,7 @@
 
         .timer-fill {
             height: 100%;
-            background: linear-gradient(90deg, #20c997, #0dcaf0);
+            background: linear-gradient(90deg, #3ecb8c, #2dc8e7);
             border-radius: 1rem;
             transition: width 0.1s linear, background 0.3s ease;
         }
@@ -105,7 +105,7 @@
             letter-spacing: 0.03em;
             padding: 0.35rem 1rem;
             border-radius: 2rem;
-            background: #7048e8;
+            background: #8a5cff;
             color: #fff;
             margin-bottom: 1rem;
         }
@@ -207,7 +207,7 @@
 
         .pause-overlay .bi {
             font-size: 2.5rem;
-            color: #7048e8;
+            color: #8a5cff;
         }
 
         .hint-btn {

@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Invencue — Learn by Playing</title>
+  <meta name="description" content="Invencue makes Maths, Science and History feel like play. Pick your age group, choose a subject and jump into a game.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    :root{
+      --ink:#13233f;
+      --muted:#63708a;
+      --blue:#4e7cff;
+      --purple:#8a5cff;
+      --cyan:#2dc8e7;
+      --yellow:#ffc83d;
+      --pink:#ff6fae;
+      --green:#3ecb8c;
+      --surface:#ffffff;
+      --page:#f7f9ff;
+      --border:rgba(19,35,63,.09);
+      --shadow:0 18px 45px rgba(39,57,110,.12);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:
+        radial-gradient(circle at 10% 5%,rgba(78,124,255,.10),transparent 24rem),
+        radial-gradient(circle at 90% 16%,rgba(138,92,255,.10),transparent 24rem),
+        var(--page);
+      color:var(--ink);
+      font-family:"Nunito",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    }
+
+    a{text-decoration:none}
+    .container-xl{max-width:1220px}
+
+    .navbar{
+      background:rgba(247,249,255,.88);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid rgba(19,35,63,.06);
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:.72rem;
+      color:var(--ink);
+      font-family:"Space Grotesk",sans-serif;
+      font-size:1.45rem;
+      font-weight:700;
+      letter-spacing:-.04em;
+    }
+
+    .brand-mark{width:38px;height:38px;flex:0 0 38px}
+    .nav-link{font-weight:800;color:#4b5872!important}
+    .nav-link:hover{color:var(--blue)!important}
+
+    .btn-main{
+      border:0;
+      color:white;
+      font-weight:900;
+      border-radius:999px;
+      padding:.85rem 1.25rem;
+      background:linear-gradient(135deg,var(--blue),var(--purple));
+      box-shadow:0 10px 24px rgba(78,124,255,.24);
+    }
+
+    .btn-main:hover{color:white;transform:translateY(-1px)}
+
+    .hero{
+      position:relative;
+      padding:clamp(3.5rem,8vw,7rem) 0 3rem;
+      overflow:hidden;
+    }
+
+    .hero-kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:.5rem;
+      border:1px solid rgba(78,124,255,.16);
+      background:rgba(255,255,255,.7);
+      border-radius:999px;
+      padding:.45rem .75rem;
+      font-size:.82rem;
+      font-weight:900;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+      color:#53607a;
+    }
+
+    .hero h1{
+      max-width:720px;
+      margin:.9rem 0 1.1rem;
+      font-size:clamp(2.65rem,6vw,5.5rem);
+      line-height:.95;
+      letter-spacing:-.055em;
+      font-weight:900;
+    }
+
+    .hero h1 span{
+      background:linear-gradient(100deg,var(--blue),var(--purple),var(--pink));
+      -webkit-background-clip:text;
+      color:transparent;
+    }
+
+    .hero-copy{
+      max-width:640px;
+      color:var(--muted);
+      font-size:clamp(1.05rem,1.6vw,1.25rem);
+      line-height:1.65;
+    }
+
+    .age-picker{
+      margin-top:1.65rem;
+      display:flex;
+      flex-wrap:wrap;
+      gap:.65rem;
+    }
+
+    .age-btn{
+      border:1px solid var(--border);
+      background:white;
+      color:var(--ink);
+      border-radius:16px;
+      padding:.82rem 1rem;
+      font-weight:900;
+      box-shadow:0 8px 20px rgba(39,57,110,.07);
+    }
+
+    .age-btn.active,.age-btn:hover{
+      color:white;
+      background:linear-gradient(135deg,var(--blue),var(--purple));
+      border-color:transparent;
+    }
+
+    .hero-art{
+      position:relative;
+      min-height:430px;
+      display:grid;
+      place-items:center;
+    }
+
+    .art-panel{
+      position:absolute;
+      inset:5% 0 0 8%;
+      border-radius:36px;
+      transform:rotate(3deg);
+      background:linear-gradient(145deg,#eaf0ff,#f8efff);
+      border:1px solid white;
+      box-shadow:var(--shadow);
+    }
+
+    .art-main{
+      position:relative;
+      width:min(100%,520px);
+      filter:drop-shadow(0 28px 35px rgba(69,80,130,.14));
+    }
+
+    .floating-chip{
+      position:absolute;
+      padding:.7rem .9rem;
+      border-radius:16px;
+      background:rgba(255,255,255,.94);
+      border:1px solid rgba(19,35,63,.07);
+      box-shadow:0 14px 25px rgba(39,57,110,.12);
+      font-weight:900;
+    }
+
+    .chip-a{top:11%;left:2%;transform:rotate(-7deg)}
+    .chip-b{right:0;top:25%;transform:rotate(5deg)}
+    .chip-c{left:7%;bottom:8%;transform:rotate(4deg)}
+
+    .section{padding:4.4rem 0}
+    .section-title{
+      font-size:clamp(2rem,4vw,3.2rem);
+      font-weight:900;
+      letter-spacing:-.04em;
+      margin-bottom:.7rem;
+    }
+    .section-intro{color:var(--muted);max-width:680px;font-size:1.08rem}
+
+    .subject-card{
+      height:100%;
+      background:white;
+      border:1px solid var(--border);
+      border-radius:26px;
+      padding:1.3rem;
+      box-shadow:0 10px 30px rgba(39,57,110,.07);
+      transition:.2s ease;
+      overflow:hidden;
+      position:relative;
+    }
+    .subject-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+    .subject-icon{
+      width:72px;height:72px;border-radius:20px;
+      display:grid;place-items:center;
+      margin-bottom:1.15rem;
+    }
+    .subject-icon svg{width:48px;height:48px}
+    .subject-card h3{font-size:1.35rem;font-weight:900;margin-bottom:.35rem}
+    .subject-card p{color:var(--muted);margin-bottom:1rem}
+    .subject-meta{font-size:.82rem;font-weight:900;color:#60708d}
+    .go{
+      position:absolute;right:1.1rem;bottom:1rem;
+      width:38px;height:38px;border-radius:50%;
+      display:grid;place-items:center;background:#f2f5ff;color:var(--blue);
+      font-size:1.35rem;font-weight:900;
+    }
+
+    .maths .subject-icon{background:#e9efff}
+    .biology .subject-icon{background:#e7fbf2}
+    .chemistry .subject-icon{background:#fff2e5}
+    .physics .subject-icon{background:#f2eaff}
+    .space .subject-icon{background:#e9f8ff}
+    .history .subject-icon{background:#fff0f3}
+
+    .featured{
+      background:linear-gradient(135deg,#172946,#263866);
+      color:white;border-radius:34px;padding:clamp(1.5rem,4vw,3rem);overflow:hidden;
+      position:relative;
+    }
+    .featured p{color:#cbd4ea}
+    .featured-badge{
+      display:inline-block;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.12);
+      border-radius:999px;padding:.35rem .65rem;font-size:.8rem;font-weight:900;
+    }
+    .game-window{
+      background:#f8fbff;border-radius:24px;padding:1rem;color:var(--ink);
+      box-shadow:0 18px 45px rgba(0,0,0,.18);
+    }
+    .game-header{display:flex;gap:.4rem;margin-bottom:.85rem}
+    .dot{width:10px;height:10px;border-radius:50%;background:#c8d0df}
+    .game-board{
+      border-radius:18px;min-height:220px;
+      background:
+        linear-gradient(135deg,rgba(78,124,255,.13),rgba(138,92,255,.10)),
+        white;
+      display:grid;place-items:center;padding:1rem;text-align:center;
+    }
+    .equation{font-family:"Space Grotesk";font-size:clamp(2rem,5vw,4rem);font-weight:700}
+
+    .feature-strip{
+      background:white;border:1px solid var(--border);border-radius:26px;
+      box-shadow:0 12px 30px rgba(39,57,110,.07);
+      padding:1rem;
+    }
+    .mini-feature{
+      display:flex;align-items:center;gap:.85rem;padding:.8rem;
+    }
+    .mini-icon{
+      width:46px;height:46px;flex:0 0 46px;border-radius:14px;
+      display:grid;place-items:center;background:#f1f4ff;font-size:1.2rem;
+    }
+    .mini-feature strong{display:block;font-weight:900}
+    .mini-feature small{color:var(--muted)}
+
+    .cta{
+      background:linear-gradient(135deg,#eaf0ff,#f5ecff 50%,#fff0f7);
+      border:1px solid white;border-radius:34px;padding:clamp(2rem,5vw,4rem);text-align:center;
+    }
+
+    footer{padding:2.5rem 0;color:#77839a;font-size:.92rem}
+
+    @media(max-width:991.98px){
+      .hero{padding-top:2.5rem}
+      .hero-art{min-height:360px;margin-top:1rem}
+      .art-panel{inset:8% 4% 0 4%}
+    }
+    @media(max-width:575.98px){
+      .hero-art{min-height:310px}
+      .floating-chip{font-size:.78rem;padding:.55rem .7rem}
+      .section{padding:3rem 0}
+      .subject-card{border-radius:22px}
+      .navbar-brand .brand-word{font-size:1.25rem}
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container-xl py-2">
+    <a class="navbar-brand brand" href="#">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+        <defs>
+          <linearGradient id="logoGradient" x1="0" x2="1" y1="0" y2="1">
+            <stop offset="0" stop-color="#4e7cff"/>
+            <stop offset=".55" stop-color="#8a5cff"/>
+            <stop offset="1" stop-color="#ff6fae"/>
+          </linearGradient>
+        </defs>
+        <path fill="url(#logoGradient)" d="M13 8h38a7 7 0 0 1 7 7v34a7 7 0 0 1-7 7H13a7 7 0 0 1-7-7V15a7 7 0 0 1 7-7Z"/>
+        <path d="M19 21h8v22h-8zm14 0h12v6H33zm0 10h12v6H33zm0 10h8v2h-8z" fill="#fff" opacity=".96"/>
+        <circle cx="48" cy="43" r="4" fill="#ffc83d"/>
+      </svg>
+      <span class="brand-word">Invencue</span>
+    </a>
+
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+        <li class="nav-item"><a class="nav-link" href="#subjects">Subjects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#featured">Games</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Progress</a></li>
+        <li class="nav-item ms-lg-2"><a class="btn btn-main" href="#">Start playing</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container-xl">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-7">
+        <div class="hero-kicker">⚡ Learn. Play. Level up.</div>
+        <h1>School stuff.<br><span>Game mode on.</span></h1>
+        <p class="hero-copy">
+          Pick your age, choose a subject and get straight into fast, interactive games
+          designed to make tricky topics click.
+        </p>
+
+        <div class="mt-4 d-flex gap-2 flex-wrap">
+          <a href="#subjects" class="btn btn-main btn-lg">Explore games →</a>
+          <a href="#featured" class="btn btn-light btn-lg rounded-pill px-4 fw-bold border">Try a challenge</a>
+        </div>
+
+        <div class="mt-4">
+          <div class="fw-bold mb-2">Choose your age range</div>
+          <div class="age-picker" id="agePicker">
+            <button class="age-btn active" data-age="6-9">6–9</button>
+            <button class="age-btn" data-age="10-13">10–13</button>
+            <button class="age-btn" data-age="14-16">14–16</button>
+            <button class="age-btn" data-age="16-18">16–18</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-panel"></div>
+
+          <svg class="art-main" viewBox="0 0 560 480">
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0" stop-color="#4e7cff"/>
+                <stop offset="1" stop-color="#8a5cff"/>
+              </linearGradient>
+              <linearGradient id="g2" x1="0" x2="1">
+                <stop offset="0" stop-color="#2dc8e7"/>
+                <stop offset="1" stop-color="#3ecb8c"/>
+              </linearGradient>
+            </defs>
+
+            <circle cx="280" cy="236" r="180" fill="#fff" opacity=".96"/>
+            <path d="M175 165c18-58 70-94 128-87 59 7 102 53 108 111 7 67-37 133-108 145-77 14-149-40-155-117-2-18 1-36 7-52Z" fill="url(#g1)" opacity=".10"/>
+
+            <!-- console -->
+            <rect x="150" y="156" width="260" height="174" rx="34" fill="#172946"/>
+            <rect x="178" y="181" width="204" height="112" rx="18" fill="#f8fbff"/>
+            <path d="M206 254 235 218l27 25 35-46 56 66" fill="none" stroke="#4e7cff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="235" cy="218" r="9" fill="#ffc83d"/>
+            <circle cx="297" cy="197" r="9" fill="#ff6fae"/>
+            <rect x="222" y="320" width="116" height="24" rx="12" fill="#263866"/>
+
+            <!-- orbit / learning icons -->
+            <path d="M115 210c-19 79 24 169 109 199 88 31 189-18 220-111" fill="none" stroke="#8a5cff" stroke-width="4" stroke-linecap="round" stroke-dasharray="7 12" opacity=".45"/>
+            <circle cx="111" cy="227" r="29" fill="#ffc83d"/>
+            <path d="M99 228h24M111 216v24" stroke="#172946" stroke-width="6" stroke-linecap="round"/>
+
+            <circle cx="442" cy="298" r="30" fill="url(#g2)"/>
+            <path d="M427 302c12-24 26-24 31-7-8 17-18 23-31 7Z" fill="#fff"/>
+            <path d="M443 282v41" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+
+            <circle cx="408" cy="112" r="26" fill="#ff6fae"/>
+            <path d="M395 120c9-19 18-26 27-22-2 17-10 27-27 22Z" fill="#fff"/>
+            <circle cx="400" cy="103" r="5" fill="#172946"/>
+
+            <!-- stars -->
+            <g fill="#4e7cff" opacity=".65">
+              <path d="m136 112 5 12 12 5-12 5-5 12-5-12-12-5 12-5Z"/>
+              <path d="m443 188 4 9 9 4-9 4-4 9-4-9-9-4 9-4Z"/>
+            </g>
+          </svg>
+
+          <div class="floating-chip chip-a">🧠 +250 XP</div>
+          <div class="floating-chip chip-b">🚀 7 day streak</div>
+          <div class="floating-chip chip-c">✓ Level complete</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="section pt-2">
+    <div class="container-xl">
+      <div class="feature-strip">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <div class="mini-feature">
+              <div class="mini-icon">🎮</div>
+              <div><strong>Actually interactive</strong><small>No endless worksheets.</small></div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="mini-feature">
+              <div class="mini-icon">⚡</div>
+              <div><strong>Quick sessions</strong><small>Perfect for 5–15 minute bursts.</small></div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="mini-feature">
+              <div class="mini-icon">📈</div>
+              <div><strong>Built to progress</strong><small>Games get harder as you improve.</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="subjects">
+    <div class="container-xl">
+      <div class="row align-items-end mb-4">
+        <div class="col-lg-8">
+          <div class="text-uppercase fw-black small text-primary mb-2" style="font-weight:900;letter-spacing:.08em">Pick a subject</div>
+          <h2 class="section-title">What are you playing today?</h2>
+          <p class="section-intro mb-0">Each subject can contain mini-games, challenges, quizzes and progression levels tailored to the selected age group.</p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-sm-6 col-lg-4">
+          <a href="#" class="subject-card maths d-block text-reset">
+            <div class="subject-icon">
+              <svg viewBox="0 0 64 64">
+                <rect x="9" y="11" width="46" height="42" rx="11" fill="#4e7cff"/>
+                <path d="M19 25h12M25 19v12M37 21h9M37 31h9M20 42h10M39 38l8 8m0-8-8 8" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Maths</h3>
+            <p>Numbers, fractions, algebra, geometry and logic without the worksheet vibe.</p>
+            <span class="subject-meta">12 games · all ages</span><span class="go">›</span>
+          </a>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <a href="#" class="subject-card biology d-block text-reset">
+            <div class="subject-icon">
+              <svg viewBox="0 0 64 64">
+                <path d="M43 8C24 12 13 27 15 44c12 4 25 0 33-10 7-9 8-19 7-26-4-1-8-1-12 0Z" fill="#3ecb8c"/>
+                <path d="M20 46c7-13 15-21 27-29M30 33c-4-2-7-5-9-9M36 27c3 0 7 1 10 3" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Biology</h3>
+            <p>Cells, bodies, ecosystems and genetics turned into visual challenges.</p>
+            <span class="subject-meta">8 games · age adapted</span><span class="go">›</span>
+          </a>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <a href="#" class="subject-card chemistry d-block text-reset">
+            <div class="subject-icon">
+              <svg viewBox="0 0 64 64">
+                <path d="M26 8h12v18l13 21c2 4-1 9-6 9H19c-5 0-8-5-6-9l13-21V8Z" fill="#ff9f43"/>
+                <path d="M22 41h21M26 15h12" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+                <circle cx="28" cy="47" r="3" fill="#fff"/><circle cx="38" cy="43" r="2" fill="#fff"/>
+              </svg>
+            </div>
+            <h3>Chemistry</h3>
+            <p>Elements, reactions, bonding and equations — with fewer burnt lab benches.</p>
+            <span class="subject-meta">7 games · 10+</span><span class="go">›</span>
+          </a>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <a href="#" class="subject-card physics d-block text-reset">
+            <div class="subject-icon">
+              <svg viewBox="0 0 64 64">
+                <ellipse cx="32" cy="32" rx="25" ry="10" fill="none" stroke="#8a5cff" stroke-width="4"/>
+                <ellipse cx="32" cy="32" rx="25" ry="10" transform="rotate(60 32 32)" fill="none" stroke="#8a5cff" stroke-width="4"/>
+                <ellipse cx="32" cy="32" rx="25" ry="10" transform="rotate(120 32 32)" fill="none" stroke="#8a5cff" stroke-width="4"/>
+                <circle cx="32" cy="32" r="6" fill="#8a5cff"/>
+              </svg>
+            </div>
+            <h3>Physics</h3>
+            <p>Forces, motion, electricity, waves and energy through puzzles and simulations.</p>
+            <span class="subject-meta">9 games · 10+</span><span class="go">›</span>
+          </a>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <a href="#" class="subject-card space d-block text-reset">
+            <div class="subject-icon">
+              <svg viewBox="0 0 64 64">
+                <circle cx="30" cy="32" r="16" fill="#2dc8e7"/>
+                <ellipse cx="32" cy="34" rx="27" ry="8" transform="rotate(-15 32 34)" fill="none" stroke="#172946" stroke-width="4"/>
+                <circle cx="48" cy="15" r="5" fill="#ffc83d"/>
+              </svg>
+            </div>
+            <h3>Earth & Space</h3>
+            <p>Planets, weather, geology and our place in a very big universe.</p>
+            <span class="subject-meta">6 games · all ages</span><span class="go">›</span>
+          </a>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <a href="#" class="subject-card history d-block text-reset">
+            <div class="subject-icon">
+              <svg viewBox="0 0 64 64">
+                <path d="M11 18 32 8l21 10v7H11Z" fill="#ff6fae"/>
+                <path d="M16 29h7v18h-7zm13 0h7v18h-7zm13 0h7v18h-7zM10 51h44" stroke="#ff6fae" stroke-width="5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>History</h3>
+            <p>Timelines, people, places and events explored through missions and choices.</p>
+            <span class="subject-meta">Coming next</span><span class="go">›</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section pt-0" id="featured">
+    <div class="container-xl">
+      <div class="featured">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <span class="featured-badge">FEATURED CHALLENGE</span>
+            <h2 class="section-title mt-3 mb-3">Can you beat the clock?</h2>
+            <p class="fs-5">Solve as many equations as you can before the timer hits zero. Difficulty automatically adjusts to the age range selected above.</p>
+            <div class="d-flex flex-wrap gap-2 mt-4">
+              <a href="#" class="btn btn-light rounded-pill px-4 py-2 fw-black" style="font-weight:900">Play now →</a>
+              <span class="align-self-center small text-white-50">2–5 mins · Maths · Quick game</span>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="game-window">
+              <div class="game-header"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+              <div class="game-board">
+                <div>
+                  <div class="small fw-bold text-uppercase text-secondary mb-2">Question 7 of 10</div>
+                  <div class="equation">18 × 7 = ?</div>
+                  <div class="progress mt-4" style="height:9px">
+                    <div class="progress-bar" style="width:70%;background:linear-gradient(90deg,#4e7cff,#8a5cff)"></div>
+                  </div>
+                  <div class="d-flex justify-content-between mt-2 small fw-bold text-secondary"><span>🔥 6 streak</span><span>00:18</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section pt-0">
+    <div class="container-xl">
+      <div class="cta">
+        <div class="hero-kicker mb-3">No boring bits required</div>
+        <h2 class="section-title">Ready to find your next game?</h2>
+        <p class="section-intro mx-auto">Start with an age range, then jump into a subject. No complicated setup needed.</p>
+        <a href="#subjects" class="btn btn-main btn-lg mt-3">Choose a subject →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container-xl d-flex flex-column flex-md-row justify-content-between gap-2">
+    <div>© 2026 Invencue. Learn by playing.</div>
+    <div class="d-flex gap-3"><a href="#" class="text-reset">About</a><a href="#" class="text-reset">Parents</a><a href="#" class="text-reset">Privacy</a></div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.querySelectorAll('.age-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.age-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      localStorage.setItem('invencue_age', btn.dataset.age);
+    });
+  });
+
+  const savedAge = localStorage.getItem('invencue_age');
+  if (savedAge) {
+    const saved = document.querySelector(`.age-btn[data-age="${savedAge}"]`);
+    if (saved) {
+      document.querySelectorAll('.age-btn').forEach(b => b.classList.remove('active'));
+      saved.classList.add('active');
+    }
+  }
+</script>
+</body>
+</html>

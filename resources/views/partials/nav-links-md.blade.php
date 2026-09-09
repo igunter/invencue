@@ -22,13 +22,13 @@
         </li>
     @else
         <li class="nav-item me-2">
-            <a href="{{ route('login') }}" class="btn btn-outline-light btn-sm {{ request()->routeIs('login') ? 'active' : '' }}">
+            <a href="{{ route('login') }}" class="nav-link {{ request()->routeIs('login') ? 'active' : '' }}">
                 <i class="bi bi-box-arrow-in-right me-1"></i>Log in
             </a>
         </li>
         @if (Route::has('register'))
-            <li class="nav-item">
-                <a href="{{ route('register') }}" class="btn btn-outline-light btn-sm {{ request()->routeIs('register') ? 'active' : '' }}">
+            <li class="nav-item ms-lg-2">
+                <a href="{{ route('register') }}" class="btn btn-main btn-sm {{ request()->routeIs('register') ? 'active' : '' }}">
                     <i class="bi bi-person-plus me-1"></i>Register
                 </a>
             </li>

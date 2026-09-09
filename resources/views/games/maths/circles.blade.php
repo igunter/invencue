@@ -45,10 +45,10 @@
         }
 
         .table-toggle.active {
-            background: #0d6efd;
+            background: #4e7cff;
             border-color: transparent;
             color: #fff;
-            box-shadow: 0 4px 10px rgba(13, 110, 253, 0.35);
+            box-shadow: 0 4px 10px rgba(78, 124, 255, 0.35);
         }
 
         #targetToggles {
@@ -74,10 +74,10 @@
         }
 
         .choice-toggle.active {
-            background: #0d6efd;
+            background: #4e7cff;
             border-color: transparent;
             color: #fff;
-            box-shadow: 0 4px 10px rgba(13, 110, 253, 0.35);
+            box-shadow: 0 4px 10px rgba(78, 124, 255, 0.35);
         }
 
         .quick-pick-btn {
@@ -95,13 +95,13 @@
             font-weight: 700;
             font-size: 1.15rem;
             padding: 0.75rem 1rem;
-            background: #0d6efd;
+            background: #4e7cff;
             border: none;
         }
 
         .start-btn:hover:not(:disabled),
         .start-btn:focus:not(:disabled) {
-            background: #0b5ed7;
+            background: #3a68eb;
             color: #fff;
         }
 
@@ -123,7 +123,7 @@
 
         .timer-fill {
             height: 100%;
-            background: linear-gradient(90deg, #20c997, #0dcaf0);
+            background: linear-gradient(90deg, #3ecb8c, #2dc8e7);
             border-radius: 1rem;
             transition: width 0.1s linear, background 0.3s ease;
         }
@@ -147,7 +147,7 @@
             letter-spacing: 0.03em;
             padding: 0.35rem 1rem;
             border-radius: 2rem;
-            background: #0d6efd;
+            background: #4e7cff;
             color: #fff;
             margin-bottom: 1rem;
         }
@@ -252,7 +252,7 @@
 
         .pause-overlay .bi {
             font-size: 2.5rem;
-            color: #0d6efd;
+            color: #4e7cff;
         }
 
         .hint-btn {
@@ -711,7 +711,7 @@
 
                 const svg =
                     '<svg viewBox="0 0 220 220" width="260">' +
-                        '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '" fill="#eaf2ff" stroke="#0d6efd" stroke-width="3" />' +
+                        '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '" fill="#eaf2ff" stroke="#4e7cff" stroke-width="3" />' +
                         '<line x1="' + cx + '" y1="' + cy + '" x2="' + (cx + r) + '" y2="' + cy + '" stroke="#495057" stroke-width="2" stroke-dasharray="4 3" />' +
                         '<circle cx="' + cx + '" cy="' + cy + '" r="3" fill="#495057" />' +
                         '<text x="' + (cx + r / 2) + '" y="' + (cy - 8) + '" text-anchor="middle" font-size="15" font-weight="700" fill="#495057">r = ' + q.r + '</text>' +
