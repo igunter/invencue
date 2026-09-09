@@ -89,6 +89,11 @@ footer {
     width: 250px;
 }
 
+.subjects-dropdown-menu {
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
 .site-footer {
     background: transparent;
     color: #77839a;
