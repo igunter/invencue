@@ -161,7 +161,7 @@
                         <div class="subject-icon"><i class="bi {{ $style['icon'] }}"></i></div>
                         <h3>{{ $category->name }}</h3>
                         <p class="d-none d-lg-block">Jump in and start playing games built for your age group.</p>
-                        <span class="go">&rsaquo;</span>
+                        <span class="go d-none d-lg-grid">&rsaquo;</span>
                     </a>
                 </div>
             @endforeach
