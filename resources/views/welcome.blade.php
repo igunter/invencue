@@ -13,6 +13,11 @@
             'history'     => ['icon' => 'bi-hourglass-split',   'accent' => '#ff6fae', 'tint' => '#fff0f3'],
             'geography'   => ['icon' => 'bi-map',               'accent' => '#3ecb8c', 'tint' => '#e7fbf2'],
             'psychology'  => ['icon' => 'bi-emoji-smile',       'accent' => '#ff6fae', 'tint' => '#fff0f3'],
+            'computing'   => ['icon' => 'bi-cpu',               'accent' => '#ffc83d', 'tint' => '#fff8e5'],
+            'art-design'  => ['icon' => 'bi-palette',           'accent' => '#8a5cff', 'tint' => '#f2eaff'],
+            'music'       => ['icon' => 'bi-music-note-beamed', 'accent' => '#ff6fae', 'tint' => '#fff0f3'],
+            'religious-education' => ['icon' => 'bi-stars',     'accent' => '#2dc8e7', 'tint' => '#e9f8ff'],
+            'money-financial-literacy' => ['icon' => 'bi-piggy-bank', 'accent' => '#ff9f43', 'tint' => '#fff2e5'],
         ];
         $defaultStyle = ['icon' => 'bi-grid', 'accent' => '#4e7cff', 'tint' => '#e9efff'];
 
