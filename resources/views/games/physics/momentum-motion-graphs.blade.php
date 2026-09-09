@@ -36,6 +36,10 @@
                 'A flat horizontal line on a velocity-time graph': 'The object is moving at a constant velocity.',
                 'The gradient of a velocity-time graph': "Represents the object's acceleration.",
                 'The area under a velocity-time graph': 'Represents the distance travelled by the object.',
+                'A curved, flattening line on a distance-time graph': 'The object is decelerating — its speed is decreasing.',
+                'A line sloping back down on a distance-time graph': 'The object is moving back towards its starting point.',
+                'A downward sloping line on a velocity-time graph': 'The object is decelerating, and may eventually stop or reverse direction.',
+                'The steepness (gradient) of a distance-time graph': "Represents the object's speed — the steeper the line, the faster it's moving.",
             };
             const GRAPH_NAMES = Object.keys(GRAPHS);
 

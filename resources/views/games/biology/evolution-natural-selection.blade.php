@@ -34,6 +34,7 @@
                 'Selective breeding': 'Choosing parents with desired characteristics to breed together, producing offspring with those characteristics.',
                 'Antibiotic resistance': 'When bacteria evolve so that an antibiotic no longer kills them.',
                 'Evolution': 'The gradual change in the inherited characteristics of a population over many generations.',
+                'Common ancestor': 'A single earlier species from which two or more different species have evolved.',
             };
             const TERM_NAMES = Object.keys(TERMS);
 
@@ -42,6 +43,12 @@
                 'Antibiotic-resistant bacteria': 'Natural selection happening quickly — bacteria reproduce fast, so resistant ones survive treatment and multiply.',
                 "Darwin's finches": 'Speciation — finches on different islands evolved different beak shapes suited to different food sources.',
                 'The fossil record': 'Evidence for evolution — showing how organisms have changed gradually over millions of years.',
+                'Giraffe necks': 'Natural selection — giraffes with longer necks could reach more food and were more likely to survive and breed.',
+                'Pesticide-resistant insects': 'Natural selection — insects that survive pesticide exposure pass on resistance genes to their offspring.',
+                'Dog breeds': 'Selective breeding — humans chose dogs with desired traits to breed together over many generations.',
+                'The Galápagos Islands': "Evidence for evolution — isolated islands where unique species evolved separately, inspiring Darwin's theory.",
+                'Bacteria evolving in the lab': 'Natural selection observed directly — bacteria populations change quickly because they reproduce so fast.',
+                'Woolly mammoth extinction': 'Extinction — a species that died out completely, likely due to climate change and hunting.',
             };
             const EXAMPLE_NAMES = Object.keys(EXAMPLES);
 

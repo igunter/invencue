@@ -25,12 +25,21 @@
     <script src="{{ asset('js/science-quiz.js') }}"></script>
     <script>
         (function() {
-            const STAGES = ['Evaporation', 'Condensation', 'Precipitation', 'Collection'];
+            const STAGES = [
+                'Evaporation', 'Transpiration', 'Sublimation', 'Condensation', 'Precipitation',
+                'Interception', 'Infiltration', 'Percolation', 'Runoff', 'Collection',
+            ];
 
             const TERMS = {
                 'Evaporation': 'Water heats up and turns into water vapour (a gas), rising into the air.',
+                'Transpiration': 'Water evaporates from tiny pores in plant leaves, adding more water vapour to the air.',
+                'Sublimation': 'Ice or snow turns directly into water vapour without melting into liquid first.',
                 'Condensation': 'Water vapour cools and turns back into tiny liquid droplets, forming clouds.',
                 'Precipitation': 'Water falls from clouds as rain, snow, sleet or hail.',
+                'Interception': 'Falling rain or snow is caught by leaves, branches or buildings before it reaches the ground.',
+                'Infiltration': 'Water soaks down into the soil at the ground surface.',
+                'Percolation': 'Water already in the soil seeps further down through rock layers to become groundwater.',
+                'Runoff': 'Water flows over the land surface into streams, rivers and eventually the sea.',
                 'Collection': 'Water gathers in rivers, lakes and oceans, ready to evaporate again.',
             };
 

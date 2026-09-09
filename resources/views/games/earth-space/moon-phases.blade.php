@@ -37,6 +37,10 @@
                 'Last Quarter': "Half of the Moon's face is lit, appearing as a left-hand half circle.",
                 'Waxing': 'The lit part of the Moon is growing bigger each night.',
                 'Waning': 'The lit part of the Moon is getting smaller each night.',
+                'Waxing Crescent': "A thin, growing sliver of the Moon is lit, appearing just after the New Moon.",
+                'Waxing Gibbous': "More than half of the Moon is lit and growing, appearing between the First Quarter and Full Moon.",
+                'Waning Gibbous': "More than half of the Moon is lit and shrinking, appearing between the Full Moon and Last Quarter.",
+                'Waning Crescent': "A thin, shrinking sliver of the Moon is lit, appearing just before the New Moon.",
             };
             const FACT_NAMES = Object.keys(FACTS);
 

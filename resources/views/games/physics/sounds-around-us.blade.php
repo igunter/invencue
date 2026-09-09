@@ -32,6 +32,10 @@
                 'A whisper': 'Quiet',
                 'A ticking clock': 'Quiet',
                 'Leaves rustling in the wind': 'Quiet',
+                'A fire alarm': 'Loud',
+                'A crowd cheering at a stadium': 'Loud',
+                'A pin dropping': 'Quiet',
+                'A gentle breeze': 'Quiet',
             };
             const VOLUME_NAMES = Object.keys(VOLUME);
 
@@ -42,6 +46,10 @@
                 'A lion roaring': 'Low',
                 'A bass drum': 'Low',
                 'Thunder rumbling': 'Low',
+                'A tuba playing': 'Low',
+                'A flute playing': 'High',
+                'An elephant trumpeting': 'Low',
+                'A kettle whistling': 'High',
             };
             const PITCH_NAMES = Object.keys(PITCH);
 

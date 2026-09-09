@@ -30,6 +30,11 @@
                 'Magnesium added to copper sulfate solution': 'Magnesium displaces copper from the solution, because magnesium is more reactive.',
                 'Zinc added to iron sulfate solution': 'Zinc displaces iron from the solution, because zinc is more reactive.',
                 'Gold added to dilute acid': 'No reaction happens — gold is far too unreactive.',
+                'Potassium reacting with water': 'Reacts violently, fizzing and moving around, and can even ignite — potassium is very reactive.',
+                'Iron reacting with water': 'Reacts very slowly, only rusting gradually over time in the presence of water and oxygen.',
+                'Copper added to dilute acid': 'No reaction happens — copper is below hydrogen in the reactivity series.',
+                'Order of reactivity for potassium, calcium and copper': 'Potassium is most reactive, calcium is next, and copper is least reactive.',
+                'Extracting a metal below carbon in the reactivity series': 'Can be extracted from its ore by reduction with carbon, such as extracting iron in a blast furnace.',
             };
             const REACTIVITY_NAMES = Object.keys(REACTIVITY);
 
@@ -39,6 +44,11 @@
                 'Electrolyte': 'A liquid or molten substance that conducts electricity because it contains free-moving ions.',
                 'Electrolysis of molten lead bromide': 'Lead forms at the cathode; orange bromine gas forms at the anode.',
                 'Electrolysis of copper sulfate solution with copper electrodes': 'Copper is deposited on the cathode while the anode dissolves — this is used to purify copper.',
+                'Electrolyte must be molten or dissolved': 'The ions need to be free to move so they can carry charge through the electrolyte — solid ionic compounds cannot conduct.',
+                'Electrolysis of aqueous sodium chloride solution': 'Hydrogen forms at the cathode and chlorine forms at the anode, while sodium hydroxide solution remains.',
+                'Electrode': 'A rod, usually made of an inert material like graphite or platinum, that carries electric current into or out of an electrolyte.',
+                'Electroplating': 'Using electrolysis to coat one metal with a thin layer of another metal, often for protection or appearance.',
+                'Half equation': 'An equation showing the electrons gained or lost by ions at one electrode during electrolysis.',
             };
             const ELECTROLYSIS_NAMES = Object.keys(ELECTROLYSIS);
 

@@ -45,6 +45,11 @@
                 'Protein': 'Helps your body grow and repair itself.',
                 'Dairy': 'Gives your body calcium for strong bones and teeth.',
                 'Fats & sugars': 'Give quick energy but should only be eaten in small amounts.',
+                'Water & fluids': 'Keeps your body hydrated and helps it work properly.',
+                'Wholegrains': 'Give you fibre and energy that lasts longer than sugary foods.',
+                'Oily fish': 'Gives you healthy fats that are good for your heart and brain.',
+                'Nuts & seeds': 'Give you healthy fats, protein and vitamins.',
+                'Iron-rich foods': 'Help your body make healthy red blood cells.',
             };
             const GROUP_NAMES = Object.keys(GROUP_FACTS);
 

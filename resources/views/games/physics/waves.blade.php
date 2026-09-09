@@ -31,13 +31,27 @@
                 'Frequency': 'The number of waves passing a point every second, measured in hertz (Hz).',
                 'Crest': 'The highest point of a wave.',
                 'Trough': 'The lowest point of a wave.',
+                'Period': 'The time taken for one complete wave to pass a point, measured in seconds.',
+                'Wave speed': 'How fast a wave travels, measured in metres per second (m/s).',
+                'Node': 'A point on a standing wave where there is no vibration.',
+                'Antinode': 'A point on a standing wave with the maximum vibration.',
+                'Oscillation': 'One complete vibration, from the resting position up to the crest, back down through the resting position to the trough, and back to resting.',
             };
             const PART_NAMES = Object.keys(PARTS);
 
             const TYPES = {
                 'Transverse wave': 'The particles vibrate at right angles to the direction the wave travels, like light or water waves.',
                 'Longitudinal wave': 'The particles vibrate in the same direction the wave travels, like sound waves.',
+                'Mechanical wave': 'A wave that needs a medium (like water, air or a solid) to travel through — it cannot travel through a vacuum.',
+                'Electromagnetic wave': 'A wave that can travel through a vacuum, like light, radio waves and X-rays.',
+                'Water wave': 'A transverse wave on the surface of water — the water moves up and down as the wave travels sideways.',
+                'Sound wave': 'A longitudinal wave made of compressions and rarefactions travelling through a medium.',
+                'Compression': 'A squashed-together region of particles in a longitudinal wave, where pressure is highest.',
+                'Rarefaction': 'A spread-out region of particles in a longitudinal wave, where pressure is lowest.',
+                'Standing (stationary) wave': 'A wave formed when two waves of the same frequency travel in opposite directions and overlap, appearing to stay still.',
+                'Ripple spreading across a pond': 'An example of a transverse wave, where the water surface moves up and down as the ripple spreads outwards.',
             };
+            const TYPE_NAMES = Object.keys(TYPES);
 
             function randInt(min, max) {
                 return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -72,12 +86,12 @@
                             questionText: "What is the '" + part + "' of a wave?",
                         };
                     }
-                    const waveType = randInt(0, 1) === 0 ? 'Transverse wave' : 'Longitudinal wave';
+                    const waveType = TYPE_NAMES[randInt(0, TYPE_NAMES.length - 1)];
                     return {
                         category: type,
                         label: waveType,
                         correctText: TYPES[waveType],
-                        questionText: "What happens in a '" + waveType + "'?",
+                        questionText: waveType + ' — what is true of this?',
                     };
                 },
 
@@ -87,14 +101,15 @@
                         const distractors = pickOthers(PART_NAMES, part, 3).map(function(p) { return PARTS[p]; });
                         return shuffle([q.correctText].concat(distractors));
                     }
-                    return shuffle([TYPES['Transverse wave'], TYPES['Longitudinal wave']]);
+                    const distractors = pickOthers(TYPE_NAMES, q.label, 3).map(function(t) { return TYPES[t]; });
+                    return shuffle([q.correctText].concat(distractors));
                 },
 
                 hintFor: function(q) {
                     if (q.category === 'parts') {
-                        return 'Think about height, distance between repeats, waves per second, the top, or the bottom.';
+                        return 'Think about height, distance between repeats, waves per second, time per wave, the top, the bottom, or standing wave points.';
                     }
-                    return 'Think about whether the vibration is sideways (at right angles) or back-and-forth along the same line the wave travels.';
+                    return 'Think about the direction of vibration, whether it needs a medium, and whether it involves compressions, rarefactions or a moving surface.';
                 },
 
                 explanationFor: function(q) {

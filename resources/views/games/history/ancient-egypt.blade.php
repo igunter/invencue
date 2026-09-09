@@ -31,6 +31,12 @@
                 { q: "What do we call the writing system of picture symbols used by the ancient Egyptians?", a: "Hieroglyphics" },
                 { q: "What was the title given to the rulers of ancient Egypt?", a: "Pharaoh" },
                 { q: "Which famous ancient Egyptian queen was known for her relationships with Julius Caesar and Mark Antony?", a: "Cleopatra" },
+                { q: "What is the name of the huge statue with the body of a lion and the head of a human that stands near the Giza pyramids?", a: "The Great Sphinx" },
+                { q: "Which young pharaoh's nearly untouched tomb, full of treasure, was discovered in 1922?", a: "Tutankhamun" },
+                { q: "What stone, found in 1799, allowed experts to finally translate Egyptian hieroglyphics?", a: "The Rosetta Stone" },
+                { q: "What was the ancient Egyptian sun god called?", a: "Ra" },
+                { q: "What material, made from papyrus reeds that grew along the Nile, did the Egyptians write on?", a: "Papyrus" },
+                { q: "What was the name for the coffin-shaped case used to hold a mummified body?", a: "Sarcophagus" },
             ];
 
             function randInt(min, max) {

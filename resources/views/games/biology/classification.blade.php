@@ -31,6 +31,11 @@
                 'Mushroom': 'Fungi kingdom',
                 'Amoeba': 'Protist kingdom',
                 'E. coli bacteria': 'Bacteria kingdom',
+                'Lion': 'Animal kingdom',
+                'Sunflower': 'Plant kingdom',
+                'Yeast': 'Fungi kingdom',
+                'Algae': 'Protist kingdom',
+                'Salmonella bacteria': 'Bacteria kingdom',
             };
             const ORGANISM_NAMES = Object.keys(ORGANISMS);
             const KINGDOM_LIST = ['Animal kingdom', 'Plant kingdom', 'Fungi kingdom', 'Protist kingdom', 'Bacteria kingdom'];
@@ -41,6 +46,11 @@
                 'Vertebrate': 'An animal with a backbone, such as a fish, bird or mammal.',
                 'Invertebrate': 'An animal without a backbone, such as an insect or worm.',
                 'Taxonomy': 'The scientific naming and classification of living things.',
+                'Kingdom': 'One of the largest groups used to classify living things, such as animal or plant.',
+                'Genus': 'A group of closely related species, used in an organism\'s scientific name.',
+                'Binomial naming': 'The system of giving each species a two-part scientific name, made of genus and species.',
+                'Characteristic': 'A feature of an organism that can be used to help classify it.',
+                'Habitat': 'The natural home or environment where an organism lives.',
             };
             const TERM_NAMES = Object.keys(TERMS);
 

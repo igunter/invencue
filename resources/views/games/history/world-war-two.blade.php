@@ -31,6 +31,11 @@
                 { q: "What name is given to the sustained bombing of British cities by the German air force in 1940\u201341?", a: "The Blitz" },
                 { q: "What was the codename for the Allied invasion of Normandy in June 1944?", a: "D-Day" },
                 { q: "Who was the Prime Minister who led Britain for most of the Second World War?", a: "Winston Churchill" },
+                { q: "Who was the leader of Nazi Germany during the Second World War?", a: "Adolf Hitler" },
+                { q: "What name is given to the Nazi persecution and mass murder of six million Jews and others during the war?", a: "The Holocaust" },
+                { q: "Which surprise Japanese attack on a US naval base in 1941 brought America into the war?", a: "Pearl Harbor" },
+                { q: "What day marks the Allied victory in Europe in May 1945?", a: "VE Day" },
+                { q: "What weapon did the USA drop on Hiroshima and Nagasaki in 1945, leading to Japan's surrender?", a: "The atomic bomb" },
             ];
 
             function randInt(min, max) {

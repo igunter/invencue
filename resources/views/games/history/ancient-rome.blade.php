@@ -31,6 +31,12 @@
                 { q: "What is the name of the huge wall the Romans built in the north of Britain?", a: "Hadrian's Wall" },
                 { q: "Who was the famous Roman general and leader who was assassinated in 44 BC?", a: "Julius Caesar" },
                 { q: "What term describes the network of paved roads the Romans built across their empire?", a: "Roman roads" },
+                { q: "Who became the first Roman emperor after the death of Julius Caesar?", a: "Augustus" },
+                { q: "What structures did the Romans build to carry fresh water across long distances to their cities?", a: "Aqueducts" },
+                { q: "Which Roman town was buried and preserved by ash after the eruption of Mount Vesuvius in AD 79?", a: "Pompeii" },
+                { q: "What number system, using letters like I, V, X, L, C, D and M, did the Romans use?", a: "Roman numerals" },
+                { q: "What was the loose, draped garment worn by Roman citizens called?", a: "A toga" },
+                { q: "What language did the ancient Romans speak, which later influenced many European languages?", a: "Latin" },
             ];
 
             function randInt(min, max) {

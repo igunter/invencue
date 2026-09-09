@@ -32,6 +32,11 @@
                 { independent: 'Number of weights added', dependent: 'Spring length (cm)' },
                 { independent: 'Concentration of acid (mol/dm³)', dependent: 'Reaction time (seconds)' },
                 { independent: 'Age of the plant (weeks)', dependent: 'Plant height (cm)' },
+                { independent: 'Mass added to a spring (g)', dependent: 'Extension of the spring (cm)' },
+                { independent: 'Volume of water added (ml)', dependent: 'Height of water in the container (cm)' },
+                { independent: 'Number of turns on a wire coil', dependent: 'Strength of the electromagnet (N)' },
+                { independent: 'Time in the oven (minutes)', dependent: 'Temperature of the cake mixture (°C)' },
+                { independent: 'Force applied to a wire (N)', dependent: 'Length of the stretched wire (mm)' },
             ];
 
             const GRAPH_SERIES = [
@@ -39,6 +44,12 @@
                 { label: 'Distance travelled over time', xUnit: 's', points: [[0, 0], [1, 5], [2, 10], [3, 15], [4, 20]] },
                 { label: 'Spring length as weights are added', xUnit: 'weights', points: [[0, 10], [1, 12], [2, 14], [3, 16], [4, 18]] },
                 { label: 'Plant height over weeks', xUnit: 'weeks', points: [[0, 2], [1, 4], [2, 7], [3, 9], [4, 11]] },
+                { label: 'Spring extension as mass is added', xUnit: 'g', points: [[0, 0], [1, 3], [2, 6], [3, 9], [4, 12]] },
+                { label: 'Water level as water is poured in', xUnit: 'litres', points: [[0, 1], [1, 3], [2, 5], [3, 7], [4, 9]] },
+                { label: 'Cooling of a hot drink over time', xUnit: 'min', points: [[0, 80], [1, 70], [2, 62], [3, 55], [4, 49]] },
+                { label: 'Speed of a ball rolling down a ramp', xUnit: 's', points: [[0, 0], [1, 2], [2, 4], [3, 6], [4, 8]] },
+                { label: 'Mass of salt dissolved over time', xUnit: 'min', points: [[0, 0], [1, 5], [2, 9], [3, 12], [4, 14]] },
+                { label: 'Gas volume produced over time', xUnit: 's', points: [[0, 0], [1, 10], [2, 18], [3, 24], [4, 28]] },
             ];
 
             const TYPE_SCENARIOS = [
@@ -48,6 +59,10 @@
                 { scenario: 'The number of pupils who chose each type of pet as their favourite', correctText: 'Bar graph' },
                 { scenario: 'The distance a toy car travels each second as it rolls down a ramp', correctText: 'Line graph' },
                 { scenario: 'The mass of four different rock samples', correctText: 'Bar graph' },
+                { scenario: 'The volume of gas produced every 10 seconds during a reaction', correctText: 'Line graph' },
+                { scenario: 'The number of pupils travelling to school by each method of transport', correctText: 'Bar graph' },
+                { scenario: 'The extension of a spring as increasing masses are added', correctText: 'Line graph' },
+                { scenario: 'The average rainfall recorded in each of four different cities', correctText: 'Bar graph' },
             ];
 
             function randInt(min, max) {

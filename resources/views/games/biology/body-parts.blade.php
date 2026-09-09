@@ -35,6 +35,11 @@
                 'Skin': 'Covers and protects your body.',
                 'Muscles': 'Help your body move.',
                 'Bones': 'Give your body its shape and support.',
+                'Liver': 'Cleans your blood and helps digest food.',
+                'Kidneys': 'Filter waste out of your blood to make urine.',
+                'Teeth': 'Help you bite and chew your food.',
+                'Tongue': 'Helps you taste food and helps you speak.',
+                'Nose': 'Lets you smell and helps you breathe.',
             };
             const PART_NAMES = Object.keys(FUNCTIONS);
 
@@ -46,6 +51,12 @@
                 'fingers on one hand': 5,
                 'heart': 1,
                 'nose': 1,
+                'kidneys': 2,
+                'lungs': 2,
+                'thumbs': 2,
+                'toes on one foot': 5,
+                'elbows': 2,
+                'knees': 2,
             };
             const COUNT_PARTS = Object.keys(COUNTS);
             const NUMBER_POOL = [1, 2, 3, 4, 5, 10];

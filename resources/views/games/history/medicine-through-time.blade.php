@@ -31,6 +31,11 @@
                 { q: "Which Scottish scientist discovered penicillin in 1928?", a: "Alexander Fleming" },
                 { q: "What is the name of the UK healthcare system founded in 1948 to provide free medical care?", a: "The NHS" },
                 { q: "Which Ancient Greek physician is often called the \"father of medicine\"?", a: "Hippocrates" },
+                { q: "Which French scientist proved that germs cause disease and developed pasteurisation?", a: "Louis Pasteur" },
+                { q: "Which doctor traced a London cholera outbreak to a contaminated water pump in 1854?", a: "John Snow" },
+                { q: "Which German physicist discovered X-rays in 1895?", a: "Wilhelm Röntgen" },
+                { q: "What term describes drugs used to stop patients feeling pain during operations?", a: "Anaesthetics" },
+                { q: "Which Hungarian doctor discovered that hand-washing dramatically reduced deaths from infection in hospitals?", a: "Ignaz Semmelweis" },
             ];
 
             function randInt(min, max) {

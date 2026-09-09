@@ -32,6 +32,9 @@
                 'Ultraviolet': 'Can damage skin cells and eyes, and causes fluorescent materials to glow.',
                 'X-rays': 'Very short wavelength and high energy; used to image bones and in airport security.',
                 'Gamma rays': 'The shortest wavelength and highest frequency and energy; produced by radioactive decay and used to treat cancer.',
+                'Ionising radiation': 'Radiation with enough energy to remove electrons from atoms; includes ultraviolet, X-rays and gamma rays.',
+                'Non-ionising radiation': 'Radiation that does not have enough energy to remove electrons from atoms; includes radio waves, microwaves, infrared and visible light.',
+                'The electromagnetic spectrum': 'A continuous range of all types of electromagnetic waves, ordered by wavelength and frequency, from radio waves to gamma rays.',
             };
             const SPECTRUM_NAMES = Object.keys(SPECTRUM);
 

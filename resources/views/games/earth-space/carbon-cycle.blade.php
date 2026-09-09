@@ -30,6 +30,11 @@
                 'Combustion': 'Burning fossil fuels or wood releases stored carbon back into the atmosphere as carbon dioxide.',
                 'Decomposition': 'Decomposers break down dead organisms and waste, releasing carbon dioxide back into the atmosphere.',
                 'Fossilisation': 'Over millions of years, buried dead organic matter can be compressed into fossil fuels, locking carbon away underground.',
+                'Volcanic activity': 'Volcanoes release carbon dioxide that has been stored deep within the Earth back into the atmosphere.',
+                'Ocean absorption': 'The oceans absorb carbon dioxide from the atmosphere, dissolving it in seawater.',
+                'Weathering of rocks': 'Rainwater slowly reacts with rocks, locking carbon away in new carbonate minerals over long timescales.',
+                'Carbon capture and storage': 'A technology that captures carbon dioxide from power stations and factories and stores it underground.',
+                'Extraction of fossil fuels': 'Removing coal, oil and gas from underground so they can be burned, moving carbon from long-term storage towards the atmosphere.',
             };
             const PROCESS_NAMES = Object.keys(PROCESSES);
 
@@ -38,6 +43,12 @@
                 'Greenhouse gas': 'A gas, like carbon dioxide or methane, that traps heat in the atmosphere.',
                 'Fossil fuel': 'A fuel such as coal, oil or natural gas, formed from the remains of ancient organisms.',
                 'Deforestation': 'The clearing of forests, which reduces the amount of carbon dioxide absorbed by trees.',
+                'Carbon cycle': 'The continuous movement of carbon between the atmosphere, living things, oceans and rocks.',
+                'Biomass': 'The total mass of living organisms in an area, which contains carbon stored in their bodies.',
+                'Ocean acidification': 'The oceans becoming more acidic as they absorb extra carbon dioxide from the atmosphere.',
+                'Reforestation': 'Planting new trees on cleared land to absorb more carbon dioxide from the atmosphere.',
+                'Carbon neutral': 'An activity or process that adds no net carbon dioxide to the atmosphere.',
+                'Atmosphere': 'The layer of gases surrounding the Earth, where carbon dioxide is temporarily stored.',
             };
             const TERM_NAMES = Object.keys(TERMS);
 

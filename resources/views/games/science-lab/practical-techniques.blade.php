@@ -31,6 +31,10 @@
                 'Thermometer': 'Used to measure temperature.',
                 'Microscope': 'Used to view very small objects or cells, magnified.',
                 'Balance': 'Used to measure the mass of a substance.',
+                'Gas syringe': 'Used to measure the volume of gas produced during a reaction.',
+                'Filter funnel and paper': 'Used to separate an insoluble solid from a liquid.',
+                'Evaporating basin': 'Used to hold a solution while it is heated so the solvent evaporates, leaving a solid behind.',
+                'Tongs': 'Used to safely pick up and hold hot objects without touching them.',
             };
             const EQUIPMENT_NAMES = Object.keys(EQUIPMENT);
 
@@ -39,6 +43,12 @@
                 'Filtration': 'A technique used to separate an insoluble solid from a liquid, using filter paper.',
                 'Using a microscope': 'Focus on low power first, then increase magnification to see more detail once the sample is in view.',
                 'Measuring gas produced': 'Often measured with a gas syringe, or by collecting the gas in an upside-down measuring cylinder over water.',
+                'Evaporation': 'A technique used to remove a solvent from a solution by heating it, leaving the dissolved solid behind.',
+                'Crystallisation': 'A technique used to obtain solid crystals from a solution, often by evaporating some solvent and allowing it to cool slowly.',
+                'Distillation': 'A technique used to separate a liquid from a solution by heating it to evaporate the liquid, then cooling and collecting the vapour.',
+                'Chromatography': 'A technique used to separate substances in a mixture, such as inks or dyes, based on how they travel through paper.',
+                'Serial dilution': 'A technique used to make a series of solutions of decreasing concentration, each diluted by the same factor.',
+                'Using an indicator in a titration': 'A substance added to a solution that changes colour at the exact point the reaction is complete.',
             };
             const TECHNIQUE_NAMES = Object.keys(TECHNIQUES);
 

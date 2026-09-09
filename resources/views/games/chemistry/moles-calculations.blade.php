@@ -31,6 +31,10 @@
                 'calcium carbonate (CaCO₃)': 100,
                 'magnesium oxide (MgO)': 40,
                 'sodium hydroxide (NaOH)': 40,
+                'methane (CH₄)': 16,
+                'ammonia (NH₃)': 17,
+                'sulfuric acid (H₂SO₄)': 98,
+                'calcium oxide (CaO)': 56,
             };
             const COMPOUND_NAMES = Object.keys(COMPOUNDS);
             const MOLE_VALUES = [0.5, 2, 3, 4, 5]; // 1 excluded: Mr/mass (the "inverted formula" distractor) equals the correct answer when moles = 1
@@ -41,6 +45,11 @@
                 'Relative atomic mass (Ar)': "The average mass of an atom of an element, compared to 1/12th the mass of a carbon-12 atom.",
                 "Avogadro's constant": 'The number of particles in one mole of a substance: 6.02 × 10²³.',
                 'Concentration': 'The amount of solute dissolved in a given volume of solution, often measured in mol/dm³.',
+                'Empirical formula': 'The simplest whole-number ratio of atoms of each element in a compound.',
+                'Molar mass': 'The mass of one mole of a substance, measured in grams per mole (g/mol) — numerically equal to its Mr.',
+                'Limiting reactant': 'The reactant that is used up first in a reaction, stopping the reaction and limiting how much product can form.',
+                'Yield': 'The amount of product actually obtained from a reaction, often compared with the maximum possible amount as a percentage.',
+                'Solute': 'The substance that is dissolved in a solvent to make a solution.',
             };
             const TERM_NAMES = Object.keys(TERMS);
 

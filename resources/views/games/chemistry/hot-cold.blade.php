@@ -30,6 +30,12 @@
                 'Freezing': 'A liquid turns into a solid when it gets cold enough, like water turning to ice.',
                 'Evaporating': 'A liquid turns into a gas when it gets warm, like a puddle drying up in the sun.',
                 'Condensing': 'A gas turns into a liquid when it cools down, like steam turning into droplets on a cold window.',
+                'Boiling': 'A liquid quickly turns into a gas throughout the whole liquid once it reaches its boiling point, not just at the surface.',
+                'Solidifying': 'A liquid turns into a solid as it loses heat and its particles pack closer together — another word for freezing.',
+                'Sublimating': 'A solid turns straight into a gas without ever becoming a liquid, like solid air fresheners shrinking away.',
+                'Depositing': 'A gas turns straight into a solid without becoming a liquid first, like frost forming on a cold window.',
+                'Warming up': 'A substance gains heat energy, making its particles move faster — this can make a solid melt or a liquid evaporate.',
+                'Cooling down': 'A substance loses heat energy, making its particles move slower — this can make a gas condense or a liquid freeze.',
             };
             const CHANGE_NAMES = Object.keys(CHANGES);
 
@@ -38,6 +44,12 @@
                 'A bottle of water left in the freezer overnight': 'Freezing',
                 'A puddle disappearing on a hot, sunny day': 'Evaporating',
                 'Steam from a hot shower turning into droplets on a mirror': 'Condensing',
+                'A kettle full of water reaching its boiling point and bubbling hard': 'Boiling',
+                'Melted chocolate left in the fridge until it goes hard again': 'Solidifying',
+                'A solid air freshener block slowly shrinking away without ever turning to liquid': 'Sublimating',
+                'Frost forming on a car windscreen on a cold winter morning': 'Depositing',
+                'A metal spoon left in hot soup starting to feel hot': 'Warming up',
+                'A hot cup of tea left on the table slowly becoming cool enough to drink': 'Cooling down',
             };
             const EXAMPLE_NAMES = Object.keys(EXAMPLES);
 

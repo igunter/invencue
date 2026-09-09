@@ -31,6 +31,11 @@
                 { q: "What were the large buildings full of machines where goods were mass-produced called?", a: "Factories" },
                 { q: "What form of transport, running on iron rails, transformed travel during this period?", a: "The railway" },
                 { q: "What term describes towns that grew rapidly around new factories during this period?", a: "Industrial towns" },
+                { q: "What spinning machine, invented by James Hargreaves, allowed one worker to spin multiple threads of cotton at once?", a: "The spinning jenny" },
+                { q: "What term describes children as young as five or six being made to work long hours in factories and mines?", a: "Child labour" },
+                { q: "What laws were introduced to limit working hours and improve conditions for workers, especially children?", a: "Factory Acts" },
+                { q: "What waterways, built to transport heavy goods like coal, criss-crossed Britain before railways took over?", a: "Canals" },
+                { q: "What term describes the rapid growth of towns and cities as people moved from the countryside to work in factories?", a: "Urbanisation" },
             ];
 
             function randInt(min, max) {

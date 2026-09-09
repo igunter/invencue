@@ -31,6 +31,11 @@
                 { q: "Who invented the printing press?", a: "Johannes Gutenberg" },
                 { q: "Who invented the World Wide Web?", a: "Tim Berners-Lee" },
                 { q: "Who built an improved steam engine that powered factories and trains?", a: "James Watt" },
+                { q: "Who discovered the antibiotic penicillin in 1928?", a: "Alexander Fleming" },
+                { q: "Who invented the telegraph system used to send messages using dots and dashes?", a: "Samuel Morse" },
+                { q: "Who is credited with demonstrating the first working television?", a: "John Logie Baird" },
+                { q: "Which Italian inventor sent the first transatlantic radio signal?", a: "Guglielmo Marconi" },
+                { q: "Who invented dynamite and later founded the prize named after him?", a: "Alfred Nobel" },
             ];
 
             function randInt(min, max) {

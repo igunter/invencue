@@ -27,12 +27,14 @@
             const ITEMS = [
                 { name: "William the Conqueror", order: 1 },
                 { name: "King John", order: 2 },
-                { name: "Henry VIII", order: 3 },
-                { name: "Elizabeth I", order: 4 },
-                { name: "Charles I", order: 5 },
-                { name: "Queen Victoria", order: 6 },
-                { name: "Elizabeth II", order: 7 },
-                { name: "Charles III", order: 8 },
+                { name: "Edward I", order: 3 },
+                { name: "Henry VIII", order: 4 },
+                { name: "Elizabeth I", order: 5 },
+                { name: "Charles I", order: 6 },
+                { name: "George III", order: 7 },
+                { name: "Queen Victoria", order: 8 },
+                { name: "Elizabeth II", order: 9 },
+                { name: "Charles III", order: 10 },
             ];
 
             function randInt(min, max) {

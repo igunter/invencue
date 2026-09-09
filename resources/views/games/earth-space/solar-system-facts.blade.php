@@ -32,6 +32,10 @@
                 'The planet with the most moons': 'Saturn',
                 'The closest planet to the Sun': 'Mercury',
                 'The furthest planet from the Sun': 'Neptune',
+                'The coldest planet': 'Uranus',
+                'The windiest planet': 'Neptune',
+                'The planet with the most visible rings': 'Saturn',
+                'The planet known as the Red Planet': 'Mars',
             };
             const COMPARISON_NAMES = Object.keys(COMPARISONS);
             const PLANET_LIST = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune'];
@@ -42,10 +46,14 @@
                 'Earth': '1 moon',
                 'Mars': '2 moons',
                 'Jupiter': 'Over 90 moons',
-                'Saturn': 'Over 80 moons',
+                'Saturn': 'Over 140 moons',
+                'Uranus': 'Over 25 moons',
+                'Neptune': 'Over 15 moons',
+                'Pluto': '5 moons',
+                'Ceres': '0 moons',
             };
             const MOON_PLANETS = Object.keys(MOONS);
-            const MOON_COUNTS = ['0 moons', '1 moon', '2 moons', 'Over 80 moons', 'Over 90 moons'];
+            const MOON_COUNTS = ['0 moons', '1 moon', '2 moons', '5 moons', 'Over 15 moons', 'Over 25 moons', 'Over 90 moons', 'Over 140 moons'];
 
             function randInt(min, max) {
                 return Math.floor(Math.random() * (max - min + 1)) + min;

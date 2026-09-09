@@ -31,6 +31,11 @@
                 'Temperature': 'A measure of how hot or cold something is.',
                 'Rainfall': 'The amount of rain that falls in a place over a period of time, often measured in millimetres.',
                 'Climate zone': 'A region of the world with a similar climate pattern, like tropical, temperate or polar.',
+                'Humidity': 'A measure of how much water vapour is in the air.',
+                'Air pressure': "The weight of the air pressing down on the Earth's surface, which affects weather patterns.",
+                'Meteorologist': 'A scientist who studies and forecasts the weather.',
+                'Drought': 'A long period of unusually low rainfall, causing water shortages.',
+                'Wind speed': 'A measure of how fast air is moving, often given in miles per hour, used to describe weather conditions.',
             };
             const TERM_NAMES = Object.keys(TERMS);
             const TEMP_POOL = [8, 10, 12, 14, 16, 18, 20, 22, 24];

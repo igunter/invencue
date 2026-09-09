@@ -32,6 +32,11 @@
                 'Trend': 'The general pattern shown by a set of data, such as increasing, decreasing or staying constant.',
                 'Precision': 'How close repeated measurements are to each other.',
                 'Accuracy': 'How close a measurement is to the true value.',
+                'Reliability': 'How consistent a set of results is when the experiment is repeated.',
+                'Validity': 'Whether an experiment actually tests what it set out to test.',
+                'Correlation': 'A relationship between two variables, where a change in one is linked to a change in the other.',
+                'Continuous data': 'Numerical data that can take any value within a range, such as temperature or time.',
+                'Categorical data': 'Data that can be sorted into named groups or categories, such as colour or type of material.',
             };
             const TERM_NAMES = Object.keys(TERMS);
 

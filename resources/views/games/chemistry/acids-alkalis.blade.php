@@ -34,6 +34,11 @@
                 'Oven cleaner': 'Alkali',
                 'Pure water': 'Neutral',
                 'Salt solution': 'Neutral',
+                'Sulfuric acid': 'Acid',
+                'Orange juice': 'Acid',
+                'Bicarbonate of soda solution': 'Alkali',
+                'Sodium hydroxide solution': 'Alkali',
+                'Sugar solution': 'Neutral',
             };
             const SUBSTANCE_NAMES = Object.keys(SUBSTANCES);
             const CATEGORY_LIST = ['Acid', 'Alkali', 'Neutral'];
@@ -43,6 +48,12 @@
                 'Indicator': 'A substance that changes colour to show whether something is acidic, neutral, or alkaline.',
                 'Neutralisation': 'A reaction between an acid and an alkali that produces a neutral, or close to neutral, solution.',
                 'Litmus paper': 'A type of indicator paper that turns red in acids and blue in alkalis.',
+                'Universal indicator': 'An indicator that turns a range of colours to show exactly how acidic or alkaline a substance is.',
+                'Strong acid': 'An acid, such as hydrochloric acid, that fully ionises in water, releasing lots of hydrogen ions.',
+                'Weak acid': 'An acid, such as vinegar, that only partly ionises in water, releasing fewer hydrogen ions.',
+                'Alkali': 'A soluble base that dissolves in water to produce hydroxide ions, with a pH above 7.',
+                'Base': 'A substance that can neutralise an acid; an alkali is simply a base that dissolves in water.',
+                'Salt (chemistry)': 'A compound formed when the hydrogen in an acid is replaced by a metal, often made during neutralisation.',
             };
             const TERM_NAMES = Object.keys(TERMS);
 

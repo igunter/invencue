@@ -34,6 +34,8 @@
                 'Glass cup': 'Not magnetic',
                 'Rubber ball': 'Not magnetic',
                 'Gold ring': 'Not magnetic',
+                'Silver spoon': 'Not magnetic',
+                'Steel scissors': 'Magnetic',
             };
             const OBJECT_NAMES = Object.keys(OBJECTS);
 
@@ -42,6 +44,12 @@
                 'Magnetic poles': 'The two ends of a magnet, called north and south, where the pull is strongest.',
                 'Attract': 'When two magnets, or a magnet and a magnetic metal, pull towards each other.',
                 'Repel': 'When two magnets push away from each other, which happens when two like poles face each other.',
+                'North pole': 'One end of a magnet; north poles repel other north poles but attract south poles.',
+                'South pole': 'One end of a magnet; south poles repel other south poles but attract north poles.',
+                'Magnetic field': 'The area around a magnet where its magnetic force can be felt.',
+                'Compass': "A tool with a magnetic needle that always points towards the Earth's magnetic north.",
+                'Electromagnet': 'A magnet made using electricity, which can be turned on and off.',
+                'Permanent magnet': 'A magnet that keeps its magnetism all the time, without needing electricity.',
             };
             const FACT_NAMES = Object.keys(FACTS);
 

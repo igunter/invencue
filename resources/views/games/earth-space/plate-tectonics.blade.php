@@ -29,6 +29,12 @@
                 'Constructive (divergent) boundary': 'Two plates move apart; magma rises to fill the gap, forming new crust — common at ocean ridges.',
                 'Conservative (transform) boundary': 'Two plates slide past each other; friction builds up and is released as earthquakes, with no crust made or destroyed.',
                 'Collision boundary': 'Two continental plates collide and crumple upwards, forming large mountain ranges like the Himalayas.',
+                'Ocean-continental destructive boundary': 'A dense oceanic plate is subducted beneath a lighter continental plate, causing explosive volcanoes and deep ocean trenches, such as the Andes.',
+                'Ocean-ocean destructive boundary': 'One oceanic plate is subducted beneath another, forming volcanic island arcs and deep ocean trenches, such as Japan.',
+                'Mid-ocean ridge': 'An underwater mountain range formed at a constructive boundary where two oceanic plates move apart, such as the Mid-Atlantic Ridge.',
+                'San Andreas Fault': 'A famous conservative boundary in California where the Pacific and North American plates slide past each other, causing frequent earthquakes.',
+                'The Ring of Fire': 'A horseshoe-shaped zone around the Pacific Ocean with frequent earthquakes and volcanoes, caused by many destructive plate boundaries.',
+                'The Himalayas': 'A mountain range formed by the ongoing collision between the Indian and Eurasian continental plates.',
             };
             const BOUNDARY_NAMES = Object.keys(BOUNDARIES);
 
@@ -37,6 +43,12 @@
                 'Earthquake': 'A sudden release of energy at a plate boundary, causing the ground to shake.',
                 'Seismologist': 'A scientist who studies earthquakes.',
                 'Magnitude': 'A measurement of the size, or energy released, of an earthquake.',
+                'Mantle': "The semi-molten layer of rock beneath the Earth's crust that tectonic plates slowly move over.",
+                'Crust': "The thin, solid outer layer of the Earth, broken up into tectonic plates.",
+                'Epicentre': "The point on the Earth's surface directly above where an earthquake starts.",
+                'Focus': 'The point underground where an earthquake originates.',
+                'Richter scale': 'A scale used to measure the magnitude, or size, of an earthquake.',
+                'Tsunami': 'A series of huge ocean waves, often triggered by an underwater earthquake.',
             };
             const TERM_NAMES = Object.keys(TERMS);
 

@@ -29,6 +29,12 @@
                 'Viewing a scale at an angle (parallax error)': 'A random error — this can make readings too high or too low unpredictably.',
                 'Not resetting a balance to zero before weighing': 'A systematic (zero) error — it shifts every reading by a fixed amount.',
                 'Human reaction time varying when using a stopwatch': 'A random error — reaction time varies slightly each time it is measured.',
+                'Reading a measuring cylinder from above instead of at eye level': 'A random error — parallax can make readings vary unpredictably higher or lower.',
+                'A thermometer that always reads 2°C too high': 'A systematic error — every reading is shifted by the same fixed amount.',
+                'Slight draughts affecting a balance during weighing': 'A random error — small unpredictable changes affect each reading differently.',
+                'A newton meter with a stretched spring that was never recalibrated': 'A systematic error — every force reading will be off by a similar amount.',
+                'Background noise making it hard to judge exactly when a reaction finishes': 'A random error — it makes readings inconsistent in an unpredictable way.',
+                'A measuring cylinder that was manufactured with a slightly inaccurate scale': 'A systematic error — every volume reading will be off in the same direction.',
             };
             const ERROR_NAMES = Object.keys(ERRORS);
 
@@ -37,6 +43,12 @@
                 'To check a result is reliable': 'Repeat the experiment and see if similar results are obtained each time.',
                 'To remove a systematic (zero) error': 'Recalibrate the equipment — for example, resetting a balance to zero before use.',
                 'To make an experiment more precise': 'Use more precise measuring equipment, such as a device with a smaller scale division.',
+                'To reduce parallax error when reading a scale': 'Position your eye level with the scale when taking the reading.',
+                'To improve the accuracy of a result': 'Compare it with a known true value and reduce sources of error in the method.',
+                'To make an experiment more reproducible': 'Make sure the method is described clearly enough for someone else to follow it exactly.',
+                'To reduce human error when timing an event': 'Use a data logger or light gate instead of a stopwatch and reaction time.',
+                'To spot an anomalous result': 'Compare each result with the others and look for one that does not fit the pattern.',
+                'To control extra variables in an experiment': 'Identify what else could affect the result and keep those factors the same.',
             };
             const IMPROVEMENT_NAMES = Object.keys(IMPROVEMENTS);
 

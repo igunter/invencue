@@ -29,6 +29,13 @@
                 'Igneous rock': 'Forms when molten magma or lava cools and hardens, like granite or basalt.',
                 'Sedimentary rock': 'Forms when layers of sediment are compressed and cemented together over time, like sandstone or limestone.',
                 'Metamorphic rock': 'Forms when existing rock is changed by heat and pressure, like marble or slate.',
+                'Granite': 'Forms when magma cools slowly deep underground, creating large mineral crystals — a hard igneous rock used in worktops and buildings.',
+                'Basalt': 'Forms when lava cools quickly at the surface, creating small mineral crystals — a dark igneous rock common in volcanic areas.',
+                'Sandstone': 'Forms when grains of sand are compressed and cemented together over millions of years — a sedimentary rock often orange or yellow.',
+                'Limestone': 'Forms from the compressed remains of sea creatures and shells on the ocean floor — a sedimentary rock often used to make cement.',
+                'Marble': 'Forms when limestone is changed by intense heat and pressure deep underground — a hard, crystalline metamorphic rock.',
+                'Slate': 'Forms when clay-rich rock is compressed by heat and pressure, splitting easily into thin, flat sheets — a metamorphic rock used for roof tiles.',
+                'Obsidian': 'Forms when lava cools so quickly it has no time to form crystals, creating smooth, glassy black igneous rock.',
             };
             const TYPE_NAMES = Object.keys(TYPES);
 
@@ -38,6 +45,11 @@
                 'Melting': 'Rock is heated so much it turns into liquid magma, deep underground.',
                 'Cooling': 'Melted rock (magma or lava) loses heat and turns solid again.',
                 'Heat and pressure': 'Squashes and heats existing rock without melting it, changing it into a new type of rock.',
+                'Transportation': 'Carrying broken-down rock fragments, or sediment, from one place to another by wind, water, ice or gravity.',
+                'Deposition': 'Sediment being dropped and settled in a new location when the wind, water or ice carrying it loses energy.',
+                'Compaction': 'Layers of sediment being pressed down by the weight of material above, squeezing out water and air.',
+                'Cementation': 'Minerals dissolved in groundwater bind sediment grains together to form solid sedimentary rock.',
+                'Crystallisation': 'Minerals form and grow into crystals as magma or lava cools and solidifies.',
             };
             const PROCESS_NAMES = Object.keys(PROCESS);
 

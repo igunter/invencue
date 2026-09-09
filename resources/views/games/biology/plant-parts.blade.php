@@ -31,6 +31,11 @@
                 'Leaves': 'Use sunlight to make food for the plant.',
                 'Flower': 'Makes seeds so the plant can reproduce.',
                 'Seed': 'Contains everything needed to grow into a new plant.',
+                'Petals': 'Brightly coloured parts of the flower that attract insects for pollination.',
+                'Root hairs': 'Tiny hair-like growths on roots that increase the surface area for absorbing water.',
+                'Fruit': 'Develops from the flower and protects and helps spread the seeds inside it.',
+                'Bark': 'Tough outer layer on the stem or trunk that protects the plant from damage and disease.',
+                'Buds': 'Small growths on a stem that can develop into new leaves, shoots or flowers.',
             };
             const PART_NAMES = Object.keys(PARTS);
 
@@ -39,6 +44,12 @@
                 'Water': 'Helps carry nutrients around the plant and keeps it from wilting.',
                 'Soil': 'Provides nutrients and something for the roots to grip onto.',
                 'Air': 'Provides the gas plants use, along with water and light, to make food.',
+                'Warmth': 'Helps plants grow at the right speed — most plants grow poorly if it is too cold.',
+                'Space': 'Gives roots room to spread out and leaves room to catch enough light.',
+                'Nutrients (minerals)': 'Help plants grow strong and healthy, similar to how vitamins help humans.',
+                'Time': 'Plants need enough time to grow, flower and produce seeds before the season changes.',
+                'Pollinators': 'Insects and other animals that carry pollen between flowers so plants can make seeds.',
+                'Protection from pests': 'Stops insects and animals from eating or damaging the plant before it can grow.',
             };
             const NEED_NAMES = Object.keys(NEEDS);
 

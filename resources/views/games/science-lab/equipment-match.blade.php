@@ -48,6 +48,8 @@
                 'Time how long a reaction takes': 'Stopwatch',
                 'Measure the force needed to pull a block': 'Newton meter',
                 'Add three drops of a chemical to a test tube': 'Pipette',
+                'Support a beaker while it is being heated over a Bunsen burner': 'Tripod and gauze',
+                'See how long an experiment takes to finish': 'Stopwatch',
             };
             const TASK_NAMES = Object.keys(TASKS);
 

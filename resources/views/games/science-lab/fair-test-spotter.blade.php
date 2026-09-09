@@ -34,6 +34,8 @@
                 'Testing which ball bounces highest by dropping them from different heights': 'Unfair',
                 'Comparing how sweet two drinks taste using different sized cups': 'Unfair',
                 'Testing how fast two cars go by rolling one down a ramp and pushing the other': 'Unfair',
+                'Testing which magnet is strongest by seeing how many paperclips each picks up from the same distance': 'Fair',
+                'Comparing how far two different toy cars roll on the same flat floor from the same push': 'Fair',
             };
             const TEST_NAMES = Object.keys(TESTS);
 
@@ -42,6 +44,12 @@
                 'Testing which ball bounces highest by dropping them from different heights': 'The drop height was not kept the same, so it is not a fair comparison.',
                 'Comparing how sweet two drinks taste using different sized cups': 'The cup size was not kept the same, which could affect the comparison.',
                 'Testing how fast two cars go by rolling one down a ramp and pushing the other': 'The cars were not started in the same way, so the test is not fair.',
+                'Testing which fertiliser grows the tallest plant, using different amounts of water for each plant': 'The amount of water was not kept the same, so it is not a fair comparison.',
+                'Testing which fabric is warmest by wrapping ice cubes for different lengths of time': 'The wrapping time was not kept the same, so the results cannot be compared fairly.',
+                'Testing whose paper aeroplane flies furthest by throwing them in different rooms': 'The location and conditions were not kept the same, so the test is not fair.',
+                'Testing which detergent cleans best using different amounts of dirt on each cloth': 'The starting amount of dirt was not kept the same, so it is not a fair test.',
+                'Testing which insulating material keeps a drink hottest, using different starting temperatures': 'The starting temperature was not kept the same, so the comparison is not fair.',
+                'Testing which shoe grips best by testing them on different surfaces': 'The surface being tested on was not kept the same, so the test is not fair.',
             };
             const REASON_NAMES = Object.keys(REASONS);
 

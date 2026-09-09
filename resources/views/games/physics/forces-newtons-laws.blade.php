@@ -36,6 +36,11 @@
                 "Newton's Third Law": 'When two objects interact, they exert equal and opposite forces on each other.',
                 'Resultant force': 'The single force that would have the same effect as all the forces acting on an object combined.',
                 'Terminal velocity': 'The maximum, constant speed reached when the resultant force on a falling object becomes zero.',
+                'Inertia': 'The tendency of an object to resist a change in its motion; more mass means more inertia.',
+                'Weight': "The force of gravity acting on an object's mass, measured in newtons.",
+                'Friction': 'A force that opposes motion between two surfaces in contact, or between an object and a fluid.',
+                'Newton (N)': 'The SI unit of force, defined as the force needed to accelerate a mass of 1 kg by 1 m/s².',
+                'Free body diagram': 'A diagram showing all the forces acting on a single object, drawn as arrows.',
             };
             const LAW_NAMES = Object.keys(LAWS);
 

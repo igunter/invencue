@@ -62,12 +62,43 @@
                     dependent: 'Tomato plant height',
                     control: 'Amount of water and sunlight',
                 },
+                {
+                    scenario: 'Investigating how the concentration of acid affects how quickly a marble chip reacts',
+                    independent: 'Concentration of acid',
+                    dependent: 'Rate of reaction (time for the chip to dissolve)',
+                    control: 'Mass of the marble chip and temperature',
+                },
+                {
+                    scenario: 'Investigating how the surface a shoe is tested on affects its grip',
+                    independent: 'Type of surface',
+                    dependent: 'Distance the shoe slides before stopping',
+                    control: 'The shoe used and the force applied',
+                },
+                {
+                    scenario: 'Investigating how the thickness of an insulating material affects heat loss from a beaker of hot water',
+                    independent: 'Thickness of the insulating material',
+                    dependent: 'Temperature drop of the water',
+                    control: 'Starting temperature and volume of water',
+                },
+                {
+                    scenario: 'Investigating how the height of a ramp affects the speed of a ball at the bottom',
+                    independent: 'Height of the ramp',
+                    dependent: 'Speed of the ball at the bottom',
+                    control: 'The ball used and the surface of the ramp',
+                },
             ];
 
             const DEFINITIONS = {
                 'Independent variable': 'The one thing you deliberately change in an experiment.',
                 'Dependent variable': 'The thing you measure to see the effect of the change.',
                 'Control variable': 'Something you keep the same so the test stays fair.',
+                'Continuous variable': 'A variable that can be any numerical value within a range, such as temperature or time.',
+                'Categoric variable': 'A variable that comes in distinct categories, such as colour or type of material.',
+                'Control group': 'A group in an experiment that is not exposed to the independent variable, used for comparison.',
+                'Repeatable': 'Getting similar results when you repeat the experiment yourself using the same method and equipment.',
+                'Reproducible': 'Getting similar results when someone else repeats the experiment or a different method is used.',
+                'Fair test': 'An experiment where only the independent variable is changed and all other variables are controlled.',
+                'Validity': 'Whether an experiment actually tests what it was designed to test.',
             };
             const DEFINITION_NAMES = Object.keys(DEFINITIONS);
             const BONUS_DEFINITION = 'A prediction you make before starting the experiment.';

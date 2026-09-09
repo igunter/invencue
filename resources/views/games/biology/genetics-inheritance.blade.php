@@ -43,6 +43,12 @@
                 'Bb x Bb': '1 BB : 2 Bb : 1 bb',
                 'Bb x bb': '1 Bb : 1 bb',
                 'BB x Bb': '1 BB : 1 Bb',
+                'BB x BB': '100% of offspring are BB (homozygous dominant)',
+                'bb x bb': '100% of offspring are bb (homozygous recessive)',
+                'Aa x Aa': '1 AA : 2 Aa : 1 aa',
+                'Aa x aa': '1 Aa : 1 aa',
+                'AA x aa': '100% of offspring are Aa (heterozygous)',
+                'AA x Aa': '1 AA : 1 Aa',
             };
             const CROSS_NAMES = Object.keys(CROSSES);
 

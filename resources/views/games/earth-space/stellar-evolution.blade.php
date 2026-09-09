@@ -33,6 +33,8 @@
                 'Supernova': 'A massive, explosive death of a large star, briefly outshining an entire galaxy.',
                 'Neutron star': 'An extremely dense collapsed core left behind after a supernova, made almost entirely of neutrons.',
                 'Black hole': 'An extremely dense object with gravity so strong that not even light can escape, formed from the largest stars.',
+                'Protostar': 'A dense, hot clump of collapsing gas and dust that has not yet started nuclear fusion — the stage between a nebula and a main sequence star.',
+                'Planetary nebula': 'The glowing shell of gas shed by a dying average-mass star as it loses its outer layers, leaving behind a white dwarf.',
             };
             const LIFECYCLE_NAMES = Object.keys(LIFECYCLE);
 
@@ -41,6 +43,12 @@
                 'Protostar': 'A very young star still forming, before nuclear fusion has started in its core.',
                 'Luminosity': 'A measure of how much light energy a star gives out.',
                 'Core': 'The central region of a star, where nuclear fusion happens.',
+                'Gravity': 'The force that pulls matter together, causing gas clouds to collapse and stars to form.',
+                'Mass': 'The amount of matter in a star, which determines how it will evolve and eventually die.',
+                'Hertzsprung-Russell diagram': 'A chart that plots stars by temperature and brightness, used to classify and study them.',
+                'Solar mass': "A unit used to measure the mass of stars, based on the mass of our Sun.",
+                'Binary star': 'A system of two stars that orbit each other.',
+                'Pulsar': 'A rapidly spinning neutron star that emits regular beams of radiation, detected as pulses from Earth.',
             };
             const TERM_NAMES = Object.keys(TERMS);
 

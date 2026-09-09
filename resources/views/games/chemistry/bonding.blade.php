@@ -26,7 +26,7 @@
     <script src="{{ asset('js/science-quiz.js') }}"></script>
     <script>
         (function() {
-            const BONDS = ['ionic', 'covalent'];
+            const BONDS = ['ionic', 'covalent', 'metallic'];
 
             const FACTS = {
                 ionic: {
@@ -45,27 +45,35 @@
                     examples: 'Water (H₂O) or carbon dioxide (CO₂)',
                     properties: 'Usually a low melting point; does not conduct electricity',
                 },
+                metallic: {
+                    label: 'Metallic bonding',
+                    phrase: 'a metallic bond',
+                    formation: 'Formed between positive metal ions and a "sea" of delocalised electrons',
+                    electronMovement: 'Electrons become delocalised and are free to move throughout the whole structure',
+                    examples: 'Iron (Fe) or copper (Cu) metal',
+                    properties: 'Good conductor of electricity and heat; malleable and can be bent into shape',
+                },
             };
 
             const EXTRA_DISTRACTORS = {
                 formation: ['Formed by the loss of protons between two metals', 'Formed only when atoms collide at very high temperature'],
-                electronMovement: ['Electrons are destroyed during bonding', 'Electrons move freely through a metallic lattice'],
-                examples: ['Iron (Fe) or copper (Cu)', 'Diamond and graphite only'],
+                electronMovement: ['Electrons are destroyed during bonding', 'Electrons stay fixed in place and never move at all'],
+                examples: ['Helium (He) gas', 'Diamond and graphite only'],
                 properties: ['Always a gas at room temperature', 'Always magnetic'],
             };
 
             const QUESTION_TEXT = {
                 formation: 'How is BONDTYPE formed?',
                 electronMovement: 'What happens to electrons when BONDTYPE forms?',
-                examples: 'Which of these is a typical example of a compound held together by BONDTYPE?',
+                examples: 'Which of these is a typical example of a compound or metal held together by BONDTYPE?',
                 properties: 'Which property is typical of a substance held together by BONDTYPE?',
             };
 
             const HINTS = {
-                formation: 'One type involves atoms swapping electrons completely; the other involves atoms sharing them.',
-                electronMovement: "'Transfer' means electrons move fully from one atom to another. 'Share' means both atoms keep some claim on them.",
-                examples: 'Ionic compounds are usually a metal joined to a non-metal. Covalent compounds are usually two or more non-metals.',
-                properties: 'Ionic compounds form solid lattices with strong forces between charged ions; covalent compounds are often molecular.',
+                formation: 'Ionic bonding involves atoms swapping electrons completely, covalent involves atoms sharing them, and metallic involves electrons roaming freely among metal ions.',
+                electronMovement: "'Transfer' means electrons move fully from one atom to another. 'Share' means both atoms keep some claim on them. 'Delocalised' means they belong to the whole structure.",
+                examples: 'Ionic compounds are usually a metal joined to a non-metal. Covalent compounds are usually two or more non-metals. Metallic bonding is found in pure metals and alloys.',
+                properties: 'Ionic compounds form solid lattices with strong forces between charged ions; covalent compounds are often molecular; metals are held together by free-moving electrons.',
             };
 
             function randInt(min, max) {
@@ -82,7 +90,14 @@
             }
 
             function otherBond(bond) {
-                return bond === 'ionic' ? 'covalent' : 'ionic';
+                const others = BONDS.filter(function(b) { return b !== bond; });
+                return others[randInt(0, others.length - 1)];
+            }
+
+            function badgeVariantFor(bond) {
+                if (bond === 'ionic') return 'a';
+                if (bond === 'covalent') return 'b';
+                return 'c';
             }
 
             window.ScienceQuiz.run({
@@ -93,14 +108,14 @@
                 gridColClass: 'col-12',
 
                 buildQuestion: function(type) {
-                    const bond = BONDS[randInt(0, 1)];
+                    const bond = BONDS[randInt(0, BONDS.length - 1)];
                     const facts = FACTS[bond];
                     return {
                         category: type,
                         bond: bond,
                         correctText: facts[type],
                         badge: facts.label.toUpperCase(),
-                        badgeVariant: bond === 'ionic' ? 'a' : 'b',
+                        badgeVariant: badgeVariantFor(bond),
                         questionText: QUESTION_TEXT[type].replace('BONDTYPE', facts.phrase),
                     };
                 },

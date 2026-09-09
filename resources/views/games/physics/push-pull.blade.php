@@ -34,6 +34,8 @@
                 'Pulling a wagon along': 'Pull',
                 'Throwing a ball': 'Push',
                 'Dragging a sledge': 'Pull',
+                'Pushing a swing to make it go': 'Push',
+                'Pulling a zip up': 'Pull',
             };
             const ACTION_NAMES = Object.keys(ACTIONS);
 
@@ -42,6 +44,12 @@
                 'Gravity': 'A pulling force that pulls everything down towards the Earth.',
                 'Friction': 'A force that slows things down when two surfaces rub together.',
                 'The strength of a force': 'The harder you push or pull, the bigger the force — and usually the bigger the effect.',
+                'Air resistance': 'A force that pushes against things moving through the air, slowing them down.',
+                'Water resistance': 'A force that pushes against things moving through water, slowing them down.',
+                'Magnetism': 'A pulling or pushing force between magnets, or between a magnet and certain metals.',
+                'Upthrust': 'A force from water (or another fluid) that pushes an object upwards, helping it float.',
+                'Balanced forces': 'When forces acting on an object are equal and opposite, so it does not change its speed or direction.',
+                'Unbalanced forces': "When forces acting on an object aren't equal, causing it to speed up, slow down, or change direction.",
             };
             const FACT_NAMES = Object.keys(FACTS);
 

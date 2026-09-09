@@ -31,6 +31,12 @@
                 { q: "Which explorer, later knighted by Elizabeth I, was the first Englishman to sail around the world?", a: "Sir Francis Drake" },
                 { q: "Elizabeth I never married and was sometimes known by what nickname?", a: "The Virgin Queen" },
                 { q: "What term is used for the flourishing of English drama, poetry and music during Elizabeth's reign?", a: "The Elizabethan era" },
+                { q: "What was the name of the famous London theatre where many of Shakespeare's plays were first performed?", a: "The Globe Theatre" },
+                { q: "Which cousin of Elizabeth I was executed in 1587 for plotting against her?", a: "Mary, Queen of Scots" },
+                { q: "Who was Elizabeth I's father, famous for having six wives?", a: "Henry VIII" },
+                { q: "Which explorer, backed by Elizabeth I, attempted to found England's first colony in North America at Roanoke?", a: "Sir Walter Raleigh" },
+                { q: "What group of trusted advisors helped Elizabeth I govern the country?", a: "The Privy Council" },
+                { q: "In which year did Elizabeth I die, ending the Tudor dynasty?", a: "1603" },
             ];
 
             function randInt(min, max) {

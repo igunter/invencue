@@ -44,6 +44,11 @@
                 'Adrenaline': "Made in the adrenal glands; prepares the body for 'fight or flight'.",
                 'ADH': 'Made in the pituitary gland; controls how much water the kidneys reabsorb.',
                 'Thyroxine': "Made in the thyroid gland; controls the body's metabolic rate.",
+                'Oestrogen': 'Made in the ovaries; controls the menstrual cycle and female secondary sexual characteristics.',
+                'Testosterone': 'Made in the testes; controls sperm production and male secondary sexual characteristics.',
+                'FSH': 'Made in the pituitary gland; causes an egg to mature in the ovary.',
+                'Growth hormone': 'Made in the pituitary gland; stimulates growth in bones and muscles.',
+                'Progesterone': 'Made in the ovaries; maintains the lining of the uterus during the menstrual cycle and pregnancy.',
             };
             const HORMONE_NAMES = Object.keys(HORMONES);
 

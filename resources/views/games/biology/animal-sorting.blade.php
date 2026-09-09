@@ -47,6 +47,10 @@
                 'Reptile': 'Cold-blooded animals with dry, scaly skin.',
                 'Insect': 'Small animals with six legs and usually two pairs of wings.',
                 'Amphibian': 'Animals that start life in water and can live on land as adults, like frogs.',
+                'Arachnid': 'Small animals with eight legs and two body sections, like spiders.',
+                'Crustacean': 'Animals with a hard outer shell that usually live in water, like crabs.',
+                'Mollusc': 'Soft-bodied animals, often with a shell, like snails.',
+                'Echinoderm': 'Spiny-skinned animals that live in the sea, like starfish.',
             };
             const GROUP_NAMES = Object.keys(GROUP_FEATURES);
 

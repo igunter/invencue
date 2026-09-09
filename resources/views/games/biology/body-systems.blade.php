@@ -34,15 +34,33 @@
                 'Intestines': 'Digestive system',
                 'Brain': 'Nervous system',
                 'Nerves': 'Nervous system',
+                'Skull': 'Skeletal system',
+                'Ribs': 'Skeletal system',
+                'Biceps': 'Muscular system',
+                'Diaphragm': 'Muscular system',
+                'Kidneys': 'Excretory system',
+                'Bladder': 'Excretory system',
+                'White blood cells': 'Immune system',
+                'Lymph nodes': 'Immune system',
+                'Pancreas (hormones)': 'Endocrine system',
+                'Thyroid gland': 'Endocrine system',
+                'Ovaries': 'Reproductive system',
+                'Testes': 'Reproductive system',
             };
             const ORGAN_NAMES = Object.keys(ORGANS);
-            const SYSTEM_LIST = ['Circulatory system', 'Respiratory system', 'Digestive system', 'Nervous system'];
+            const SYSTEM_LIST = ['Circulatory system', 'Respiratory system', 'Digestive system', 'Nervous system', 'Skeletal system', 'Muscular system', 'Excretory system', 'Immune system', 'Endocrine system', 'Reproductive system'];
 
             const SYSTEMS = {
                 'Circulatory system': 'Pumps blood around the body, carrying oxygen and nutrients to cells.',
                 'Respiratory system': 'Takes in oxygen and removes carbon dioxide from the body.',
                 'Digestive system': 'Breaks down food so the body can absorb nutrients.',
                 'Nervous system': 'Carries messages between the brain and the rest of the body.',
+                'Skeletal system': 'Supports the body, protects organs and lets it move using bones.',
+                'Muscular system': 'Contracts and relaxes muscles to move the body and its organs.',
+                'Excretory system': 'Removes waste products and excess water from the body.',
+                'Immune system': 'Defends the body against germs, infections and disease.',
+                'Endocrine system': 'Releases hormones that control processes like growth and metabolism.',
+                'Reproductive system': 'Produces sex cells and allows organisms to have offspring.',
             };
 
             function randInt(min, max) {

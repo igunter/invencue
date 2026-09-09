@@ -30,6 +30,11 @@
                 'Methane (CH₄)': 'A powerful greenhouse gas released by cattle farming, rice paddies and landfill sites.',
                 'Global warming': "The long-term increase in the Earth's average temperature, mainly caused by rising greenhouse gas levels.",
                 'Carbon footprint': 'A measure of the total greenhouse gases released by a person, product or activity.',
+                'Nitrous oxide (N₂O)': 'A powerful greenhouse gas released mainly from agricultural fertilisers and some industrial processes.',
+                'Water vapour': 'The most abundant greenhouse gas; the amount in the atmosphere increases as the climate warms.',
+                'Fossil fuels': 'Coal, oil and gas, which release stored carbon as carbon dioxide when they are burned for energy.',
+                'Deforestation': 'The clearing of forests, which reduces how much carbon dioxide is absorbed and can release stored carbon.',
+                'Renewable energy': 'Energy from sources like wind, solar and hydro power that release little or no extra greenhouse gases.',
             };
             const GREENHOUSE_NAMES = Object.keys(GREENHOUSE);
 
@@ -38,6 +43,12 @@
                 'Rising sea levels': 'Caused by melting ice sheets and glaciers, and by seawater expanding as it warms.',
                 'Temperature records': 'Direct measurements over the last 150+ years show a clear warming trend.',
                 'Melting glaciers and ice sheets': 'Satellite and ground measurements show polar and glacier ice shrinking over recent decades.',
+                'Tree rings': 'The width of a tree\'s growth rings reveals past temperature and rainfall conditions.',
+                'Extreme weather events': 'Increasingly frequent heatwaves, floods and storms are linked to a warming climate.',
+                'Ocean temperature records': 'Measurements show the oceans absorbing and storing extra heat over recent decades.',
+                'Species migration': 'Many animals and plants are shifting towards the poles or higher altitudes as their habitats warm.',
+                'Coral bleaching': 'Rising sea temperatures cause corals to expel the algae they depend on, turning them white.',
+                'Arctic sea ice extent': 'Satellite records show a shrinking area of Arctic sea ice each summer.',
             };
             const EVIDENCE_NAMES = Object.keys(EVIDENCE);
 

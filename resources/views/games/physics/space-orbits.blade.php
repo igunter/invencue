@@ -30,10 +30,12 @@
                 'Venus': 2,
                 'Earth': 3,
                 'Mars': 4,
-                'Jupiter': 5,
-                'Saturn': 6,
-                'Uranus': 7,
-                'Neptune': 8,
+                'The asteroid belt': 5,
+                'Jupiter': 6,
+                'Saturn': 7,
+                'Uranus': 8,
+                'Neptune': 9,
+                'Pluto': 10,
             };
             const PLANET_NAMES = Object.keys(ORDER);
 
@@ -44,6 +46,10 @@
                 'Mars': "Known as the 'Red Planet' because of rusty iron oxide on its surface.",
                 'Jupiter': 'The largest planet in the solar system, a gas giant with a huge storm called the Great Red Spot.',
                 'Saturn': 'Famous for its wide, bright rings made of ice and rock.',
+                'Uranus': 'A pale blue ice giant that spins on its side, tilted almost 90 degrees.',
+                'Neptune': 'The windiest planet, with the fastest recorded winds in the solar system.',
+                'Pluto (dwarf planet)': 'Once called the ninth planet, now classed as a dwarf planet in the icy Kuiper Belt.',
+                'Ceres (dwarf planet)': 'The largest object in the asteroid belt, and the closest dwarf planet to the Sun.',
             };
             const FACT_PLANETS = Object.keys(FACTS);
 
@@ -85,13 +91,13 @@
                         category: type,
                         fact: FACTS[planet],
                         correctText: planet,
-                        questionText: 'Which planet is this: ' + FACTS[planet].toLowerCase() + '?',
+                        questionText: 'Which planet or dwarf planet is this: ' + FACTS[planet].toLowerCase() + '?',
                     };
                 },
 
                 buildChoices: function(q) {
                     if (q.category === 'order') {
-                        const numbers = ['1', '2', '3', '4', '5', '6', '7', '8'];
+                        const numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
                         const distractors = pickOthers(numbers, q.correctText, 3);
                         return shuffle([q.correctText].concat(distractors));
                     }

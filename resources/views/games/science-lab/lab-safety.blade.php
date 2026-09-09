@@ -33,6 +33,9 @@
                 'Tasting a substance to see what it is': 'Unsafe',
                 'Pointing a test tube at a friend': 'Unsafe',
                 'Leaving a hot Bunsen burner unattended': 'Unsafe',
+                'Standing the Bunsen burner on a heatproof mat': 'Safe',
+                'Reporting a broken piece of equipment to your teacher': 'Safe',
+                'Reaching over a lit Bunsen burner to grab something': 'Unsafe',
             };
             const BEHAVIOUR_NAMES = Object.keys(BEHAVIOUR);
 
@@ -41,6 +44,12 @@
                 'A lab coat or apron': 'Protects your clothes and skin from spills.',
                 'Telling an adult about spills or breakages': 'Lets them clean it up safely straight away.',
                 'Never eating or drinking in a lab': 'Stops chemicals or germs from getting into your food or drink.',
+                'Tying back long hair': 'Stops it catching fire or falling into chemicals and equipment.',
+                'Standing up, not sitting, when using a Bunsen burner': 'Lets you react quickly and move away if something goes wrong.',
+                'Only using equipment as shown by your teacher': 'Stops accidents caused by using equipment the wrong way.',
+                'Washing your hands after an experiment': 'Removes any chemicals or germs before you touch your face or food.',
+                'Keeping bags and coats away from the workbench': 'Stops you tripping over them or knocking something over.',
+                'Turning a Bunsen burner to a yellow safety flame when not heating something': 'Makes the flame easy to see so nobody puts their hand through it by accident.',
             };
             const RULE_NAMES = Object.keys(RULES);
 

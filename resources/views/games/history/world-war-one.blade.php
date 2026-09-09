@@ -31,6 +31,11 @@
                 { q: "What term describes the long ditches soldiers fought from on the Western Front?", a: "Trenches" },
                 { q: "What name is given to the alliance of Britain, France and Russia during the war?", a: "The Allies" },
                 { q: "What was the name of the treaty signed in 1919 that officially ended the war with Germany?", a: "The Treaty of Versailles" },
+                { q: "What deadly chemical weapon was used by both sides for the first time on a large scale during the First World War?", a: "Poison gas" },
+                { q: "Which battle in 1916 on the Western Front is remembered as one of the bloodiest in history, with over a million casualties?", a: "The Battle of the Somme" },
+                { q: "What new armoured vehicle, designed to cross trenches, was first used in battle in 1916?", a: "The tank" },
+                { q: "The sinking of which passenger liner by a German U-boat in 1915 helped turn public opinion against Germany?", a: "The Lusitania" },
+                { q: "In which year did the United States join the war on the side of the Allies?", a: "1917" },
             ];
 
             function randInt(min, max) {

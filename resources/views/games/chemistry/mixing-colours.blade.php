@@ -31,14 +31,26 @@
                 'Red + Blue': 'Purple',
                 'Red + White': 'Pink',
                 'Black + White': 'Grey',
+                'Blue + White': 'Light blue',
+                'Green + Blue': 'Teal',
+                'Red + Green': 'Brown',
+                'Yellow + White': 'Pale yellow',
+                'Orange + Red': 'Reddish orange',
             };
             const MIX_NAMES = Object.keys(MIXES);
-            const COLOUR_LIST = ['Orange', 'Green', 'Purple', 'Pink', 'Grey', 'Brown'];
+            const COLOUR_LIST = ['Orange', 'Green', 'Purple', 'Pink', 'Grey', 'Brown', 'Light blue', 'Teal', 'Pale yellow', 'Reddish orange'];
 
             const FACTS = {
                 'Primary colours': "Red, blue and yellow — colours that can't be made by mixing other colours together.",
                 'Secondary colours': 'Orange, green and purple — made by mixing two primary colours together.',
                 'Mixing all three primary colours': 'Usually makes a muddy brown colour.',
+                'Warm colours': 'Reds, oranges and yellows — colours that can remind you of sunshine or fire.',
+                'Cool colours': 'Blues, greens and purples — colours that can remind you of water or ice.',
+                'Adding white to a colour': 'Makes it lighter, creating what is called a tint.',
+                'Adding black to a colour': 'Makes it darker, creating what is called a shade.',
+                'Complementary colours': 'Colours opposite each other, like red and green, that look extra bright next to each other.',
+                'Mixing two secondary colours': 'Usually makes a muddy, dull brown or grey colour.',
+                'Tertiary colours': 'Colours made by mixing a primary colour with a neighbouring secondary colour, like red-orange.',
             };
             const FACT_NAMES = Object.keys(FACTS);
 

@@ -46,6 +46,8 @@
                 'Time': 'Seconds (s)',
                 'Temperature': 'Kelvin (K) or degrees Celsius (°C)',
                 'Frequency': 'Hertz (Hz)',
+                'Pressure': 'Pascals (Pa)',
+                'Electric charge': 'Coulombs (C)',
             };
             const UNIT_NAMES = Object.keys(UNITS);
 

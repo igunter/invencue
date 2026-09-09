@@ -31,6 +31,11 @@
                 'Cytoplasm': 'A jelly-like substance where chemical reactions happen.',
                 'Mitochondria': 'The site of respiration, releasing energy for the cell.',
                 'Ribosomes': 'Where proteins are made in the cell.',
+                'Cell wall': 'A rigid layer outside the cell membrane that supports and protects plant cells.',
+                'Chloroplast': 'Contains chlorophyll and is the site of photosynthesis in plant cells.',
+                'Vacuole': 'A fluid-filled space that stores water and helps keep the cell firm.',
+                'Golgi apparatus': 'Processes and packages proteins before they leave the cell.',
+                'Endoplasmic reticulum': 'A network of membranes that transports proteins and other materials around the cell.',
             };
             const ORGANELLE_NAMES = Object.keys(ORGANELLES);
 
@@ -45,6 +50,12 @@
                 'A cell membrane': 'Both plant and animal cells',
                 'A flexible, irregular shape': 'Animal cells only',
                 'Centrioles, used in cell division': 'Animal cells only',
+                'Chlorophyll': 'Plant cells only',
+                'Ribosomes': 'Both plant and animal cells',
+                'A small vacuole (if present)': 'Animal cells only',
+                'A round, regular shape': 'Animal cells only',
+                'A rigid, fixed shape': 'Plant cells only',
+                'Cytoplasm': 'Both plant and animal cells',
             };
             const FEATURE_NAMES = Object.keys(FEATURES);
 

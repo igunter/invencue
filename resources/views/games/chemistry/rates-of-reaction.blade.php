@@ -29,6 +29,12 @@
                 'Activation energy': 'The minimum energy particles need when they collide for a reaction to happen.',
                 'Catalyst': 'A substance that speeds up a reaction without being used up itself.',
                 'Rate of reaction': 'How quickly reactants are used up, or products are formed, in a reaction.',
+                'Successful collision': 'A collision between particles that has enough energy to break bonds and start a reaction.',
+                'Surface area': 'The amount of exposed outer area of a solid — breaking a solid into smaller pieces increases it.',
+                'Concentration': 'A measure of how much solute is dissolved in a given volume of solution.',
+                'Reversible reaction': 'A reaction where the products can react again to reform the original reactants.',
+                'Equilibrium': 'The point in a reversible reaction where the forward and backward reactions happen at the same rate, so overall amounts stay constant.',
+                'Precipitate reaction rate method': 'Measuring rate by timing how long it takes for a cross viewed through the solution to disappear as a precipitate forms.',
             };
             const TERM_NAMES = Object.keys(TERMS);
 
@@ -38,6 +44,11 @@
                 'Decreasing particle size (more surface area)': 'More particles are exposed and available to collide, increasing the rate.',
                 'Adding a catalyst': 'It lowers the activation energy needed, increasing the rate without being used up.',
                 'Increasing pressure of a gas': 'Particles are pushed closer together, so collisions happen more often, increasing the rate.',
+                'Decreasing temperature': 'Particles move slower and collide less often and with less energy, decreasing the rate.',
+                'Decreasing concentration': 'There are fewer particles in the same volume, so collisions happen less often, decreasing the rate.',
+                'Using larger pieces (less surface area)': 'Fewer particles are exposed and available to collide, decreasing the rate.',
+                'Removing a catalyst': 'The activation energy needed rises back to normal, so the rate decreases.',
+                'Stirring a reaction mixture': 'Helps particles mix and meet more often, which can increase the rate of collisions between them.',
             };
             const FACTOR_NAMES = Object.keys(FACTORS);
 

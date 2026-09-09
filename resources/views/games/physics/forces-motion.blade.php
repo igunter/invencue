@@ -33,6 +33,12 @@
                 'Velocity': 'Speed in a particular direction.',
                 'Acceleration': "The rate at which an object's velocity changes.",
                 'Distance': 'How far an object has travelled, regardless of direction.',
+                'Deceleration': 'A decrease in speed; negative acceleration.',
+                'Displacement': "An object's distance and direction from its starting point.",
+                'Momentum': 'A measure of how hard it is to stop a moving object, calculated as mass × velocity.',
+                'Friction': 'A force that opposes motion between two surfaces in contact.',
+                'Terminal velocity': 'The maximum, constant speed reached when the forces on a moving object are balanced.',
+                'Air resistance': 'A frictional force that acts against an object moving through air.',
             };
             const TERM_NAMES = Object.keys(TERMS);
 

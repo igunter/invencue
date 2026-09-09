@@ -45,6 +45,11 @@
                 'Metal': 'Elements found on the left and middle of the periodic table; usually shiny, conduct electricity, and can be bent into shape.',
                 'Non-metal': "Elements found on the right of the periodic table; usually dull and brittle, and don't conduct electricity well.",
                 'Noble gases': 'Group 0 elements that are very unreactive, such as helium and neon.',
+                'Alkali metals': 'Group 1 elements, such as lithium and sodium, that are soft, very reactive metals.',
+                'Halogens': 'Group 7 elements, such as chlorine and iodine, that are reactive non-metals.',
+                'Transition metals': 'A block of metals in the middle of the periodic table, such as iron and copper, often used to make useful alloys.',
+                'Atomic number': "The number of protons in an atom's nucleus, which decides its position in the periodic table.",
+                'Dmitri Mendeleev': 'The scientist often credited with arranging the first widely used periodic table, ordering elements by atomic mass and leaving gaps for undiscovered elements.',
             };
             const FACT_NAMES = Object.keys(FACTS);
 

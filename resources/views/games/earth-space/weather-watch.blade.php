@@ -32,15 +32,25 @@
                 'Strong moving air that bends the trees': 'Windy',
                 'A flash of light followed by a loud bang': 'Stormy',
                 'Thick, low cloud you can barely see through': 'Foggy',
+                'The sky is grey and covered with clouds, blocking the sun': 'Cloudy',
+                'The ground and puddles are frozen solid and slippery': 'Icy',
+                'Big piles of snow on the ground and icicles hanging from roofs': 'Snowy',
+                'Dark clouds, thunder rumbling and bright flashes across the sky': 'Stormy',
             };
             const SPOT_NAMES = Object.keys(SPOT);
-            const WEATHER_LIST = ['Sunny', 'Rainy', 'Snowy', 'Windy', 'Stormy', 'Foggy'];
+            const WEATHER_LIST = ['Sunny', 'Rainy', 'Snowy', 'Windy', 'Stormy', 'Foggy', 'Cloudy', 'Icy'];
 
             const CLOTHING = {
                 'Sunny': 'Sunglasses, a hat and sun cream to protect your skin.',
                 'Rainy': 'A raincoat, wellies, and maybe an umbrella.',
                 'Snowy': 'A warm coat, gloves, a hat and snow boots.',
                 'Windy': 'A windproof jacket, since loose things can blow around.',
+                'Stormy': 'A raincoat and sturdy shoes — it is safest to stay indoors during lightning.',
+                'Foggy': 'Bright or reflective clothing so that drivers and others can see you clearly.',
+                'Cloudy': 'A light jacket, since it might not be sunny but usually is not freezing either.',
+                'Icy': 'Boots with a good grip, warm layers and gloves to stay safe on slippery ground.',
+                'Hot': 'Loose, light-coloured clothing, a hat, sunglasses and plenty of water.',
+                'Frosty': 'A warm coat, gloves and a hat, plus boots with a good grip for icy pavements.',
             };
             const CLOTHING_WEATHER = Object.keys(CLOTHING);
 

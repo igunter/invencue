@@ -32,6 +32,9 @@
                 'The Milky Way': 'Our home galaxy, containing over 100 billion stars, including our Sun.',
                 'A galaxy': 'A huge collection of billions of stars, gas and dust, held together by gravity.',
                 'The universe': 'Everything that exists — all galaxies, stars, planets, and space itself.',
+                'A star': 'A huge ball of burning gas that produces its own light and heat through nuclear fusion.',
+                'A planet': 'A large object that orbits a star, is rounded by its own gravity, and has cleared its orbit of other debris.',
+                'A cluster of galaxies': 'A group of galaxies held together by gravity, among the largest structures in the universe.',
             };
             const SCALE_NAMES = Object.keys(SCALE);
 
@@ -40,6 +43,12 @@
                 'Light-year': 'The distance light travels in one year, about 9.46 trillion km — used to measure distances between stars and galaxies.',
                 'Orbit': 'The curved path an object takes around another object because of gravity.',
                 'Telescope': 'An instrument used to observe distant objects in space by collecting light or other radiation.',
+                'Gravity': 'The force of attraction between objects with mass, which holds planets in orbit and shapes the universe.',
+                'Parsec': 'Another unit astronomers use to measure vast distances in space, based on parallax.',
+                'Redshift': 'The stretching of light from distant objects moving away from us, used as evidence that the universe is expanding.',
+                'Big Bang': 'The event around 13.8 billion years ago when the universe began expanding from an extremely hot, dense point.',
+                'Satellite': 'An object that orbits a larger object in space, either natural, like a moon, or artificial, like the ISS.',
+                'Constellation': 'A recognisable pattern of stars in the sky, named after objects, animals or characters.',
             };
             const TERM_NAMES = Object.keys(TERMS);
 

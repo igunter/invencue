@@ -31,6 +31,10 @@
                 { q: "Which queen was the longest-reigning monarch in British history?", a: "Elizabeth II" },
                 { q: "Which king became King of England after the Battle of Hastings in 1066?", a: "William the Conqueror" },
                 { q: "Who is the current King of the United Kingdom?", a: "King Charles III" },
+                { q: "Which king was forced by his barons to sign the Magna Carta in 1215?", a: "King John" },
+                { q: "Which king was defeated and killed at the Battle of Bosworth in 1485, ending the Wars of the Roses?", a: "Richard III" },
+                { q: "Which king united the crowns of England and Scotland in 1603?", a: "James I" },
+                { q: "Which king led England's armies to victory at the Battle of Agincourt in 1415?", a: "Henry V" },
             ];
 
             function randInt(min, max) {

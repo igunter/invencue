@@ -31,6 +31,11 @@
                 'Element': 'A substance made of only one type of atom.',
                 'Compound': 'A substance made of two or more different elements chemically joined together.',
                 'Mixture': 'Two or more substances mixed together but not chemically joined, so they can be separated again.',
+                'Proton': 'A positively charged particle found in the nucleus of an atom.',
+                'Neutron': 'A particle with no electrical charge found in the nucleus of an atom.',
+                'Electron': 'A tiny, negatively charged particle that orbits the nucleus of an atom.',
+                'Nucleus (atom)': 'The small, dense centre of an atom, containing protons and neutrons.',
+                'Ion': 'An atom or molecule that has gained or lost electrons, giving it an electrical charge.',
             };
             const TERM_NAMES = Object.keys(TERMS);
 
@@ -41,6 +46,10 @@
                 'Carbon dioxide (CO₂)': 'Compound',
                 'Iron (Fe)': 'Element',
                 'Air': 'Mixture',
+                'Sodium chloride (table salt)': 'Compound',
+                'Copper (Cu)': 'Element',
+                'Sand and water stirred together': 'Mixture',
+                'Glucose (C₆H₁₂O₆)': 'Compound',
             };
             const EXAMPLE_NAMES = Object.keys(EXAMPLES);
             const CATEGORY_LIST = ['Element', 'Compound', 'Mixture'];

@@ -31,6 +31,11 @@
                 'Transparent': 'A material that lets almost all light pass through, like clear glass.',
                 'Opaque': 'A material that blocks light completely, so no light passes through.',
                 'Translucent': "A material that lets some light pass through, but you can't see clearly through it.",
+                'Reflection': 'When light bounces off a surface, like a mirror.',
+                'Luminous object': 'An object that gives out its own light, like the Sun or a lamp.',
+                'Non-luminous object': 'An object that does not make its own light, but can reflect light from elsewhere, like the Moon.',
+                'Umbra': 'The darkest, central part of a shadow, where light is completely blocked.',
+                'Reflective material': 'A material like a mirror or shiny metal that reflects most of the light that hits it.',
             };
             const FACT_NAMES = Object.keys(FACTS);
 
@@ -39,6 +44,12 @@
                 'Moving a torch further away from an object': 'The shadow gets smaller.',
                 'Shining a light on a see-through object like glass': 'Little to no shadow is made, because light passes through.',
                 'Shining a light on a solid object like a book': 'A dark, clear shadow is made.',
+                'Moving the object itself closer to the torch': 'The shadow gets bigger still, because the object blocks more of the spreading light.',
+                'Moving the object itself closer to the screen': 'The shadow gets smaller and sharper.',
+                'Using two torches shining from different angles': 'Two overlapping shadows are made, one from each light source.',
+                'Shining a light directly above an object, straight down': 'A short shadow is made, right underneath the object.',
+                'Shining a light at a low angle, near the ground': 'A long, stretched-out shadow is made.',
+                'Shining a light on a translucent material like tracing paper': 'A faint, blurry shadow is made, because some light passes through.',
             };
             const PREDICT_NAMES = Object.keys(PREDICT);
 

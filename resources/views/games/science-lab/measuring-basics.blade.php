@@ -40,6 +40,8 @@
                 'How hot a cup of tea is': 'Thermometer',
                 'How much water is in a bottle': 'Measuring jug',
                 'How heavy a bag of flour is': 'Weighing scales',
+                'Length of a piece of string': 'Ruler',
+                'How cold the freezer is': 'Thermometer',
             };
             const TOOL_TASKS = Object.keys(TOOLS);
             const TOOL_LIST = ['Ruler', 'Measuring jug', 'Thermometer', 'Weighing scales'];

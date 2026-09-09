@@ -31,6 +31,11 @@
                 'Seeing bright colours in a rainbow': 'Sight',
                 'Feeling that ice is cold': 'Touch',
                 'Tasting that a lemon is sour': 'Taste',
+                'Hearing thunder rumble in the distance': 'Hearing',
+                'Feeling that sandpaper is rough': 'Touch',
+                'Seeing that the sky is cloudy': 'Sight',
+                'Smelling smoke from a bonfire': 'Smell',
+                'Tasting that a crisp is salty': 'Taste',
             };
             const OBSERVATION_NAMES = Object.keys(OBSERVATIONS);
             const SENSE_LIST = ['Smell', 'Hearing', 'Sight', 'Touch', 'Taste'];
@@ -41,7 +46,13 @@
                 'Smell': 'Nose',
                 'Taste': 'Tongue',
                 'Touch': 'Skin',
+                'Balance': 'Inner ear',
+                'Body position (proprioception)': 'Muscles and joints',
+                'Temperature (thermoception)': 'Nerve endings in the skin',
+                'Hunger': 'Stomach',
+                'Thirst': 'Brain (hypothalamus)',
             };
+            const ORGAN_SENSE_LIST = ['Sight', 'Hearing', 'Smell', 'Taste', 'Touch', 'Balance', 'Body position (proprioception)', 'Temperature (thermoception)', 'Hunger', 'Thirst'];
 
             function randInt(min, max) {
                 return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -76,7 +87,7 @@
                             questionText: observation + ' — which sense is this?',
                         };
                     }
-                    const sense = SENSE_LIST[randInt(0, SENSE_LIST.length - 1)];
+                    const sense = ORGAN_SENSE_LIST[randInt(0, ORGAN_SENSE_LIST.length - 1)];
                     return {
                         category: type,
                         label: sense,
@@ -90,7 +101,7 @@
                         const distractors = pickOthers(SENSE_LIST, q.correctText, 3);
                         return shuffle([q.correctText].concat(distractors));
                     }
-                    const distractors = pickOthers(SENSE_LIST.map(function(s) { return ORGANS[s]; }), q.correctText, 3);
+                    const distractors = pickOthers(ORGAN_SENSE_LIST.map(function(s) { return ORGANS[s]; }), q.correctText, 3);
                     return shuffle([q.correctText].concat(distractors));
                 },
 

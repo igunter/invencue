@@ -31,6 +31,11 @@
                 'Night': 'The part of the 24 hours when your part of the Earth faces away from the Sun.',
                 'Sunrise': 'When the Sun appears to come up as your part of the Earth turns to face it.',
                 'Sunset': 'When the Sun appears to go down as your part of the Earth turns away from it.',
+                'Axis': "An imaginary line through the centre of the Earth, from the North Pole to the South Pole, that the Earth spins around.",
+                'Rotation': 'The spinning motion of the Earth on its axis, which takes 24 hours and causes day and night.',
+                'Midday (noon)': 'The middle of the day, when the Sun is at its highest point in the sky.',
+                'Midnight': 'The middle of the night, 12 hours away from midday.',
+                'Time zones': "Different regions of the world set their clocks differently, depending on how far the Earth has turned relative to the Sun.",
             };
             const FACT_NAMES = Object.keys(FACTS);
 
@@ -41,6 +46,10 @@
                 'Sleeping in bed': 'Night',
                 'Stars appearing in the sky': 'Night',
                 'The Moon being high in the sky': 'Night',
+                'Eating lunch': 'Day',
+                'Playing outside in the sunshine': 'Day',
+                'Brushing your teeth before bed': 'Night',
+                'The street lights turning on': 'Night',
             };
             const TIME_NAMES = Object.keys(TIME_OF_DAY);
 

@@ -32,6 +32,10 @@
                 'Decomposer': 'An organism that breaks down dead material, returning nutrients to the soil.',
                 'Predator': 'An animal that hunts and eats other animals.',
                 'Prey': 'An animal that is hunted and eaten by a predator.',
+                'Tertiary consumer': 'An animal that eats secondary consumers — usually a top predator.',
+                'Herbivore': 'An animal that only eats plants.',
+                'Carnivore': 'An animal that only eats other animals.',
+                'Omnivore': 'An animal that eats both plants and other animals.',
             };
             const ROLE_NAMES = Object.keys(ROLES);
 
@@ -40,6 +44,12 @@
                 'Grass → Rabbit → Fox': 'Shows energy flowing from grass to rabbit to fox — the rabbit eats grass, and the fox eats the rabbit.',
                 "Losing a food chain's producer": 'Affects every organism in the chain, since all of their energy traces back to that producer.',
                 'A food web': 'Shows how several food chains overlap and connect within a habitat.',
+                'Removing a predator from a food chain': 'Can cause the prey population it used to eat to grow much larger.',
+                'The Sun': "The original source of energy for almost every food chain, captured by producers.",
+                'Grass → Grasshopper → Frog → Snake': 'Shows energy passing along four trophic levels, from producer to top predator.',
+                'A food chain with fewer links': 'Usually loses less energy overall, since energy is lost at every stage of the chain.',
+                'Algae → Small fish → Big fish → Shark': 'Shows a marine food chain, with the shark as the top predator.',
+                'Two overlapping food chains': 'Happens when the same organism appears in more than one food chain, forming a food web.',
             };
             const CHAIN_NAMES = Object.keys(CHAINS);
 

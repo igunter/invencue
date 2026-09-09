@@ -34,6 +34,9 @@
                 'Decomposer': 'An organism that breaks down dead material and waste, releasing nutrients.',
                 'Food web': 'A diagram showing how several connected food chains in a habitat relate to each other.',
                 'Pyramid of biomass': 'A diagram showing how biomass decreases at each trophic level going up the chain.',
+                'Ecosystem': 'All the living organisms and non-living conditions in an area, and how they interact.',
+                'Habitat': 'The place where an organism lives within its ecosystem.',
+                'Population': 'All the organisms of one species living in a particular area at the same time.',
             };
             const TERM_NAMES = Object.keys(TERMS);
             const ENERGY_VALUES = [1000, 2000, 4000, 5000, 8000, 10000, 20000];

@@ -34,6 +34,10 @@
                 'Coin': 'Sink',
                 'Metal spoon': 'Sink',
                 'Marble': 'Sink',
+                'Beach ball': 'Float',
+                'Cork': 'Float',
+                'Brick': 'Sink',
+                'Golf ball': 'Sink',
             };
             const OBJECT_NAMES = Object.keys(OBJECTS);
 
@@ -42,6 +46,12 @@
                 'Why do light objects like leaves float?': 'Because their material is light for its size, so the water can push up and support its weight.',
                 "Why does a big empty bottle float, even though it's plastic?": "Because it's full of air, which is very light, making the whole bottle light for its size.",
                 'Why does a small coin sink, even though it is small?': 'Because metal is very dense — heavy for its size — so it sinks even in small pieces.',
+                'Why does a golf ball sink but a beach ball float?': 'The golf ball is packed solid and dense, while the beach ball is full of light air, so it stays light for its size.',
+                'Why does a cork float?': 'Cork is very light for its size, so the water easily pushes up and supports its weight.',
+                'Why does a heavy brick sink?': 'A brick is packed tightly and is heavy for its size, so gravity pulls it down through the water.',
+                'What is the water pushing up on an object called?': 'Upthrust — an upward push from the water that can support an object if it is light enough for its size.',
+                'Why do ships made of heavy metal float?': "A ship's hollow shape spreads its weight over a large area and traps air inside, making it light enough for its size overall.",
+                'What happens if an object is denser than water?': "It sinks, because it is heavier than the water it pushes out of the way.",
             };
             const WHY_NAMES = Object.keys(WHY);
 

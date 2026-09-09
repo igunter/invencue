@@ -31,6 +31,11 @@
                 'Slate': 'A flat, grey rock that splits easily into thin sheets, often used for roof tiles.',
                 'Sandstone': 'A rock made of grains of sand pressed together, often orange or yellow.',
                 'Pumice': 'A light, bumpy rock full of holes, made from cooled volcanic lava — it can even float!',
+                'Marble': 'A smooth rock, often white or patterned, that can be polished to a shine — used for statues and floors.',
+                'Basalt': 'A dark, fine-grained rock formed from cooled lava, common in volcanic areas.',
+                'Obsidian': 'A smooth, shiny black rock that looks like glass, formed when lava cools very quickly.',
+                'Limestone': 'A grey rock that often contains tiny bits of ancient sea shells, used to make cement.',
+                'Flint': 'A hard, dark grey or black rock that can be sharpened to a point, often found inside chalk.',
             };
             const ROCK_NAMES = Object.keys(ROCKS);
 
@@ -38,6 +43,13 @@
                 'Clay soil': 'Soil made of very fine particles — it holds water well but drains slowly.',
                 'Sandy soil': "Soil made of large particles — it drains quickly but doesn't hold water or nutrients well.",
                 'Loam soil': "A mix of sand, silt and clay — it's great for growing most plants.",
+                'Silty soil': 'Soil made of smooth, fine particles that feels soft and holds water well, but can wash away easily.',
+                'Peaty soil': 'Dark soil made of lots of decayed plant material — it holds water well and is rich in nutrients.',
+                'Chalky soil': 'Soil containing lumps of chalk or limestone — it drains freely and is not very acidic.',
+                'Saline soil': 'Soil containing a lot of salt, often found near the coast, which can make it hard for some plants to grow.',
+                'Topsoil': 'The dark, nutrient-rich top layer of soil where most plant roots grow.',
+                'Subsoil': 'The layer of soil beneath the topsoil, with fewer nutrients and less organic matter.',
+                'Humus': 'Dark, crumbly material in soil made from decomposed plants and animals, which adds nutrients to help plants grow.',
             };
             const SOIL_NAMES = Object.keys(SOIL);
 

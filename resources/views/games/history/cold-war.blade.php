@@ -31,6 +31,12 @@
                 { q: "What term describes the military buildup of weapons between two rival superpowers, without direct fighting?", a: "The arms race" },
                 { q: "What is the name of the plan the USA used to give economic aid to rebuild Western Europe after the war?", a: "The Marshall Plan" },
                 { q: "In which year did the Berlin Wall fall?", a: "1989" },
+                { q: "What is the name of the military alliance formed in 1949 by the USA, Canada and Western European countries?", a: "NATO" },
+                { q: "What was the name of the rival military alliance formed by the Soviet Union and its Eastern European allies?", a: "The Warsaw Pact" },
+                { q: "What term, popularised by Winston Churchill, describes the political divide separating Soviet-controlled Eastern Europe from the West?", a: "The Iron Curtain" },
+                { q: "What name is given to the competition between the USA and Soviet Union to achieve space exploration milestones first?", a: "The Space Race" },
+                { q: "Which Soviet cosmonaut became the first human in space in 1961?", a: "Yuri Gagarin" },
+                { q: "In which country was there a major Cold War conflict during the 1950s and 1960s-70s involving the USA fighting communist forces in Southeast Asia?", a: "Vietnam" },
             ];
 
             function randInt(min, max) {

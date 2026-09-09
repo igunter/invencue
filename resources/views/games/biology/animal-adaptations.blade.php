@@ -40,6 +40,12 @@
                 'Arctic (polar region)': 'Extreme cold and long periods of darkness in winter.',
                 'Rainforest': 'Intense competition for light, and heavy rainfall.',
                 'Ocean depths': 'Total darkness and very high water pressure.',
+                'Grassland (savanna)': 'Wide open spaces with little shelter from predators and long dry seasons.',
+                'Mountains': 'Thin air, freezing temperatures and strong winds at high altitude.',
+                'Tropical wetland': 'Waterlogged ground and warm, humid conditions all year round.',
+                'Woodland': 'Changing seasons, with cold winters and limited food in autumn and winter.',
+                'Coral reef': 'Strong currents and intense competition for space and light near the surface.',
+                'Coastal rock pool': 'Being covered by the sea at high tide and exposed to air and sun at low tide.',
             };
             const HABITAT_NAMES = Object.keys(HABITATS);
 

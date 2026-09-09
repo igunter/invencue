@@ -35,15 +35,26 @@
                 'Steam': 'Gas',
                 'Air': 'Gas',
                 'Oxygen': 'Gas',
+                'Honey': 'Liquid',
+                'Helium in a balloon': 'Gas',
+                'Brick': 'Solid',
             };
             const OBJECT_NAMES = Object.keys(OBJECTS);
             const STATE_LIST = ['Solid', 'Liquid', 'Gas'];
 
             const FACTS = {
-                'Solid': 'Keeps its shape and size — its particles are packed tightly together.',
-                'Liquid': 'Takes the shape of its container — its particles can move past each other.',
+                'Solid': 'Keeps its shape and size — its particles are packed tightly together and only vibrate in place.',
+                'Liquid': 'Takes the shape of its container but keeps the same amount of space — its particles can move past each other.',
                 'Gas': 'Spreads out to fill any space — its particles move around freely and are far apart.',
+                'Melting point': 'The temperature at which a solid turns into a liquid.',
+                'Boiling point': 'The temperature at which a liquid turns into a gas throughout the whole liquid, not just at the surface.',
+                'Particles in a solid': 'Vibrate in fixed positions but do not move from place to place, which is why a solid keeps its shape.',
+                'Particles in a gas': 'Move quickly in random directions and are spread far apart from each other.',
+                'Squashing a gas': 'A gas can be compressed into a smaller space quite easily, because its particles are far apart.',
+                'Squashing a liquid': 'A liquid is very hard to compress, because its particles are already close together.',
+                'Changing state': 'Happens when heating or cooling gives particles more or less energy, changing how they are arranged and how they move.',
             };
+            const FACT_NAMES = Object.keys(FACTS);
 
             function randInt(min, max) {
                 return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -56,6 +67,10 @@
                     [out[i], out[j]] = [out[j], out[i]];
                 }
                 return out;
+            }
+
+            function pickOthers(pool, exclude, count) {
+                return shuffle(pool.filter(function(x) { return x !== exclude; })).slice(0, count);
             }
 
             window.ScienceQuiz.run({
@@ -74,12 +89,12 @@
                             questionText: 'Is ' + object.toLowerCase() + ' a solid, a liquid, or a gas?',
                         };
                     }
-                    const state = STATE_LIST[randInt(0, STATE_LIST.length - 1)];
+                    const fact = FACT_NAMES[randInt(0, FACT_NAMES.length - 1)];
                     return {
                         category: type,
-                        label: state,
-                        correctText: FACTS[state],
-                        questionText: 'What is special about a ' + state.toLowerCase() + '?',
+                        label: fact,
+                        correctText: FACTS[fact],
+                        questionText: "What is true about '" + fact.toLowerCase() + "'?",
                     };
                 },
 
@@ -87,16 +102,15 @@
                     if (q.category === 'sort') {
                         return shuffle(STATE_LIST.slice());
                     }
-                    const others = STATE_LIST.filter(function(s) { return s !== q.label; }).map(function(s) { return FACTS[s]; });
-                    const bonusDistractor = 'Only exists inside stars and lightning — far too hot for everyday particles to stay together.';
-                    return shuffle([q.correctText].concat(others).concat([bonusDistractor]));
+                    const distractors = pickOthers(FACT_NAMES, q.label, 3).map(function(f) { return FACTS[f]; });
+                    return shuffle([q.correctText].concat(distractors));
                 },
 
                 hintFor: function(q) {
                     if (q.category === 'sort') {
                         return 'Can you hold it in your hand and it keeps its shape? Does it flow and pour? Or can you not see or hold it at all?';
                     }
-                    return 'Think about whether the particles are packed tight, can slide past each other, or spread far apart.';
+                    return 'Think about whether the particles are packed tight, can slide past each other, or spread far apart, and how that affects the substance.';
                 },
 
                 explanationFor: function(q) {

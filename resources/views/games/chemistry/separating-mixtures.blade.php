@@ -31,6 +31,11 @@
                 'Separating different coloured inks mixed together': 'Chromatography',
                 'Separating alcohol from water (they have different boiling points)': 'Distillation',
                 'Separating iron filings from sand': 'Using a magnet',
+                'Separating tea leaves from brewed tea': 'Filtration',
+                'Separating pure water from seawater': 'Distillation',
+                'Separating dyes in a felt-tip pen ink spot': 'Chromatography',
+                'Getting crystals of salt from rock salt after dissolving out the salt': 'Evaporation',
+                'Separating steel paperclips from a pile of plastic buttons': 'Using a magnet',
             };
             const METHOD_SCENARIOS = Object.keys(METHODS);
             const METHOD_LIST = ['Filtration', 'Evaporation', 'Chromatography', 'Distillation', 'Using a magnet'];
@@ -40,6 +45,12 @@
                 'Evaporation': 'Heats a solution so the liquid turns to gas, leaving the dissolved solid behind.',
                 'Distillation': 'Separates liquids with different boiling points by heating, then cooling and collecting the vapour.',
                 'Chromatography': 'Separates substances, like inks, based on how well they dissolve and move through paper.',
+                'Using a magnet': 'Attracts and pulls out magnetic materials, like iron or steel, from a mixture.',
+                'Crystallisation': 'Slowly evaporates a solution so that pure, solid crystals form as the dissolved substance comes out of solution.',
+                'Simple distillation': 'Separates a solvent from a solution by boiling off the liquid and then cooling and collecting the vapour, leaving the dissolved solid behind.',
+                'Fractional distillation': 'Separates a mixture of liquids with different, close boiling points using a fractionating column, collecting each liquid separately.',
+                'Sieving': 'Separates solids of different particle sizes by passing the mixture through a mesh with holes of a certain size.',
+                'Decanting': 'Separates a liquid from a settled solid by carefully pouring off the liquid without disturbing the solid.',
             };
             const TERM_NAMES = Object.keys(TERMS);
 

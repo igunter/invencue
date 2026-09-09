@@ -36,6 +36,11 @@
                 'A steeper gradient': 'Shows a faster rate of change between the two variables.',
                 'An intercept (where a line crosses the y-axis)': 'Shows the starting value of y when x is zero.',
                 'A line of best fit': 'A line drawn through a set of data points to show the overall trend, ignoring anomalies.',
+                'A directly proportional relationship': 'A straight line through the origin, showing that y increases at the same rate as x.',
+                'Extrapolation': 'Using a graph to estimate a value beyond the range of the data actually collected.',
+                'Interpolation': 'Using a graph to estimate a value that falls between two data points already collected.',
+                'A positive correlation': 'Shows that as one variable increases, the other variable also tends to increase.',
+                'An anomalous point on a graph': 'A point that does not fit the general trend of the other data points.',
             };
             const READING_NAMES = Object.keys(READING);
 

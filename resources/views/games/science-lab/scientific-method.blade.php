@@ -27,22 +27,28 @@
         (function() {
             const STEPS = [
                 'Ask a question',
+                'Research what is already known',
                 'Write a hypothesis (a prediction)',
                 'Plan a fair test',
                 'Carry out the investigation',
                 'Record the results',
+                'Present the results (e.g. in a table or graph)',
                 'Draw a conclusion',
                 'Evaluate the method',
+                'Report the findings',
             ];
 
             const DEFINITIONS = {
                 'Ask a question': 'Decide what you want to find out.',
+                'Research what is already known': 'Find out what has already been discovered about the topic before planning your own investigation.',
                 'Write a hypothesis (a prediction)': 'Predict what you think will happen, and why.',
                 'Plan a fair test': 'Decide what to change, what to measure, and what to keep the same.',
                 'Carry out the investigation': 'Follow your plan and collect data.',
                 'Record the results': 'Write down your measurements, often in a table.',
+                'Present the results (e.g. in a table or graph)': 'Organise your results clearly, such as in a table or on a graph, so patterns are easy to see.',
                 'Draw a conclusion': 'Explain what your results show and whether they support your hypothesis.',
                 'Evaluate the method': 'Think about how the investigation could be improved.',
+                'Report the findings': 'Share what you found out with others, explaining the method and the conclusion.',
             };
 
             function randInt(min, max) {

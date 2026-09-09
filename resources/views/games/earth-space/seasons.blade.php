@@ -38,6 +38,12 @@
                 'A year': 'The time it takes for the Earth to orbit the Sun once, containing all four seasons.',
                 'Deciduous trees': 'Trees that lose their leaves in autumn and grow new ones in spring.',
                 'Hibernation': 'When some animals sleep through the cold winter months to save energy.',
+                'Evergreen trees': 'Trees that keep their green leaves all year round, unlike deciduous trees.',
+                'Migration': 'When some animals travel to warmer places for winter and return again in spring.',
+                'Solstice': 'The day with the most daylight (summer solstice) or the least daylight (winter solstice) in the year.',
+                'Equinox': 'A day in spring or autumn when day and night are almost exactly equal in length.',
+                'Northern Hemisphere': 'The half of the Earth north of the equator, where the UK is — it has summer when tilted towards the Sun.',
+                'Southern Hemisphere': 'The half of the Earth south of the equator — it has the opposite seasons to the UK.',
             };
             const FACT_NAMES = Object.keys(FACTS);
 

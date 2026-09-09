@@ -31,6 +31,11 @@
                 'Ramp': 'A slanted surface that makes it easier to move things up or down.',
                 'Pulley': 'A wheel with a rope over it, used to lift things by changing the direction of the pull.',
                 'Screw': 'A spiral-shaped ramp wrapped around a rod, used to hold things together or lift materials.',
+                'Wedge': 'A tool with a thick end and a thin, sharp edge, used to split or cut things apart.',
+                'Gear': 'A wheel with teeth that locks together with another gear to change speed or force.',
+                'Spring': 'A coiled piece of metal that stores energy when squashed or stretched, then pushes or pulls back.',
+                'Cam': 'A rotating, oddly-shaped wheel that changes turning motion into up-and-down motion.',
+                'Block and tackle': 'A system of pulleys used together to lift very heavy loads with much less effort.',
             };
             const MACHINE_NAMES = Object.keys(MACHINES);
 
@@ -41,6 +46,10 @@
                 'A slide at the playground': 'Ramp',
                 'A flagpole rope system': 'Pulley',
                 'A jar lid': 'Screw',
+                'A pair of scissors': 'Wedge',
+                'A bicycle': 'Gear',
+                'A trampoline': 'Spring',
+                'A crane lifting heavy loads': 'Block and tackle',
             };
             const EXAMPLE_NAMES = Object.keys(EXAMPLES);
 

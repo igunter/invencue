@@ -31,6 +31,10 @@
                 { q: "Which explorer mapped the coasts of Australia and New Zealand?", a: "James Cook" },
                 { q: "Which explorer was the first person to walk on the Moon?", a: "Neil Armstrong" },
                 { q: "Which explorer was the first woman to fly solo across the Atlantic Ocean?", a: "Amelia Earhart" },
+                { q: "Which explorer found a sea route from Europe around Africa to India?", a: "Vasco da Gama" },
+                { q: "Which explorer led the first expedition to reach the South Pole, in 1911?", a: "Roald Amundsen" },
+                { q: "Which Soviet cosmonaut became the first human to travel into space?", a: "Yuri Gagarin" },
+                { q: "Which Italian explorer sailed for Portugal and Spain, mapping much of the coast of South America, which is named after him?", a: "Amerigo Vespucci" },
             ];
 
             function randInt(min, max) {

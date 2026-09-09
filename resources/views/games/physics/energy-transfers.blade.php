@@ -31,6 +31,11 @@
                 'A battery-powered torch shining': 'Chemical energy transfers to light and thermal energy.',
                 'A stretched elastic band being let go': 'Elastic potential energy transfers to kinetic energy.',
                 'Rubbing your hands together': 'Kinetic energy transfers to thermal energy through friction.',
+                'A wind turbine spinning': 'Kinetic energy transfers to electrical energy.',
+                'A car engine burning petrol': 'Chemical energy transfers to kinetic energy and thermal energy.',
+                'A solar panel in sunlight': 'Light energy transfers to electrical energy.',
+                'A kettle boiling water': 'Electrical energy transfers to thermal energy, heating the water.',
+                'A firework exploding': 'Chemical energy transfers to light, sound, kinetic and thermal energy.',
             };
             const SCENARIO_NAMES = Object.keys(SCENARIOS);
 
@@ -40,6 +45,11 @@
                 'Chemical energy store': 'Energy stored in food, fuels and batteries, released by chemical reactions.',
                 'Thermal energy store': 'Energy an object has because of its temperature.',
                 'Elastic potential energy store': 'Energy stored in a stretched or squashed object, like a spring or elastic band.',
+                'Magnetic energy store': 'Energy stored between magnetic objects, like two magnets pushed together or pulled apart.',
+                'Electrostatic energy store': 'Energy stored between electrically charged objects that are attracting or repelling.',
+                'Nuclear energy store': 'Energy stored in the nucleus of an atom, released during nuclear reactions.',
+                'Energy store': 'A way of describing where energy is being kept — for example in movement, height, temperature or chemicals — when it is not being transferred.',
+                'Conservation of energy': 'The principle that energy cannot be created or destroyed, only transferred between different energy stores.',
             };
             const STORE_NAMES = Object.keys(STORES);
 

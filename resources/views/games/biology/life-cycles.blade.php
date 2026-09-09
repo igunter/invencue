@@ -29,6 +29,13 @@
                 'frog': ['Egg', 'Tadpole', 'Froglet', 'Adult frog'],
                 'butterfly': ['Egg', 'Caterpillar', 'Chrysalis', 'Adult butterfly'],
                 'plant': ['Seed', 'Seedling', 'Young plant', 'Adult plant with flowers'],
+                'ladybird': ['Egg', 'Larva', 'Pupa', 'Adult ladybird'],
+                'bee': ['Egg', 'Larva', 'Pupa', 'Adult bee'],
+                'human': ['Baby', 'Child', 'Teenager', 'Adult'],
+                'chicken': ['Egg', 'Chick', 'Pullet (young hen)', 'Adult chicken'],
+                'dragonfly': ['Egg', 'Nymph', 'Sub-adult', 'Adult dragonfly'],
+                'mosquito': ['Egg', 'Larva', 'Pupa', 'Adult mosquito'],
+                'salmon': ['Egg', 'Alevin', 'Fry', 'Adult salmon'],
             };
             const CREATURES = Object.keys(SEQUENCES);
             const ALL_STAGES = Array.from(new Set([].concat.apply([], Object.values(SEQUENCES))));
@@ -37,6 +44,13 @@
                 'frog': 'Starts as an egg in water, becomes a tadpole with a tail, then a froglet with legs, before becoming an adult frog.',
                 'butterfly': 'Starts as an egg, hatches into a caterpillar, forms a chrysalis, then emerges as an adult butterfly.',
                 'plant': 'Starts as a seed, grows into a seedling, then a young plant, before becoming an adult plant that can flower and make new seeds.',
+                'ladybird': 'Starts as a tiny egg, hatches into a spiky larva, forms a pupa, then emerges as an adult spotted ladybird.',
+                'bee': 'Starts as an egg in a honeycomb cell, hatches into a larva, forms a pupa, then emerges as an adult bee.',
+                'human': 'Starts as a baby, grows into a child, then a teenager, before becoming a fully grown adult.',
+                'chicken': "Starts as an egg, hatches into a fluffy chick, grows into a young pullet, before becoming an adult chicken that can lay eggs.",
+                'dragonfly': 'Starts as an egg laid in water, hatches into a nymph that lives underwater, moults into a sub-adult, then becomes a flying adult dragonfly.',
+                'mosquito': 'Starts as an egg laid on water, hatches into a wriggling larva, forms a pupa, then emerges as an adult flying mosquito.',
+                'salmon': 'Starts as an egg in a river, hatches into an alevin, grows into a fry, before becoming an adult salmon that swims out to sea.',
             };
 
             function randInt(min, max) {

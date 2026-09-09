@@ -34,9 +34,11 @@
                 'Saturn': 6,
                 'Uranus': 7,
                 'Neptune': 8,
+                'Pluto': 9,
+                'Eris': 10,
             };
             const PLANET_NAMES = Object.keys(ORDER);
-            const NUMBER_LIST = ['1', '2', '3', '4', '5', '6', '7', '8'];
+            const NUMBER_LIST = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
 
             const FACTS = {
                 'The Sun': 'A giant star at the centre of our solar system that gives us light and heat.',
@@ -44,6 +46,11 @@
                 'Earth': 'The planet we live on — the third planet from the Sun.',
                 'Mars': "Known as the 'Red Planet'.",
                 'Saturn': 'Famous for its beautiful rings made of ice and rock.',
+                'Mercury': 'The smallest planet in the solar system, and the closest one to the Sun.',
+                'Venus': 'The hottest planet, covered in thick clouds that trap heat.',
+                'Jupiter': 'The biggest planet in the solar system, with a giant storm called the Great Red Spot.',
+                'Uranus': 'Tipped right over on its side, so it spins very differently to the other planets.',
+                'Neptune': 'The furthest planet from the Sun, and one of the windiest places in the solar system.',
             };
             const FACT_NAMES = Object.keys(FACTS);
 
@@ -77,7 +84,7 @@
                         return {
                             category: type,
                             correctText: String(ORDER[planet]),
-                            questionText: 'What number planet from the Sun is ' + planet + '?',
+                            questionText: 'What number planet or dwarf planet from the Sun is ' + planet + '?',
                         };
                     }
                     const term = FACT_NAMES[randInt(0, FACT_NAMES.length - 1)];
@@ -100,7 +107,7 @@
 
                 hintFor: function(q) {
                     if (q.category === 'order') {
-                        return 'Remember: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune — in that order from the Sun.';
+                        return 'Remember: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune are the 8 planets in order from the Sun, with the dwarf planets Pluto and Eris further out.';
                     }
                     return 'Think about which one gives light, which one orbits us, which one we live on, or which ones have a nickname or rings.';
                 },
