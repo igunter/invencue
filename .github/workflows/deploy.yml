@@ -37,8 +37,10 @@ jobs:
               NEW_ENV=true
             fi
 
+            NEW_DB=false
             if [ ! -f database/database.sqlite ]; then
               touch database/database.sqlite
+              NEW_DB=true
             fi
 
             composer install --no-interaction --prefer-dist --optimize-autoloader --no-dev
@@ -55,6 +57,11 @@ jobs:
 
             php artisan storage:link
             php artisan migrate --force
+
+            if [ "$NEW_DB" = true ]; then
+              php artisan db:seed --force
+            fi
+
             php artisan config:cache
             php artisan route:cache
             php artisan view:cache
