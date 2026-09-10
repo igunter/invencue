@@ -13,6 +13,13 @@ class ContactMessageMail extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
 
+    // Bail out of a hung SMTP connection instead of tying up the worker indefinitely.
+    public int $timeout = 30;
+
+    public int $tries = 3;
+
+    public array $backoff = [30, 120, 300];
+
     public function __construct(
         public string $senderName,
         public string $senderEmail,
@@ -30,6 +37,6 @@ class ContactMessageMail extends Mailable implements ShouldQueue
 
     public function content(): Content
     {
-        return new Content(view: 'emails.contact-message');
+        return new Content(markdown: 'emails.contact-message');
     }
 }

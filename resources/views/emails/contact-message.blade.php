@@ -1,12 +1,19 @@
-<!DOCTYPE html>
-<html>
-<body style="font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; color: #13233f; line-height: 1.6;">
-    <p>New message from the {{ config('app.name') }} contact form:</p>
+<x-mail::message>
+# New contact form message
 
-    <p><strong>Name:</strong> {{ $senderName }}<br>
-    <strong>Email:</strong> {{ $senderEmail }}</p>
+You've received a new message from the {{ config('app.name') }} contact form.
 
-    <p><strong>Message:</strong></p>
-    <p>{{ $messageBody }}</p>
-</body>
-</html>
+**Name:** {{ $senderName }}
+**Email:** {{ $senderEmail }}
+
+**Message:**
+
+{{ $messageBody }}
+
+<x-mail::button :url="'mailto:' . $senderEmail">
+Reply to {{ $senderName }}
+</x-mail::button>
+
+Thanks,<br>
+{{ config('app.name') }}
+</x-mail::message>

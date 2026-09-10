@@ -11,7 +11,7 @@
 
             <div class="card">
                 <div class="card-body p-4">
-                    <form method="POST" action="{{ route('contact.send') }}">
+                    <form method="POST" action="{{ route('contact.send') }}" id="contactForm">
                         @csrf
 
                         <div class="mb-3">
@@ -38,10 +38,27 @@
                             @enderror
                         </div>
 
-                        <button type="submit" class="btn btn-primary w-100">Send message</button>
+                        <button type="submit" class="btn btn-primary w-100" id="contactSubmit">
+                            <span class="spinner-border spinner-border-sm me-2 d-none" id="contactSpinner" role="status" aria-hidden="true"></span>
+                            <span id="contactSubmitLabel">Send message</span>
+                        </button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        (function () {
+            var form = document.getElementById('contactForm');
+            if (!form) return;
+
+            form.addEventListener('submit', function () {
+                var button = document.getElementById('contactSubmit');
+                document.getElementById('contactSpinner').classList.remove('d-none');
+                document.getElementById('contactSubmitLabel').textContent = 'Sending…';
+                button.disabled = true;
+            });
+        })();
+    </script>
 @endsection

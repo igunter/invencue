@@ -66,5 +66,27 @@ jobs:
             php artisan route:cache
             php artisan view:cache
             php artisan event:cache
+
+            # Install/refresh the queue worker's systemd unit so it survives
+            # reboots and gets managed alongside the rest of the deploy.
+            sudo tee /etc/systemd/system/invencue-queue-worker.service > /dev/null <<'UNIT'
+            [Unit]
+            Description=invenCue queue worker
+            After=network.target mysql.service
+
+            [Service]
+            User=${{ secrets.LIGHTSAIL_USER }}
+            WorkingDirectory=${{ secrets.APP_PATH }}
+            ExecStart=/usr/bin/php artisan queue:work database --sleep=3 --tries=3 --max-time=3600
+            Restart=always
+            RestartSec=5
+
+            [Install]
+            WantedBy=multi-user.target
+            UNIT
+            sudo systemctl daemon-reload
+            sudo systemctl enable invencue-queue-worker
+
             php artisan queue:restart
+            sudo systemctl restart invencue-queue-worker
             sudo systemctl reload php8.2-fpm
