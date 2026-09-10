@@ -51,6 +51,7 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
     Route::get('/questions', [AdminQuestionController::class, 'index'])->name('questions.index');
     Route::get('/questions/{game:slug}', [AdminQuestionController::class, 'show'])->name('questions.show');
     Route::post('/questions/{game:slug}', [AdminQuestionController::class, 'store'])->name('questions.store');
+    Route::get('/questions/{question}/edit', [AdminQuestionController::class, 'edit'])->name('questions.edit');
     Route::put('/questions/{question}', [AdminQuestionController::class, 'update'])->name('questions.update');
     Route::delete('/questions/{question}', [AdminQuestionController::class, 'destroy'])->name('questions.destroy');
 });

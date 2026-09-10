@@ -50,6 +50,11 @@ class QuestionController extends Controller
         return redirect()->route('admin.questions.show', $game)->with('status', 'Question added.');
     }
 
+    public function edit(Question $question): View
+    {
+        return view('admin.questions.edit', ['question' => $question, 'game' => $question->game]);
+    }
+
     public function update(Request $request, Question $question): RedirectResponse
     {
         $validated = $request->validate([

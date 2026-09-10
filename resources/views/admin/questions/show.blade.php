@@ -63,16 +63,23 @@
                                 <th>Answer</th>
                                 <th>Choices</th>
                                 <th></th>
+                                <th class="text-end"></th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($typeQuestions as $question)
-                                <tr>
+                                <tr class="{{ $question->is_active ? '' : 'text-secondary' }}">
                                     <td>{{ $question->question }}</td>
                                     <td>{{ $question->answer }}</td>
                                     <td class="small text-secondary">{{ $question->choices ? implode(', ', $question->choices) : '—' }}</td>
-                                    <td class="text-end">
-                                        <form method="POST" action="{{ route('admin.questions.destroy', $question) }}" onsubmit="return confirm('Delete this question?');">
+                                    <td>
+                                        @unless ($question->is_active)
+                                            <span class="badge bg-secondary">Inactive</span>
+                                        @endunless
+                                    </td>
+                                    <td class="text-end text-nowrap">
+                                        <a href="{{ route('admin.questions.edit', $question) }}" class="btn btn-sm btn-outline-secondary">Edit</a>
+                                        <form method="POST" action="{{ route('admin.questions.destroy', $question) }}" class="d-inline" onsubmit="return confirm('Delete this question?');">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
