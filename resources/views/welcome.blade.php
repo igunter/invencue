@@ -41,10 +41,10 @@
         <div class="row align-items-center g-4">
             <div class="col-lg-7">
                 <div class="hero-kicker">⚡ Learn. Play. Level up.</div>
-                <h1 class="hero-h1">School stuff.<br><span>Game mode on.</span></h1>
+                <h1 class="hero-h1">Free learning games &amp; quizzes for kids<br><span>School stuff. Game mode on.</span></h1>
                 <p class="hero-copy">
                     Pick your age, choose a subject and get straight into fast, interactive games
-                    designed to make tricky topics click.
+                    covering maths, English, science, history and more — designed to make tricky topics click.
                 </p>
 
                 <div class="mt-4 d-flex gap-2 flex-wrap">
