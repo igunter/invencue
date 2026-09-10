@@ -105,10 +105,23 @@
                 var navbar = document.querySelector('.site-navbar');
                 if (!navbar) return;
                 var toggle = function () {
-                    navbar.classList.toggle('is-scrolled', window.scrollY > 20);
+                    var isScrolled = window.scrollY > 20;
+                    navbar.classList.toggle('is-scrolled', isScrolled);
+                    document.body.classList.toggle('is-scrolled', isScrolled);
                 };
                 toggle();
                 window.addEventListener('scroll', toggle, { passive: true });
+
+                var updateNavbarHeight = function () {
+                    document.documentElement.style.setProperty('--navbar-h', navbar.offsetHeight + 'px');
+                };
+                updateNavbarHeight();
+                if (window.ResizeObserver) {
+                    new ResizeObserver(updateNavbarHeight).observe(navbar);
+                } else {
+                    navbar.addEventListener('transitionend', updateNavbarHeight);
+                    window.addEventListener('resize', updateNavbarHeight);
+                }
             })();
         </script>
 

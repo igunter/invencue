@@ -47,6 +47,10 @@ main {
     flex: 1 0 auto;
     padding-top: 10rem;
     padding-bottom: 2rem;
+    transition: padding-top 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+body.is-scrolled main {
+    padding-top: 6rem;
 }
 footer {
     flex-shrink: 0;
@@ -239,9 +243,9 @@ footer {
 
 .category-header {
     position: sticky;
-    top: 0;
+    top: var(--navbar-h, 0px);
     z-index: 1020;
-    transition: border-radius 0.15s ease;
+    transition: border-radius 0.15s ease, top 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .category-header.is-stuck {

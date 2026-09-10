@@ -86,9 +86,15 @@
         const categoryHeader = document.querySelector('.category-header');
         const fixedNavbar = document.querySelector('nav.fixed-top');
         if (categoryHeader && fixedNavbar) {
-            const navbarHeight = fixedNavbar.offsetHeight;
-            categoryHeader.style.top = navbarHeight + 'px';
-            document.documentElement.style.scrollPaddingTop = (navbarHeight + categoryHeader.offsetHeight) + 'px';
+            const updateScrollPadding = () => {
+                document.documentElement.style.scrollPaddingTop = (fixedNavbar.offsetHeight + categoryHeader.offsetHeight) + 'px';
+            };
+            updateScrollPadding();
+            if (window.ResizeObserver) {
+                new ResizeObserver(updateScrollPadding).observe(fixedNavbar);
+            } else {
+                window.addEventListener('resize', updateScrollPadding);
+            }
         }
 
         const categoryHeaderSentinel = document.getElementById('categoryHeaderSentinel');
