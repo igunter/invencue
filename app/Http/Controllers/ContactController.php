@@ -10,9 +10,6 @@ use Illuminate\View\View;
 
 class ContactController extends Controller
 {
-    // TODO: replace with the real address this should be sent to.
-    private const RECIPIENT_EMAIL = 'REPLACE_ME@example.com';
-
     public function show(): View
     {
         return view('pages.contact');
@@ -26,7 +23,7 @@ class ContactController extends Controller
             'message' => ['required', 'string', 'max:5000'],
         ]);
 
-        Mail::to(self::RECIPIENT_EMAIL)->send(new ContactMessageMail(
+        Mail::to(config('mail.from.address'))->send(new ContactMessageMail(
             $validated['name'],
             $validated['email'],
             $validated['message'],
