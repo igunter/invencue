@@ -28,7 +28,7 @@ class RegisteredUserController extends Controller
             'date_of_birth' => [
                 'required',
                 'date',
-                'after:'.now()->subYears(20)->toDateString(),
+                'after:1900-01-01',
                 'before_or_equal:'.now()->subYears(4)->toDateString(),
             ],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],

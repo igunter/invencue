@@ -32,7 +32,7 @@
                         <div class="mb-3">
                             <label for="date_of_birth" class="form-label">Date of birth</label>
                             <input id="date_of_birth" type="date" class="form-control @error('date_of_birth') is-invalid @enderror" name="date_of_birth" value="{{ old('date_of_birth') }}" required
-                                   max="{{ now()->subYears(4)->toDateString() }}" min="{{ now()->subYears(20)->toDateString() }}">
+                                   max="{{ now()->subYears(4)->toDateString() }}" min="1900-01-01">
                             <div class="form-text">Used to put you in the right age range — you can change your age range later.</div>
                             @error('date_of_birth')
                                 <div class="invalid-feedback">{{ $message }}</div>
