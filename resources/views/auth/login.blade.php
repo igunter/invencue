@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Log in - ' . config('app.name'))
+@section('meta_title', 'Log in - ' . config('app.name'))
+@section('robots', 'noindex, nofollow')
 
 @section('content')
     <div class="row justify-content-center">

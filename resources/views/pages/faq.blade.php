@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'FAQs - ' . config('app.name'))
+@section('meta_title', 'FAQs - ' . config('app.name'))
+@section('meta_blurb', 'Answers to common questions about ' . config('app.name') . ' — accounts, age ranges, subjects covered, scoring and cookies.')
 
 @section('content')
     <div class="row justify-content-center">

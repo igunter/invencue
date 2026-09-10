@@ -6,7 +6,37 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta name="user-authenticated" content="{{ auth()->check() ? '1' : '0' }}">
 
-        <title>@yield('title', config('app.name', 'Laravel'))</title>
+        @php
+            $siteName = config('app.name', 'Invencue');
+            $defaultMetaTitle = $siteName . ' - Free Learning Games & Quizzes for Kids';
+            $defaultMetaDescription = 'Play free, interactive learning games and quizzes for kids covering maths, English, science, history and more. Pick an age range and subject — no sign-up needed.';
+
+            $metaTitle = trim($__env->yieldContent('meta_title'));
+            if ($metaTitle === '') {
+                $plainTitle = trim($__env->yieldContent('title'));
+                $metaTitle = $plainTitle !== '' ? $plainTitle . ' - ' . $siteName : $defaultMetaTitle;
+            }
+
+            $metaDescription = trim($__env->yieldContent('meta_blurb')) ?: $defaultMetaDescription;
+            $metaRobots = trim($__env->yieldContent('robots')) ?: 'index, follow';
+            $canonicalUrl = url()->current();
+        @endphp
+
+        <title>{!! $metaTitle !!}</title>
+        <meta name="description" content="{!! $metaDescription !!}">
+        <meta name="robots" content="{{ $metaRobots }}">
+        <link rel="canonical" href="{{ $canonicalUrl }}">
+
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="{{ $siteName }}">
+        <meta property="og:title" content="{!! $metaTitle !!}">
+        <meta property="og:description" content="{!! $metaDescription !!}">
+        <meta property="og:url" content="{{ $canonicalUrl }}">
+        <meta property="og:image" content="{{ asset('favicon.ico') }}">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="{!! $metaTitle !!}">
+        <meta name="twitter:description" content="{!! $metaDescription !!}">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

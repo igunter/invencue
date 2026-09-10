@@ -1,6 +1,28 @@
 @extends('layouts.app')
 
-@section('title', $category->name)
+@php
+    $categoryBlurbs = [
+        'maths'       => 'Free maths games for kids — addition, times tables, fractions, algebra, geometry and more, sorted by age range.',
+        'english'     => 'Free English games for kids — spelling, grammar, punctuation, synonyms and reading skills, sorted by age range.',
+        'biology'     => 'Free biology games for kids — cells, the human body, plants, genetics and ecosystems, sorted by age range.',
+        'chemistry'   => 'Free chemistry games for kids — atoms, states of matter, reactions and the periodic table, sorted by age range.',
+        'physics'     => 'Free physics games for kids — forces, energy, electricity, light and waves, sorted by age range.',
+        'earth-space' => 'Free Earth & Space games for kids — the solar system, weather, rocks and the water cycle, sorted by age range.',
+        'science-lab' => 'Free science lab games for kids — scientific method, measuring, graphs and lab safety, sorted by age range.',
+        'history'     => 'Free history games for kids — ancient civilisations, monarchs, world wars and more, sorted by age range.',
+        'geography'   => 'Free geography games for kids — maps, countries, flags, landforms and the world around us, sorted by age range.',
+        'psychology'  => 'Free psychology games for kids — the brain, emotions, memory and how we learn, sorted by age range.',
+        'computing'   => 'Free computing games for kids — binary, algorithms, networks and online safety, sorted by age range.',
+        'art-design'  => 'Free art & design games for kids — colour theory, famous artists, art movements and techniques, sorted by age range.',
+        'music'       => 'Free music games for kids — musical instruments, rhythm, notation and famous composers, sorted by age range.',
+        'religious-education' => 'Free religious education games for kids — world religions, beliefs, festivals and holy books, sorted by age range.',
+        'money-financial-literacy' => 'Free money & financial literacy games for kids — saving, budgeting, needs vs wants and earning, sorted by age range.',
+    ];
+    $categoryBlurb = $categoryBlurbs[$category->slug] ?? ('Free ' . $category->name . ' games for kids, sorted by age range — quick, interactive practice with no sign-up needed.');
+@endphp
+
+@section('meta_title', $category->name . ' Games for Kids - ' . config('app.name'))
+@section('meta_blurb', $categoryBlurb)
 
 @section('content')
     <div id="categoryHeaderSentinel"></div>

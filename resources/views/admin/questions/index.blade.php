@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Manage Questions - ' . config('app.name'))
+@section('meta_title', 'Manage Questions - ' . config('app.name'))
+@section('robots', 'noindex, nofollow')
 
 @section('content')
     <h1 class="h4 mb-4">Manage questions</h1>

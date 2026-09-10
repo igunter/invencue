@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Verify Email - ' . config('app.name'))
+@section('meta_title', 'Verify Email - ' . config('app.name'))
+@section('robots', 'noindex, nofollow')
 
 @section('content')
     <div class="row justify-content-center">

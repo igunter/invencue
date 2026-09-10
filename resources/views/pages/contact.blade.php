@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Contact Us - ' . config('app.name'))
+@section('meta_title', 'Contact Us - ' . config('app.name'))
+@section('meta_blurb', 'Get in touch with the ' . config('app.name') . ' team — ask a question, report a mistake in a game, or share feedback.')
 
 @section('content')
     <div class="row justify-content-center">

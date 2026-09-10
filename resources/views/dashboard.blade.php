@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Dashboard - ' . config('app.name'))
+@section('meta_title', 'Dashboard - ' . config('app.name'))
+@section('robots', 'noindex, nofollow')
 
 @section('content')
     <div class="card mb-4">

@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
-@section('title', $game->name . ' Questions - ' . config('app.name'))
+@section('meta_title', $game->name . ' Questions - ' . config('app.name'))
+@section('robots', 'noindex, nofollow')
 
 @section('content')
     <a href="{{ route('admin.questions.index') }}" class="d-inline-block mb-3 small"><i class="bi bi-arrow-left me-1"></i>All games</a>

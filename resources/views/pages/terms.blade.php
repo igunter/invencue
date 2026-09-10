@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Terms & Conditions - ' . config('app.name'))
+@section('meta_title', 'Terms & Conditions - ' . config('app.name'))
+@section('meta_blurb', 'Read the terms and conditions for using ' . config('app.name') . ', our free educational games site for kids.')
 
 @section('content')
     <div class="row justify-content-center">

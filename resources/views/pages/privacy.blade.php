@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Privacy Policy - ' . config('app.name'))
+@section('meta_title', 'Privacy Policy - ' . config('app.name'))
+@section('meta_blurb', 'How ' . config('app.name') . ' collects, uses and protects your information, including what we ask for if you create an account.')
 
 @section('content')
     <div class="row justify-content-center">
