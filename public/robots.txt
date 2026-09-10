@@ -7,3 +7,5 @@ Disallow: /register
 Disallow: /forgot-password
 Disallow: /reset-password
 Disallow: /verify-email
+
+Sitemap: https://invencue.com/sitemap.xml
