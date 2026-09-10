@@ -107,6 +107,43 @@ footer {
     overflow-y: auto;
 }
 
+.share-bar {
+    background: transparent;
+}
+
+.share-label {
+    color: #77839a;
+    letter-spacing: 0.05rem;
+}
+
+.btn-share {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: #77839a;
+    font-size: 1rem;
+    transition: color .15s ease, border-color .15s ease, background .15s ease, transform .15s ease;
+}
+
+.btn-share:hover,
+.btn-share:focus-visible {
+    color: #fff;
+    background: var(--blue);
+    border-color: var(--blue);
+    transform: translateY(-2px);
+}
+
+.btn-share.is-copied {
+    color: #fff;
+    background: var(--green);
+    border-color: var(--green);
+}
+
 .site-footer {
     background: transparent;
     color: #77839a;

@@ -104,6 +104,34 @@
             @yield('content')
         </main>
 
+        <div class="share-bar py-3">
+            <div class="container-xl d-flex flex-column flex-sm-row align-items-center justify-content-center gap-2">
+                <div class="d-flex gap-2">
+                    <button type="button" class="btn-share" data-share="facebook" aria-label="Share on Facebook" title="Share on Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </button>
+                    <button type="button" class="btn-share" data-share="twitter" aria-label="Share on X" title="Share on X">
+                        <i class="bi bi-twitter-x"></i>
+                    </button>
+                    <button type="button" class="btn-share" data-share="whatsapp" aria-label="Share on WhatsApp" title="Share on WhatsApp">
+                        <i class="bi bi-whatsapp"></i>
+                    </button>
+                    <button type="button" class="btn-share" data-share="linkedin" aria-label="Share on LinkedIn" title="Share on LinkedIn">
+                        <i class="bi bi-linkedin"></i>
+                    </button>
+                    <button type="button" class="btn-share" data-share="instagram" aria-label="Copy link to share on Instagram" title="Copy link to share on Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </button>
+                    <button type="button" class="btn-share" data-share="email" aria-label="Share by email" title="Share by email">
+                        <i class="bi bi-envelope"></i>
+                    </button>
+                    <button type="button" class="btn-share" data-share="copy" aria-label="Copy link" title="Copy link">
+                        <i class="bi bi-clipboard"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
         <footer class="site-footer py-4 mt-auto position-relative">
             <div class="container-xl d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 text-center text-md-start small">
                 <div class="d-flex flex-column flex-md-row align-items-center gap-2">
@@ -147,6 +175,64 @@
                     navbar.addEventListener('transitionend', updateNavbarHeight);
                     window.addEventListener('resize', updateNavbarHeight);
                 }
+            })();
+        </script>
+
+        <script>
+            (function () {
+                var buttons = document.querySelectorAll('.btn-share');
+                if (!buttons.length) return;
+
+                var pageUrl = window.location.href;
+                var pageTitle = document.title;
+
+                var shareUrls = {
+                    facebook: 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl),
+                    twitter: 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(pageUrl) + '&text=' + encodeURIComponent(pageTitle),
+                    whatsapp: 'https://wa.me/?text=' + encodeURIComponent(pageTitle + ' ' + pageUrl),
+                    linkedin: 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(pageUrl),
+                    email: 'mailto:?subject=' + encodeURIComponent(pageTitle) + '&body=' + encodeURIComponent(pageUrl),
+                };
+
+                var copyLink = function (button, copiedTitle) {
+                    var icon = button.querySelector('i');
+                    var originalIcon = icon.className;
+                    var originalTitle = button.getAttribute('title');
+                    var restore = function () {
+                        icon.className = originalIcon;
+                        button.classList.remove('is-copied');
+                        button.setAttribute('title', originalTitle);
+                    };
+                    navigator.clipboard.writeText(pageUrl).then(function () {
+                        icon.className = 'bi bi-check-lg';
+                        button.classList.add('is-copied');
+                        button.setAttribute('title', copiedTitle || 'Copied!');
+                        setTimeout(restore, 1500);
+                    });
+                };
+
+                buttons.forEach(function (button) {
+                    button.addEventListener('click', function () {
+                        var type = button.getAttribute('data-share');
+
+                        if (type === 'copy') {
+                            copyLink(button, 'Copied!');
+                            return;
+                        }
+
+                        if (type === 'instagram') {
+                            copyLink(button, 'Link copied — paste it into Instagram');
+                            return;
+                        }
+
+                        if (type === 'email') {
+                            window.location.href = shareUrls.email;
+                            return;
+                        }
+
+                        window.open(shareUrls[type], '_blank', 'noopener,noreferrer,width=600,height=500');
+                    });
+                });
             })();
         </script>
 
