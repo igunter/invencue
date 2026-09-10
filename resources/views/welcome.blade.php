@@ -2,6 +2,7 @@
 
 @section('meta_title', config('app.name') . ' - Free Learning Games & Quizzes for Kids')
 @section('meta_blurb', 'Play free, fast learning games for kids covering maths, English, biology, chemistry, physics, history, geography and more. Pick an age range and subject — no sign-up needed to start playing.')
+@section('author', 'Ian Gunter')
 
 @section('content')
     @php

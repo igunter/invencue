@@ -19,12 +19,16 @@
 
             $metaDescription = trim($__env->yieldContent('meta_blurb')) ?: $defaultMetaDescription;
             $metaRobots = trim($__env->yieldContent('robots')) ?: 'index, follow';
+            $metaAuthor = trim($__env->yieldContent('author'));
             $canonicalUrl = url()->current();
         @endphp
 
         <title>{!! $metaTitle !!}</title>
         <meta name="description" content="{!! $metaDescription !!}">
         <meta name="robots" content="{{ $metaRobots }}">
+        @if ($metaAuthor !== '')
+            <meta name="author" content="{!! $metaAuthor !!}">
+        @endif
         <link rel="canonical" href="{{ $canonicalUrl }}">
 
         <meta property="og:type" content="website">
