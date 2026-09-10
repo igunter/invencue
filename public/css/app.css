@@ -100,6 +100,32 @@ footer {
     border-top: 1px solid var(--border);
 }
 
+.footer-links a {
+    color: #77839a;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: var(--blue);
+    text-decoration: underline;
+}
+
+.cookie-consent-banner {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1050;
+    background: var(--ink);
+    color: #fff;
+    box-shadow: 0 -8px 24px rgba(19, 35, 63, .18);
+}
+
+.cookie-consent-banner a {
+    color: #fff;
+    text-decoration: underline;
+}
+
 .footer-stars {
     font-size: 1rem;
     letter-spacing: 0.3rem;

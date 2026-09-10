@@ -2,9 +2,11 @@
 
 use App\Http\Controllers\Admin\QuestionController as AdminQuestionController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\GameResultController;
+use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProfileController;
 use App\Models\AgeRange;
 use App\Models\User;
@@ -55,6 +57,13 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
     Route::put('/questions/{question}', [AdminQuestionController::class, 'update'])->name('questions.update');
     Route::delete('/questions/{question}', [AdminQuestionController::class, 'destroy'])->name('questions.destroy');
 });
+
+Route::get('/terms', [PageController::class, 'terms'])->name('terms');
+Route::get('/privacy', [PageController::class, 'privacy'])->name('privacy');
+Route::get('/faq', [PageController::class, 'faq'])->name('faq');
+
+Route::get('/contact', [ContactController::class, 'show'])->name('contact.show');
+Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
 
 Route::resource('/category', CategoryController::class)->only(['index', 'show'])->names('category');
 

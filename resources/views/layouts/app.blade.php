@@ -56,9 +56,17 @@
         <footer class="site-footer py-4 mt-auto">
             <div class="container-xl d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 text-center text-md-start small">
                 <div>&copy; {{ date('Y') }} {{ config('app.name', 'Laravel') }}. Learn by playing.</div>
+                <nav class="footer-links d-flex gap-3">
+                    <a href="{{ route('faq') }}">FAQs</a>
+                    <a href="{{ route('contact.show') }}">Contact</a>
+                    <a href="{{ route('terms') }}">Terms</a>
+                    <a href="{{ route('privacy') }}">Privacy</a>
+                </nav>
                 <div class="footer-stars">⭐️✨⭐️</div>
             </div>
         </footer>
+
+        @include('partials.cookie-consent')
 
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
