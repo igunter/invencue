@@ -59,6 +59,25 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="{{ asset('css/app.css') }}?v={{ @filemtime(public_path('css/app.css')) ?: '1' }}">
 
+        <script type="application/ld+json">
+            {!! json_encode([
+                '@context' => 'https://schema.org',
+                '@graph' => [
+                    [
+                        '@type' => 'WebSite',
+                        'name' => $siteName,
+                        'url' => url('/'),
+                    ],
+                    [
+                        '@type' => 'Organization',
+                        'name' => $siteName,
+                        'url' => url('/'),
+                        'logo' => asset('images/invencue.png'),
+                    ],
+                ],
+            ], JSON_UNESCAPED_SLASHES) !!}
+        </script>
+
         @stack('styles')
         @stack('head')
     </head>
