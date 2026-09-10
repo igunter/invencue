@@ -52,9 +52,6 @@
                         <a href="{{ route('register') }}" class="btn btn-main btn-lg">
                             <i class="bi bi-person-plus me-1"></i>Get started
                         </a>
-                        <a href="{{ route('login') }}" class="btn btn-light btn-lg rounded-pill px-4 fw-bold border">
-                            <i class="bi bi-box-arrow-in-right me-1"></i>Log in
-                        </a>
                     @else
                         <a href="{{ route('dashboard') }}" class="btn btn-main btn-lg">
                             <i class="bi bi-speedometer2 me-1"></i>Go to dashboard

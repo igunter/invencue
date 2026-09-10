@@ -31,12 +31,16 @@
         @endif
         <link rel="canonical" href="{{ $canonicalUrl }}">
 
+        <link rel="icon" href="{{ asset('images/favicon.png') }}" type="image/png">
+        <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}" type="image/png">
+        <link rel="apple-touch-icon" href="{{ asset('images/favicon.png') }}">
+
         <meta property="og:type" content="website">
         <meta property="og:site_name" content="{{ $siteName }}">
         <meta property="og:title" content="{!! $metaTitle !!}">
         <meta property="og:description" content="{!! $metaDescription !!}">
         <meta property="og:url" content="{{ $canonicalUrl }}">
-        <meta property="og:image" content="{{ asset('favicon.ico') }}">
+        <meta property="og:image" content="{{ asset('images/favicon.png') }}">
 
         <meta name="twitter:card" content="summary">
         <meta name="twitter:title" content="{!! $metaTitle !!}">
@@ -56,19 +60,7 @@
         <nav class="navbar navbar-expand-md site-navbar fixed-top">
             <div class="container-xl">
                 <a class="navbar-brand brand" href="{{ url('/') }}">
-                    <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
-                        <defs>
-                            <linearGradient id="logoGradient" x1="0" x2="1" y1="0" y2="1">
-                                <stop offset="0" stop-color="#4e7cff"/>
-                                <stop offset=".55" stop-color="#8a5cff"/>
-                                <stop offset="1" stop-color="#ff6fae"/>
-                            </linearGradient>
-                        </defs>
-                        <path fill="url(#logoGradient)" d="M13 8h38a7 7 0 0 1 7 7v34a7 7 0 0 1-7 7H13a7 7 0 0 1-7-7V15a7 7 0 0 1 7-7Z"/>
-                        <path d="M19 21h8v22h-8zm14 0h12v6H33zm0 10h12v6H33zm0 10h8v2h-8z" fill="#fff" opacity=".96"/>
-                        <circle cx="48" cy="43" r="4" fill="#ffc83d"/>
-                    </svg>
-                    <span class="brand-word">{{ config('app.name', 'Laravel') }}</span>
+                    <img src="{{ asset('images/invencue.png') }}" alt="{{ config('app.name', 'Invencue') }}" class="brand-logo">
                 </a>
 
                 <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas" aria-controls="navbarOffcanvas" aria-label="Toggle navigation">
@@ -87,9 +79,12 @@
             @yield('content')
         </main>
 
-        <footer class="site-footer py-4 mt-auto">
+        <footer class="site-footer py-4 mt-auto position-relative">
             <div class="container-xl d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 text-center text-md-start small">
-                <div>&copy; {{ date('Y') }} {{ config('app.name', 'Laravel') }}. Learn by playing.</div>
+                <div class="d-flex flex-column flex-md-row align-items-center gap-2">
+                    <img src="{{ asset('images/invencue.png') }}" alt="{{ config('app.name', 'Invencue') }}" class="footer-logo">
+                    <span>&copy; {{ date('Y') }} {{ config('app.name', 'Laravel') }}. Learn by playing.</span>
+                </div>
                 <nav class="footer-links d-flex gap-3">
                     <a href="{{ route('faq') }}">FAQs</a>
                     <a href="{{ route('contact.show') }}">Contact</a>
@@ -105,6 +100,17 @@
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="{{ asset('js/game-results.js') }}"></script>
+        <script>
+            (function () {
+                var navbar = document.querySelector('.site-navbar');
+                if (!navbar) return;
+                var toggle = function () {
+                    navbar.classList.toggle('is-scrolled', window.scrollY > 20);
+                };
+                toggle();
+                window.addEventListener('scroll', toggle, { passive: true });
+            })();
+        </script>
 
         @include('partials.age-range-confirm-modal')
 

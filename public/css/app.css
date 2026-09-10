@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, h6,
 }
 main {
     flex: 1 0 auto;
-    padding-top: 5rem;
+    padding-top: 10rem;
     padding-bottom: 2rem;
 }
 footer {
@@ -69,10 +69,19 @@ footer {
     letter-spacing: -.03em;
 }
 
-.brand-mark {
-    width: 34px;
+.brand-logo {
+    height: 100px;
+    width: auto;
+    transition: height 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.site-navbar.is-scrolled .brand-logo {
     height: 34px;
-    flex: 0 0 34px;
+}
+
+.footer-logo {
+    height: 22px;
+    width: auto;
 }
 
 .site-navbar .nav-link {
@@ -129,6 +138,15 @@ footer {
 .footer-stars {
     font-size: 1rem;
     letter-spacing: 0.3rem;
+}
+
+@media (min-width: 768px) {
+    .footer-stars {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
 
 /* Playful default button styling site-wide */
