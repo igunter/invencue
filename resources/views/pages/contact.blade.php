@@ -3,6 +3,10 @@
 @section('meta_title', 'Contact Us - ' . config('app.name'))
 @section('meta_blurb', 'Get in touch with the ' . config('app.name') . ' team — ask a question, report a mistake in a game, or share feedback.')
 
+@push('head')
+    <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.site_key') }}"></script>
+@endpush
+
 @section('content')
     <div class="row justify-content-center">
         <div class="col-md-8 col-lg-6">
@@ -38,6 +42,11 @@
                             @enderror
                         </div>
 
+                        <input type="hidden" name="g-recaptcha-response" id="recaptchaResponse">
+                        @error('g-recaptcha-response')
+                            <div class="text-danger small mt-2 mb-3">{{ $message }}</div>
+                        @enderror
+
                         <button type="submit" class="btn btn-primary w-100" id="contactSubmit">
                             <span class="spinner-border spinner-border-sm me-2 d-none" id="contactSpinner" role="status" aria-hidden="true"></span>
                             <span id="contactSubmitLabel">Send message</span>
@@ -53,11 +62,22 @@
             var form = document.getElementById('contactForm');
             if (!form) return;
 
-            form.addEventListener('submit', function () {
+            var siteKey = @json(config('services.recaptcha.site_key'));
+
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+
                 var button = document.getElementById('contactSubmit');
                 document.getElementById('contactSpinner').classList.remove('d-none');
                 document.getElementById('contactSubmitLabel').textContent = 'Sending…';
                 button.disabled = true;
+
+                grecaptcha.ready(function () {
+                    grecaptcha.execute(siteKey, { action: 'contact' }).then(function (token) {
+                        document.getElementById('recaptchaResponse').value = token;
+                        form.submit();
+                    });
+                });
             });
         })();
     </script>

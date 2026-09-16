@@ -5,10 +5,13 @@ namespace App\Providers;
 use App\Models\AgeRange;
 use App\Models\Category;
 use App\Models\User;
+use Illuminate\Http\Request;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\View\View;
 
@@ -28,6 +31,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Paginator::useBootstrapFive();
+
+        RateLimiter::for('contact', fn (Request $request) => Limit::perMinute(5)->by($request->ip()));
 
         // Schema::hasTable() itself is a DB round-trip, so its result is cached
         // forever (cleared automatically whenever the app deploy flushes cache,

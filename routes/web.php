@@ -66,7 +66,9 @@ Route::get('/privacy', [PageController::class, 'privacy'])->name('privacy');
 Route::get('/faq', [PageController::class, 'faq'])->name('faq');
 
 Route::get('/contact', [ContactController::class, 'show'])->name('contact.show');
-Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
+Route::post('/contact', [ContactController::class, 'send'])
+    ->middleware('throttle:contact')
+    ->name('contact.send');
 
 Route::resource('/category', CategoryController::class)->only(['index', 'show'])->names('category');
 
