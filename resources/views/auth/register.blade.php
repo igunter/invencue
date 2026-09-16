@@ -3,6 +3,10 @@
 @section('meta_title', 'Register - ' . config('app.name'))
 @section('robots', 'noindex, nofollow')
 
+@push('head')
+    <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.site_key') }}"></script>
+@endpush
+
 @section('content')
     <div class="row justify-content-center">
         <div class="col-md-6 col-lg-5">
@@ -52,7 +56,15 @@
                             <input id="password_confirmation" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                         </div>
 
-                        <button type="submit" class="btn btn-primary w-100">Register</button>
+                        <input type="hidden" name="g-recaptcha-response" id="recaptchaResponse">
+                        @error('g-recaptcha-response')
+                            <div class="text-danger small mt-2 mb-3">{{ $message }}</div>
+                        @enderror
+
+                        <button type="submit" class="btn btn-primary w-100" id="registerSubmit">
+                            <span class="spinner-border spinner-border-sm me-2 d-none" id="registerSpinner" role="status" aria-hidden="true"></span>
+                            <span id="registerSubmitLabel">Register</span>
+                        </button>
 
                         <div class="text-center mt-3 small">
                             <a href="{{ route('login') }}">Already have an account?</a>
@@ -62,4 +74,29 @@
             </div>
         </div>
     </div>
+
+    <script>
+        (function () {
+            var form = document.querySelector('form[action="{{ route('register') }}"]');
+            if (!form) return;
+
+            var siteKey = @json(config('services.recaptcha.site_key'));
+
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                var button = document.getElementById('registerSubmit');
+                document.getElementById('registerSpinner').classList.remove('d-none');
+                document.getElementById('registerSubmitLabel').textContent = 'Registering…';
+                button.disabled = true;
+
+                grecaptcha.ready(function () {
+                    grecaptcha.execute(siteKey, { action: 'register' }).then(function (token) {
+                        document.getElementById('recaptchaResponse').value = token;
+                        form.submit();
+                    });
+                });
+            });
+        })();
+    </script>
 @endsection

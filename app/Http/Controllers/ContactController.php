@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Mail\ContactMessageMail;
+use App\Services\RecaptchaVerifier;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Validation\Rule;
@@ -23,27 +23,11 @@ class ContactController extends Controller
     {
         $validated = $request->validate([
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'max:255', Rule::email()->rfcCompliant()],
+            'email' => ['required', 'string', 'max:255', Rule::email()->rfcCompliant()->validateMxRecord()],
             'message' => ['required', 'string', 'max:5000'],
         ]);
 
-        $captchaToken = $request->string('g-recaptcha-response')->toString();
-        $captchaResponse = $captchaToken !== '' && config('services.recaptcha.secret_key')
-            ? Http::asForm()->timeout(5)->post('https://www.google.com/recaptcha/api/siteverify', [
-                'secret' => config('services.recaptcha.secret_key'),
-                'response' => $captchaToken,
-                'remoteip' => $request->ip(),
-            ])
-            : null;
-
-        // reCAPTCHA v3 has no checkbox — it returns a 0.0-1.0 confidence score per
-        // request instead of a pass/fail, so we reject anything below a threshold.
-        $isHuman = $captchaResponse?->successful()
-            && $captchaResponse->json('success')
-            && $captchaResponse->json('action') === 'contact'
-            && $captchaResponse->json('score', 0) >= 0.5;
-
-        if (!$isHuman) {
+        if (!RecaptchaVerifier::passes($request, 'contact')) {
             return redirect()->route('contact.show')
                 ->withErrors(['g-recaptcha-response' => 'Please complete the anti-spam check and try again.'])
                 ->withInput();

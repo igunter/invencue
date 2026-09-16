@@ -4,12 +4,14 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Services\RecaptchaVerifier;
 use Carbon\Carbon;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rule;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
 
@@ -24,7 +26,7 @@ class RegisteredUserController extends Controller
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
+            'email' => ['required', 'string', 'lowercase', Rule::email()->rfcCompliant()->validateMxRecord(), 'max:255', 'unique:'.User::class],
             'date_of_birth' => [
                 'required',
                 'date',
@@ -33,6 +35,12 @@ class RegisteredUserController extends Controller
             ],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
+
+        if (!RecaptchaVerifier::passes($request, 'register')) {
+            return back()
+                ->withErrors(['g-recaptcha-response' => 'Please complete the anti-spam check and try again.'])
+                ->withInput();
+        }
 
         $age = Carbon::parse($request->date_of_birth)->age;
         $ageRange = match (true) {
